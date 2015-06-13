@@ -10,7 +10,9 @@ var YAHOO_WEATHER_API_ENDPOINT = 'https://query.yahooapis.com/' +
   'Fdatatables.org%2Falltableswithkeys';
 ***/
 
-var YAHOO_WEATHER_API_ENDPOINT='http://data.kataweb.it/storage/static/iwatch/iwatch-push-sent.html';  
+// var YAHOO_WEATHER_API_ENDPOINT='http://data.kataweb.it/storage/static/iwatch/iwatch-push-sent.html';  
+var YAHOO_WEATHER_API_ENDPOINT='https://justforfun.github.io/endpoint.html';  
+
 var KEY_VALUE_STORE_NAME = 'key-value-store';
 
 var idb;
@@ -68,7 +70,7 @@ self.addEventListener('push', function(event) {
         
         var title = 'Repubblica.it';
         //var message = data.query.results.channel.item.condition.text;
-        var message = data.TESTO.text;
+        var message = data.alert.text;
         var icon = data.query.results.channel.image.url ||
           'images/touch/chrome-touch-icon-192x192.png';
         var notificationTag = 'simple-push-demo-notification';
