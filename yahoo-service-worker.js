@@ -2,11 +2,15 @@
 
 importScripts('indexdbwrapper.js');
 
+/***
 var YAHOO_WEATHER_API_ENDPOINT = 'https://query.yahooapis.com/' +
   'v1/public/yql?q=select%20*%20from%20weather.forecast%20where%' +
   '20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where' +
   '%20text%3D%22london%2C%20uk%22)&format=json&env=store%3A%2F%2' +
   'Fdatatables.org%2Falltableswithkeys';
+***/
+
+var YAHOO_WEATHER_API_ENDPOINT='http://data.kataweb.it/storage/static/iwatch/iwatch-push-sent.html';  
 var KEY_VALUE_STORE_NAME = 'key-value-store';
 
 var idb;
@@ -53,14 +57,18 @@ self.addEventListener('push', function(event) {
 
       // Examine the text in the response
       return response.json().then(function(data) {
-        // console.log('Data = ', JSON.stringify(data));
+        console.log('Data = ', JSON.stringify(data));
+        
+        /***
         if (data.query.count === 0) {
           // Throw an error so the promise is rejected and catch() is executed
           throw new Error();
         }
-
-        var title = 'What\'s the weather like in London?';
-        var message = data.query.results.channel.item.condition.text;
+        ***/
+        
+        var title = 'Repubblica.it';
+        //var message = data.query.results.channel.item.condition.text;
+        var message = data.TESTO.text;
         var icon = data.query.results.channel.image.url ||
           'images/touch/chrome-touch-icon-192x192.png';
         var notificationTag = 'simple-push-demo-notification';
