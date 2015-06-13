@@ -117,8 +117,8 @@ self.addEventListener('push', function(event) {
                   }
                   existingNotification.close();
                 }
-                message = 'You have ' + notificationCount +
-                  ' weather updates.';
+                message = 'Hai ' + notificationCount +
+                  ' aggiornamenti da Repubblica.it.';
                 notificationData.notificationCount = notificationCount;
               }
 
