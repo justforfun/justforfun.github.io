@@ -35,7 +35,7 @@ function sendSubscriptionToServer(subscription) {
   // For compatibly of Chrome 43, get the endpoint via
   // endpointWorkaround(subscription)
   console.log('TODO: Implement sendSubscriptionToServer()');
-  console.log('TODO: Valore del token da salvare:' + subscription.Id);
+  console.log('TODO: Valore del token da salvare:' + subscription.subscriptionId;
 
   var mergedEndpoint = endpointWorkaround(subscription);
 
@@ -88,7 +88,7 @@ function unsubscribe() {
         // TODO: Make a request to your server to remove
         // the users data from your data store so you
         // don't attempt to send them push messages anymore
-        console.log('TODO: Valore del token da eliminare dal server del publisher:' + pushSubscription.Id);
+        console.log('TODO: Valore del token da eliminare dal server del publisher:' + pushSubscription.subscriptionId);
 
 
         // We have a subcription, so call unsubscribe on it
