@@ -70,13 +70,21 @@ self.addEventListener('push', function(event) {
         
         var title = 'Repubblica.it';
         //var message = data.query.results.channel.item.condition.text;
+        console.log('Testo alert', data.alert.text);
         var message = data.alert.text;
+        
+        /***
         var icon = data.query.results.channel.image.url ||
           'images/touch/chrome-touch-icon-192x192.png';
+        ***/
+
+        var icon = 'images/icon-152.png';
+        
         var notificationTag = 'simple-push-demo-notification';
 
         // Add this to the data of the notification
-        var urlToOpen = data.query.results.channel.link;
+        // var urlToOpen = data.query.results.channel.link;
+        var urlToOpen = 'https://bit.ly/'+ data..u;
 
         if (!Notification.prototype.hasOwnProperty('data')) {
           // Since Chrome doesn't support data at the moment
