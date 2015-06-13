@@ -20,7 +20,7 @@ self.addEventListener('push', function(event) {
 
   event.waitUntil(
     
-    fetch(url).then(parseJson);
+    //fetch(url).then(parseJson);
 
       /***   
       if (response.status !== 200) {
