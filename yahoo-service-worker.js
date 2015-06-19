@@ -30,7 +30,7 @@ function getIdb() {
 function showNotification(title, body, icon, data) {
   var notificationOptions = {
     body: body,
-    icon: icon ? icon : 'images/touch/chrome-touch-icon-192x192.png',
+    icon: icon ? icon : 'images/icon-152.png',
     tag: 'simple-push-demo-notification',
     data: data
   };
