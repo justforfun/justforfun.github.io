@@ -67,12 +67,13 @@ function showNotification(title, body, icon, data) {
 self.addEventListener('push', function(event) {
   console.log('Received a push message', event);
   console.log('PARSE_APPLICATION_ID:' + PARSE_APPLICATION_ID);
-  console.log('PARSE_JAVASCRIPT_KEY:' + PARSE_JAVASCRIPT_KEY);
+  
 
   //if (!Parse) {
     Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY);
   //};
-  Parse.Analytics.track('push_received');
+  console.log('Parse Inizializzato');
+  //Parse.Analytics.track('push_received');
 
   // Since this is no payload data with the first version
   // of Push notifications, here we'll grab some data from
