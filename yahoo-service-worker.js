@@ -69,9 +69,9 @@ self.addEventListener('push', function(event) {
   console.log('PARSE_APPLICATION_ID:' + PARSE_APPLICATION_ID);
   console.log('PARSE_JAVASCRIPT_KEY:' + PARSE_JAVASCRIPT_KEY);
 
-  if (!Parse) {
+  //if (!Parse) {
     Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
-  };
+  //};
   Parse.Analytics.track('push_received');
 
   // Since this is no payload data with the first version
