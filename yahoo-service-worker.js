@@ -56,6 +56,7 @@ function showNotification(title, body, icon, data) {
 
 self.addEventListener('push', function(event) {
   console.log('Received a push message', event);
+  console.log('PARSE_APPLICATION_ID:' + PARSE_APPLICATION_ID);
   if (!Parse) {
     Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
   };
