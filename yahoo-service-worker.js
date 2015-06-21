@@ -39,10 +39,9 @@ function getIdb() {
 function showNotification(title, body, icon, data) {
   var notificationOptions = {
     body: body,
-<<<<<<< Updated upstream
-=======
+
+
     // icona con logo Rep.it
->>>>>>> Stashed changes
     icon: icon ? icon : 'images/icon-152.png',
     tag: 'simple-push-demo-notification',
     data: data
@@ -164,7 +163,7 @@ self.addEventListener('notificationclick', function(event) {
     Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
   };
   Parse.Analytics.track('push_opened');
-  
+
   if (Notification.prototype.hasOwnProperty('data')) {
     console.log('Using Data');
     var url = event.notification.data.url;
