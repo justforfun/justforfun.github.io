@@ -73,7 +73,10 @@ self.addEventListener('push', function(event) {
     Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY);
   //};
   console.log('Parse Inizializzato');
-  //Parse.Analytics.track('push_received');
+  var dimensions = {
+    browser: 'Chrome'
+  };
+  Parse.Analytics.track('push_received', dimensions);
 
   // Since this is no payload data with the first version
   // of Push notifications, here we'll grab some data from
