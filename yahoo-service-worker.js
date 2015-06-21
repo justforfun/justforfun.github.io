@@ -56,6 +56,7 @@ function showNotification(title, body, icon, data) {
 
 self.addEventListener('push', function(event) {
   console.log('Received a push message', event);
+  /***
   console.log('PARSE_APPLICATION_ID:' + PARSE_APPLICATION_ID);
   console.log('PARSE_JAVASCRIPT_KEY:' + PARSE_JAVASCRIPT_KEY);
 
@@ -63,7 +64,7 @@ self.addEventListener('push', function(event) {
     Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
   };
   Parse.Analytics.track('push_received');
-
+  ***/
   // Since this is no payload data with the first version
   // of Push notifications, here we'll grab some data from
   // an API and use it to populate a notification
@@ -161,12 +162,12 @@ self.addEventListener('push', function(event) {
 
 self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event);
-
+/***
   if (!Parse) {
     Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
   };
   Parse.Analytics.track('push_opened');
-
+***/
   if (Notification.prototype.hasOwnProperty('data')) {
     console.log('Using Data');
     var url = event.notification.data.url;
