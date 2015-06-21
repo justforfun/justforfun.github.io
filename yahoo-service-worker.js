@@ -1,6 +1,6 @@
 'use strict';
 
-importScripts('indexdbwrapper.js');
+importScripts('indexdbwrapper.js', 'parse-1.4.2.min.js');
 //importScripts('parse-1.4.2.min.js');
 
 
