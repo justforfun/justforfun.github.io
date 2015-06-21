@@ -24,7 +24,7 @@ var idb;
 // Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
 var PARSE_APPLICATION_ID='OtIe34Q9MQ6gwtjO1q5XOryZ5cowx6W2NOw9KEsR';
 var PARSE_JAVASCRIPT_KEY='9w4oZHDrl1Rb5TxVLwsyFeaWkw6wULLwEqMswCeY';
-var PARSE_MASTER_KEY='SiJiBIXmOp4U30HPxsDjgIiVQY5dvHOqjqgz7xfHS';
+
 
 /***
   
@@ -70,7 +70,7 @@ self.addEventListener('push', function(event) {
   console.log('PARSE_JAVASCRIPT_KEY:' + PARSE_JAVASCRIPT_KEY);
 
   //if (!Parse) {
-    Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
+    Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY);
   //};
   Parse.Analytics.track('push_received');
 
