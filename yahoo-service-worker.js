@@ -1,6 +1,8 @@
 'use strict';
 
 importScripts('indexdbwrapper.js');
+importScripts('parse-1.4.2.min.js');
+
 
 /***
 var YAHOO_WEATHER_API_ENDPOINT = 'https://query.yahooapis.com/' +
@@ -17,6 +19,13 @@ var KEY_VALUE_STORE_NAME = 'key-value-store';
 
 var idb;
 
+// Parse Parameteers
+// Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
+var PARSE_APPLICATION_ID='OtIe34Q9MQ6gwtjO1q5XOryZ5cowx6W2NOw9KEsR';
+var PARSE_JAVASCRIPT_KEY='9w4oZHDrl1Rb5TxVLwsyFeaWkw6wULLwEqMswCeY';
+var PARSE_MASTER_KEY='SiJiBIXmOp4U30HPxsDjgIiVQY5dvHOqjqgz7xfHS';
+
+
 // avoid opening idb until first call
 function getIdb() {
   if (!idb) {
@@ -30,6 +39,10 @@ function getIdb() {
 function showNotification(title, body, icon, data) {
   var notificationOptions = {
     body: body,
+<<<<<<< Updated upstream
+=======
+    // icona con logo Rep.it
+>>>>>>> Stashed changes
     icon: icon ? icon : 'images/icon-152.png',
     tag: 'simple-push-demo-notification',
     data: data
@@ -44,6 +57,10 @@ function showNotification(title, body, icon, data) {
 
 self.addEventListener('push', function(event) {
   console.log('Received a push message', event);
+  if (!Parse) {
+    Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
+  };
+  Parse.Analytics.track('push_received');
 
   // Since this is no payload data with the first version
   // of Push notifications, here we'll grab some data from
@@ -143,6 +160,11 @@ self.addEventListener('push', function(event) {
 self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event);
 
+  if (!Parse) {
+    Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
+  };
+  Parse.Analytics.track('push_opened');
+  
   if (Notification.prototype.hasOwnProperty('data')) {
     console.log('Using Data');
     var url = event.notification.data.url;
