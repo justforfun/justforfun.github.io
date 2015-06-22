@@ -75,7 +75,14 @@ self.addEventListener('push', function(event) {
   var dimensions = {
     browser: 'Chrome'
   };
-  //Parse.Analytics.track('push_received', dimensions);
+
+  Parse.Analytics.track('push_received', dimensions).then(function(result) {
+    // loaded
+    console.log('Evento loggato', result);
+  }, function(err) {
+    // failed
+    console.log('Errore', err);
+  });
 
   // Since this is no payload data with the first version
   // of Push notifications, here we'll grab some data from
