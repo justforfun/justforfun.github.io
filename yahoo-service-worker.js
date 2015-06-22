@@ -75,6 +75,15 @@ self.addEventListener('push', function(event) {
   var dimensions = {
     browser: 'Chrome'
   };
+  Parse.Analytics.track('push_received', dimensions, {
+    success: function(){
+      response.success("Success");
+    },
+    error: function( error ){
+      response.error( error.message );
+    }
+  });
+
   //Parse.Analytics.track('push_received', dimensions);
 
   // Since this is no payload data with the first version
