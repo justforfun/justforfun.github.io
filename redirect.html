@@ -2,7 +2,23 @@
 <html>
 <head><title>Redirect</title></head>
 <body>
+<script type="text/javascript" src="parse-1.4.2.js"></script>
 <script type="text/javascript">
+var PARSE_APPLICATION_ID='OtIe34Q9MQ6gwtjO1q5XOryZ5cowx6W2NOw9KEsR';
+var PARSE_JAVASCRIPT_KEY='9w4oZHDrl1Rb5TxVLwsyFeaWkw6wULLwEqMswCeY';
+
+var dimensions = {
+    browser: 'Chrome'
+  };
+
+Parse.Analytics.track('push_received', dimensions).then(function(result) {
+    // loaded
+    console.log('Evento loggato', result);
+	}, function(err) {
+    // failed
+    console.log('Errore', err);
+    });
+
 var urlcompleta = window.location.href;
 var i = urlcompleta.indexOf("redirect=");
 i = i + 9;
