@@ -65,7 +65,7 @@ self.addEventListener('push', function(event) {
   console.log('Parse Inizializzato');
   
   //console.log('Parse Config:' + JSON.stringify(Parse.Config.current());
-  /***/
+  /***
   var dimensions = {
     browser: 'Chrome',
     version: '43'
@@ -78,7 +78,7 @@ self.addEventListener('push', function(event) {
     // failed
     console.log('Errore', err);
   });
-  /***/
+  ***/
 
   // Since this is no payload data with the first version
   // of Push notifications, here we'll grab some data from
