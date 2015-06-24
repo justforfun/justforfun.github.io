@@ -25,15 +25,6 @@ var PARSE_APPLICATION_ID='OtIe34Q9MQ6gwtjO1q5XOryZ5cowx6W2NOw9KEsR';
 var PARSE_JAVASCRIPT_KEY='9w4oZHDrl1Rb5TxVLwsyFeaWkw6wULLwEqMswCeY';
 
 
-/***
-  
-
-  if (!Parse) {
-    Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY, PARSE_MASTER_KEY);
-  };
-  Parse.Analytics.track('push_opened');
-
-***/
 
 // avoid opening idb until first call
 function getIdb() {
@@ -74,9 +65,10 @@ self.addEventListener('push', function(event) {
   console.log('Parse Inizializzato');
   
   //console.log('Parse Config:' + JSON.stringify(Parse.Config.current());
-  /***
+  /***/
   var dimensions = {
-    browser: 'Chrome'
+    browser: 'Chrome',
+    version: '43'
   };
 
   Parse.Analytics.track('push_received', dimensions).then(function(result) {
@@ -86,7 +78,7 @@ self.addEventListener('push', function(event) {
     // failed
     console.log('Errore', err);
   });
-  ***/
+  /***/
 
   // Since this is no payload data with the first version
   // of Push notifications, here we'll grab some data from
