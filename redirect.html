@@ -9,7 +9,8 @@ var PARSE_JAVASCRIPT_KEY='9w4oZHDrl1Rb5TxVLwsyFeaWkw6wULLwEqMswCeY';
 Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY);
 
 var dimensions = {
-    browser: 'Chrome'
+    browser: 'Chrome',
+    version: '43'
   };
 
 Parse.Analytics.track('push_clicked', dimensions).then(function(result) {
