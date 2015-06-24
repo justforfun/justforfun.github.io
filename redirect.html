@@ -12,7 +12,7 @@ var dimensions = {
     browser: 'Chrome'
   };
 
-Parse.Analytics.track('push_received', dimensions).then(function(result) {
+Parse.Analytics.track('push_clicked', dimensions).then(function(result) {
     // loaded
     console.log('Evento loggato', result);
 	}, function(err) {
