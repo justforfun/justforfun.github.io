@@ -1,4 +1,5 @@
 window.GoogleSamples = window.GoogleSamples || {};
 window.GoogleSamples.Config = window.GoogleSamples.Config || {
-  gcmAPIKey: 'AIzaSyBViWF9gHrx55nu-HGytkrlYPW61q6iNhI'
+  // prod gcmAPIKey: 'AIzaSyBViWF9gHrx55nu-HGytkrlYPW61q6iNhI'
+  gcmAPIKey: 'AIzaSyA00CL5HW81bQqjAdyyPnuCMlJq5KlX0MA'
 };
