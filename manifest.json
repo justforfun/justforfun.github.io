@@ -7,8 +7,8 @@
       }],
   "start_url": "./index.html?homescreen=1",
   "display": "standalone",
-  "gcm_sender_id": "1039485158524",
-  "//": "test gcm_sender_id 1039485158524",
+  "gcm_sender_id": "267729869220",
+  "//": "test gcm_sender_id 1267729869220",
   "//": "prod gcm_sender_id 218968402224",
   "//": "gcm_user_visible_only is only needed until Chrome 44 is in stable ",
   "gcm_user_visible_only": true
