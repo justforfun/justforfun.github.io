@@ -119,7 +119,7 @@ self.addEventListener('push', function(event) {
 
         // Add this to the data of the notification
         // var urlToOpen = data.query.results.channel.link;
-        var urlToOpen = 'https://bit.ly/'+ data.u;
+        var urlToOpen = 'https://larep.it/'+ data.u;
 
         if (!Notification.prototype.hasOwnProperty('data')) {
           // Since Chrome doesn't support data at the moment

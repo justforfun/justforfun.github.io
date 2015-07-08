@@ -4,13 +4,19 @@
 <body>
 <script type="text/javascript" src="parse-1.4.2.js"></script>
 <script type="text/javascript">
+var urlcompleta = window.location.href;
+var i = urlcompleta.indexOf("redirect=");
+i = i + 9;
+var urldef= urlcompleta.substring(i);
+
 var PARSE_APPLICATION_ID='N9kuHXiLIp4lfam830w9m2lA2isIFkfATcYUZCrp';
 var PARSE_JAVASCRIPT_KEY='dVKQtDkJf5Y0tstuLG3fXTanqK3A2nzOlQUNwTwS';
 Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_KEY);
 
 var dimensions = {
     browser: 'Chrome',
-    version: '43'
+    version: '43',
+    url: urldef
   };
 
 Parse.Analytics.track('push_clicked', dimensions).then(function(result) {
@@ -21,10 +27,7 @@ Parse.Analytics.track('push_clicked', dimensions).then(function(result) {
     console.log('Errore', err);
     });
 
-var urlcompleta = window.location.href;
-var i = urlcompleta.indexOf("redirect=");
-i = i + 9;
-var urldef= urlcompleta.substring(i);
+
 window.location.href = urldef;
 </script>
 <!-- https://justforfun.github.io/redirect.html?redirect=https://bit.ly/1e4QIhM -->>
