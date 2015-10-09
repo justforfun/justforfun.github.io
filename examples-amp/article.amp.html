@@ -145,6 +145,7 @@
     }
   </style>
   <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
   <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
@@ -156,6 +157,13 @@
   </header>
   <main role="main">
     <article>
+      <h2>IFrame</h2>
+      <amp-iframe width=300 height=300
+          sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+          layout="responsive"
+          frameborder="0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDG9YXIhKBhqclZizcSzJ0ROiE0qgVfwzI&q=Alameda,%20CA">
+      </amp-iframe>
       <figure>
         <amp-img
             src="/examples-amp/img/hero@1x.jpg"
