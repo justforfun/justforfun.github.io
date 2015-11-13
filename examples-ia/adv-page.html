@@ -18,11 +18,11 @@ for (i = 0; i < MNZ_page_url_KeysValues.length; i++) {
 
 if (MNZ_page_profilo.indexOf("cronaca") !=-1){
 	MNZ_sitepage = '_mz_manzoni.it/demo'; // profilo di test poi da assegnare veramente
-	console.log(MNZ_sitepage);
+	//console.log(MNZ_sitepage);
 }
 else if (MNZ_page_profilo.indexOf("esteri") !=-1) {
 	MNZ_sitepage = '_mz_manzoni.it/demo'; // profilo di test poi da assegnare veramente
-	console.log(MNZ_sitepage);
+	//console.log(MNZ_sitepage);
 
 }
 // else if le varie casistiche
@@ -31,7 +31,7 @@ else if (MNZ_page_profilo.indexOf("esteri") !=-1) {
 
 </head>
 <body style="margin:0;padding:0;">
-
+<p>Hello world!</p>
 <script type='text/javascript' src='http://www.googletagservices.com/tag/js/gpt.js'>
 googletag.pubads().definePassback(MNZ_account+'/'+MNZ_sitepage+'/Middle1',[[300,250]]).display();
 </script>
