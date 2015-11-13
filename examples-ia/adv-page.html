@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>adv-page</title>
+<script>
+var MNZ_page_url = window.location.href;
+var MNZ_page_url_KeysValues = MNZ_page_url.split(/[\?&]+/);
+var MNZ_page_url_Key = 'adref';
+var MNZ_account = '35012960';
+var MNZ_sitepage = '_mz_manzoni.it/demo'; // profilo di test poi da assegnare veramente
+var MNZ_page_profilo = '';
+
+for (i = 0; i < MNZ_page_url_KeysValues.length; i++) {
+    KeyValue = MNZ_page_url_KeysValues[i].split("=");
+    if (KeyValue[0] == MNZ_page_url_Key) {
+        MNZ_page_profilo = KeyValue[1];
+    }
+}
+
+if (MNZ_page_profilo.indexOf("cronaca") !=-1){
+	MNZ_sitepage = '_mz_manzoni.it/demo'; // profilo di test poi da assegnare veramente
+	console.log(MNZ_sitepage);
+}
+else if (MNZ_page_profilo.indexOf("esteri") !=-1) {
+	MNZ_sitepage = '_mz_manzoni.it/demo'; // profilo di test poi da assegnare veramente
+	console.log(MNZ_sitepage);
+
+}
+// else if le varie casistiche
+
+</script>
+
+</head>
+<body style="margin:0;padding:0;">
+
+<script type='text/javascript' src='http://www.googletagservices.com/tag/js/gpt.js'>
+googletag.pubads().definePassback(MNZ_account+'/'+MNZ_sitepage+'/Middle1',[[300,250]]).display();
+</script>
+
+
+</body>
+</html>
