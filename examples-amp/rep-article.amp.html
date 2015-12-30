@@ -267,9 +267,7 @@
       </figure>
       <amp-lightbox id="headline-img-lightbox" class="lightbox"
           layout="nodisplay">
-
         <div class="lightbox-content">
-          <!-- figure -->
             <amp-img id="floating-headline-img"
                 src="http://www.repstatic.it/content/nazionale/img/2015/12/25/133228571-81c4969a-0298-4338-9881-5831c0ed8730.jpg"
                 srcset="http://www.repstatic.it/content/nazionale/img/2015/12/25/133228571-81c4969a-0298-4338-9881-5831c0ed8730.jpg 1x, http://www.repstatic.it/content/nazionale/img/2015/12/25/133228571-81c4969a-0298-4338-9881-5831c0ed8730.jpg 2x"
@@ -281,10 +279,6 @@
               >
             </amp-img>
             <p>Il villaggio di Babbo Natale, 5 km a nord di Rovaniemi (Finlandia)</p>
-          <!-- /figure>
-          <figcaption>
-              Il villaggio di Babbo Natale, 5 km a nord di Rovaniemi (Finlandia)
-          </figcaption -->
         </div>
       </amp-lightbox>      
       <div class="content-container">
@@ -326,8 +320,9 @@
             src="image1" width=200 height=100></amp-img>
           <amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox -->
           
-          <amp-image-lightbox id="lightbox1" layout="nodisplay" on="tap:lightbox1.close" role="button" tabindex="0">
-
+          <!-- amp-image-lightbox id="lightbox1" layout="nodisplay" on="tap:lightbox1.close" role="button" tabindex="0"-->
+          <amp-lightbox id="lightbox1" layout="nodisplay" on="tap:lightbox1.close" role="button" tabindex="0">
+          <div class="lightbox-content">
           <figure>
             <amp-carousel type="slides" layout="responsive" width="867" height="579" loop controls>
                 <figure>
@@ -414,7 +409,9 @@
                 Maniche corte e pantaloncini. Sembrano foto scattate in primavera, ma raccontano un anomalo Natale nella Grande Mela dove la colonnina di mercurio ha superato i 20 gradi. Temperature record, le più calde mai registrate negli ultimi 20 anni, che hanno segnato un primato storico.
             </figcaption>
           </figure>
-          </amp-image-lightbox>
+          <!-- /amp-image-lightbox -->
+          </div>
+          </amp-lightbox>
 
           <p>  
             <br/>
