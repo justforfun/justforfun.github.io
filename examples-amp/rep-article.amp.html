@@ -330,13 +330,15 @@
           <amp-image-lightbox id="lightbox1" layout="nodisplay" on="tap:lightbox1.close" role="button" tabindex="0"></amp-image-lightbox>
 
           <figure>
-            <amp-carousel type="slides" layout="responsive" width="867" height="579" loop controls>
+            <amp-carousel type="slides" layout="responsive" width="867" height="579" loop controls on="tap:lightbox1"
+                    role="button"
+                    tabindex="0">
                 <figure>
                   <amp-img 
                     src="http://www.repstatic.it/content/nazionale/img/2015/12/25/101255749-7ecca5c0-0156-4da3-bae3-627a913ef461.jpg" 
                     width="867" height="579" 
                     layout="responsive" 
-                    on="tap:lightbox1"
+                    on="tap:lightbox1.close"
                     role="button"
                     tabindex="0"
                   ></amp-img>
