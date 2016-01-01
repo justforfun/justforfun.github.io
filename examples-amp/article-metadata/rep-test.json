@@ -14,7 +14,8 @@
             "isAudio": false,
             "isGallery": false,
             "toneClass": "tone-feature",
-            "showWebPublicationDate": true
+            "showWebPublicationDate": true,
+            "WebPublicationDate": "2015-12-25T17:50:39Z"
         },
         {
             "headline": "Eppur si scia, le località a Nord Ovest dove le piste sono aperte",
@@ -28,7 +29,8 @@
             "isAudio": false,
             "isGallery": true,
             "toneClass": "tone-news",
-            "showWebPublicationDate": false
+            "showWebPublicationDate": false,
+            "WebPublicationDate": "2015-12-25T16:34:23Z"
         },
         {
             "headline": "Stati Uniti: gli auguri di Natale di Barack e Michelle Obama",
@@ -42,7 +44,8 @@
             "isAudio": false,
             "isGallery": false,
             "toneClass": "tone-feature",
-            "showWebPublicationDate": false
+            "showWebPublicationDate": false,
+            "WebPublicationDate": "2015-12-25T12:52:09Z"
         }]
     }],
     "refreshStatus": true
