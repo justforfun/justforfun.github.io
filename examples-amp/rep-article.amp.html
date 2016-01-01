@@ -576,7 +576,7 @@
       {{#content}}
       <div class="fc-item {{toneClass}}">
       <div class="fc-item__image-container">
-      <amp-img src="{{thumbnail}}" layout="fixed" width=200 height=200></amp-img>
+      <amp-img src="{{thumbnail}}" layout="fixed" width=126 height=75></amp-img>
       </div>
       <div class="fc-item__content">
       <div class="fc-item__header">
@@ -613,26 +613,26 @@
       </div>
       <aside class="fc-item__meta">
       <!-- time class="fc-item__timestamp" data-relativeformat="short" -->
-      <time class="header-time" data-relativeformat="short">  
-      <span class="inline-clock inline-icon ">
-      <svg width="11" height="11" viewBox="0 0 11 11"><path d="M5.4 0C2.4 0 0 2.4 0 5.4s2.4 5.4 5.4 5.4 5.4-2.4 5.4-5.4S8.4 0 5.4 0zm3 6.8H4.7V1.7h.7L6 5.4l2.4.6v.8z"/></svg>
-      </span>
-      {{#showWebPublicationDate}}
-      <span class="timestamp__text">
-      <span class="u-h">Pubblicato: </span>
-      {{webPublicationDate}}
-      </span>
-      {{/showWebPublicationDate}}
-      </time>
+        <time class="header-time" data-relativeformat="short">  
+          <span class="inline-clock inline-icon ">
+          <svg width="11" height="11" viewBox="0 0 11 11"><path d="M5.4 0C2.4 0 0 2.4 0 5.4s2.4 5.4 5.4 5.4 5.4-2.4 5.4-5.4S8.4 0 5.4 0zm3 6.8H4.7V1.7h.7L6 5.4l2.4.6v.8z"/></svg>
+          </span>
+          {{#showWebPublicationDate}}
+          <span class="timestamp__text">
+          <span class="u-h">Pubblicato: </span>
+          {{webPublicationDate}}
+          </span>
+          {{/showWebPublicationDate}}
+        </time>
       </aside>
       </div>
+      <!-- trailText -->
       <a href="{{url}}" class="fc-item__link">{{headline}}</a>
       </div>
       {{/content}}
       </div>
       {{/showContent}}
       </template>
-    <div></div>
   </amp-list>
   <footer>
     <div class="brand-logo">
