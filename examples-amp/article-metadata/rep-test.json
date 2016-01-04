@@ -13,7 +13,7 @@
             "isVideo": false,
             "isAudio": false,
             "isGallery": false,
-            "toneClass": "tone-feature",
+            "toneClass": "tone-news",
             "showWebPublicationDate": true,
             "webPublicationDate": "2015-12-25T17:50:39Z"
         },
