@@ -1,7 +1,7 @@
 {
     "items": [{
         "displayName": "Articoli correlati",
-        "showContent": false,
+        "showContent": true,
         "content": [{
             "headline": "Meteo, un caldo Natale: tempo stabile e temperature oltre le medie",
             "trailText": "Il forte campo di alta pressione insistente da settimane sull\u0027Italia e sull\u0027Europa meridionale rester\u00E0 determinante nei prossimi due-tre giorni e, probabilmente, nonostante una tendenza all\u0027indebolimento, anche per le ultime giornate dell\u0027anno. Soprattutto domenica 27, giornata soleggiata in gran parte del Paese",
