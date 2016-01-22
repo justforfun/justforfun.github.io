@@ -1,11 +1,12 @@
 {
   "transport": {"beacon": false, "xhrpost": false},
   "requests": {
-    "base": "https://gruppoespresso01.webtrekk.net/253822047730481/wt?p=315,${canonicalUrl},1,${screenWidth}x${screenHeight},24,1,${timestamp},${documentReferrer},0x0,0&tz=${timezone}",
-    "event": "${base}&name=${eventName}&type=${eventId}&time=${timestamp}&tz=${timezone}&pid=${pageViewId}&screenSize=${screenWidth}x${screenHeight}"
+    "base": "https://gruppoespresso01.webtrekk.net/253822047730481/wt?p=315,${canonicalUrl},1,${screenWidth}x${screenHeight},24,1,${timestamp},${documentReferrer},0x0,0",
+    "event": "${base}&tz=${timezone}&name=${eventName}&type=${eventId}&pid=${pageViewId}"
   },
   "vars": {
-    "title": "Example Request"
+    "title": "Example Request",
+    "test": "https://gruppoespresso01.webtrekk.net/253822047730481/wt?p=315,http%3A%2F%2Fwww.repubblica.it%2Fcronaca%2F2015%2F12%2F25%2Fnews%2Fnatale_anomalo_mondo_sotto_smog_e_temperature_oltre_media-130148884%2F,1,1920x1080,24,1,1453457573069,,0x0,0&tz=-60&name=page-loaded&type=42&time=1453457573069&tz=-60&pid=1455&screenSize=1920x1080"
   },
   "triggers": {
     "default pageview": {
