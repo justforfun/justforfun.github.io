@@ -226,15 +226,49 @@
     /* Hack per collassare spazio banner nel caso di mancata erogazione
     [creative-id*="dfp-_empty_"] { display: none;} 
     */
-    
-    @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-    }
 
+    /* Styling user notification */
+    amp-user-notification {
+      min-height: 30px;
+      font-family: 'Roboto';
+      font-weight: 500;
+      line-height: 30px;
+      padding: 8px;
+      background: #46b6ac;
+    }
+    amp-user-notification button {
+      border: none;
+      border-radius: 2px;
+      color: #fafafa;
+      height: 26px;
+      min-width: 32px;
+      padding: 0 16px;
+      margin: 0 16px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      cursor: pointer;
+      vertical-align: middle;
+      line-height: 26px;
+      text-align: center;
+      background: #3f51b5;
+    }
+    @-webkit-keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @-moz-keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
     amp-user-notification.amp-active {
-     opacity: 0;
-     animation: fadeIn ease-in 1s 1 forwards;
+      opacity: 0;
+      -webkit-animation: fadeIn ease-in 1s 1 forwards;
+      -moz-animation: fadeIn ease-in 1s 1 forwards;
+      animation: fadeIn ease-in 1s 1 forwards;
     }
   </style>
   <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
