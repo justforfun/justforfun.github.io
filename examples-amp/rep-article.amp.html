@@ -223,7 +223,19 @@
       font-weight:normal;
       font-style:normal
     }
-    /* [creative-id*="dfp-_empty_"] { display: none;} */
+    /* Hack per collassare spazio banner nel caso di mancata erogazione
+    [creative-id*="dfp-_empty_"] { display: none;} 
+    */
+    
+    @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+    }
+
+    amp-user-notification.amp-active {
+     opacity: 0;
+     animation: fadeIn ease-in 1s 1 forwards;
+    }
   </style>
   <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
   <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
