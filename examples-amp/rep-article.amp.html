@@ -292,7 +292,18 @@
       data-dismiss-href="https://justforfun.github.io/examples-amp/dismiss.js?cid=CLIENT_ID(pippo)">
       Su questo sito utilizziamo cookie tecnici e, previo tuo consenso, cookie di profilazione, nostri e di terze parti, per proporti pubblicità in linea con le tue preferenze. Se vuoi saperne di più o prestare il consenso solo ad alcuni utilizzi <a href="https://login.kataweb.it/static/privacy/?editore=gruppoespresso">clicca qui</a>
       <a href="https://login.kataweb.it/static/privacy/?editore=gruppoespresso"><button on="tap:amp-user-notification1.dismiss">OK</button></a>
-      <!--button on="tap:amp-user-notification1.dismiss">Presto il consenso all'uso di tutti i cookie</button-->
+
+      <!-- -->
+      <amp-list src="https://data.com/articles.json?ref=CANONICAL_URL"
+          width=300 height=200 layout=responsive>
+        <template type="amp-mustache">
+          <div>
+            <a href="https://login.kataweb.it/static/privacy/?editore=gruppoespresso&cid=CLIENT_ID(pippo)">clicca qui</a>
+          </div>
+        </template>
+      </amp-list>
+      <!-- --> 
+
   </amp-user-notification>
   <amp-pixel src="https://justforfun.github.io/examples-amp/pixel.gif?cid=CLIENT_ID(pippo)"></amp-pixel>
 
