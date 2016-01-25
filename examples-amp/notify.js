@@ -1,1 +1,1 @@
-{ "showNotification": false }
+{ "showNotification": true }
