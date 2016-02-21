@@ -1,6 +1,7 @@
 {
     "items": [{
         "displayName": "Articoli correlati",
+        "ShowContent": "false",
         "content": ""
     }]    
 }
