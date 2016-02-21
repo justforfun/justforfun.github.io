@@ -1001,17 +1001,19 @@ main { margin-top: 80px; }
      {{#showContent}}
      <section class="related-articles-section">
        <h3>{{displayName}}</h3>
-       <article class="related-article">
-         <a href="{{targetlink}}">
-           {{#thumb}}
-           <div class="related-articles-image">
-             <amp-img src="{{thumb}}" layout="fixed" width="80" height="80"></amp-img>
-           </div>
-           {{/thumb}}
-           <h1>{{title}}</h1>
-         </a>
-       </article>
-     </section>
+       {{#content}}
+         <article class="related-article">
+           <a href="{{targetlink}}">
+             {{#thumb}}
+             <div class="related-articles-image">
+               <amp-img src="{{thumb}}" layout="fixed" width="80" height="80"></amp-img>
+             </div>
+             {{/thumb}}
+             <h1>{{title}}</h1>
+           </a>
+         </article>
+         {{/content}}
+       </section>
      {{/showContent}}
      </template>
  </amp-list>
