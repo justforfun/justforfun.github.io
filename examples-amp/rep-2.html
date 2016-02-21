@@ -993,25 +993,29 @@ main { margin-top: 80px; }
     </div>
  </main>
 
- <amp-list class="related-articles" layout="responsive" height="80" width="320" src="include/rep-test.json">
-  <template type="amp-mustache">
-    {{#showContent}}
-    <section class="related-articles-section">
-      <h3>{{displayName}}</h3>
-      {{#content}}
-        <article class="related-article">
-          <a href="{{url}}">
-            <div class="related-articles-image">
-              <amp-img src="{{thumbnail}}" layout="fixed" width="80" height="80"></amp-img>
-            </div>
-            <h1>{{headline}}</h1>
-          </a>
-        </article>
-      {{/content}}
-    </section>
-    {{/showContent}}
-    </template>
-</amp-list>
+
+<!-- ARTICOLI CORRELATI -->
+ <amp-list class="related-articles" layout="responsive" height="80" width="320" src="https://justforfun.github.io/examples-amp/article-metadata/rep-related.json">
+   <template type="amp-mustache">
+     {{#showContent}}
+     <section class="related-articles-section">
+       <h3>{{displayName}}</h3>
+       {{#content}}
+         <article class="related-article">
+           <a href="{{targetlink}}">
+             <div class="related-articles-image">
+               <amp-img src="{{thumb}}" layout="fixed" width="80" height="80"></amp-img>
+             </div>
+             <h1>{{title}}</h1>
+           </a>
+         </article>
+       {{/content}}
+     </section>
+     {{/showContent}}
+     </template>
+ </amp-list>
+<!-- FINE ARTICOLI CORRELATI -->
+
 
   <footer class="main-footer">
     <p>
