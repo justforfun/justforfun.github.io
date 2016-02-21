@@ -996,25 +996,23 @@ main { margin-top: 80px; }
 
 
 <!-- ARTICOLI CORRELATI -->
- <amp-list class="related-articles" layout="responsive" height="80" width="320" src="https://justforfun.github.io/examples-amp/article-metadata/rep-related.json">
+ <amp-list class="related-articles" layout="responsive" height="80" width="320" src="https://justforfun.github.io/examples-amp/article-metadata/rep-related-empty.json">
    <template type="amp-mustache">
-     {{#showContent}}
+     {{#content}}
      <section class="related-articles-section">
        <h3>{{displayName}}</h3>
-       {{#content}}
-         <article class="related-article">
-           <a href="{{targetlink}}">
-             {{#thumb}}
-             <div class="related-articles-image">
-               <amp-img src="{{thumb}}" layout="fixed" width="80" height="80"></amp-img>
-             </div>
-             {{/thumb}}
-             <h1>{{title}}</h1>
-           </a>
-         </article>
-       {{/content}}
+       <article class="related-article">
+         <a href="{{targetlink}}">
+           {{#thumb}}
+           <div class="related-articles-image">
+             <amp-img src="{{thumb}}" layout="fixed" width="80" height="80"></amp-img>
+           </div>
+           {{/thumb}}
+           <h1>{{title}}</h1>
+         </a>
+       </article>
      </section>
-     {{/showContent}}
+     {{/content}}
      </template>
  </amp-list>
 <!-- FINE ARTICOLI CORRELATI -->
