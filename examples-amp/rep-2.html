@@ -1003,9 +1003,11 @@ main { margin-top: 80px; }
        {{#content}}
          <article class="related-article">
            <a href="{{targetlink}}">
+             {{#thumb}}
              <div class="related-articles-image">
                <amp-img src="{{thumb}}" layout="fixed" width="80" height="80"></amp-img>
              </div>
+             {{/thumb}}
              <h1>{{title}}</h1>
            </a>
          </article>
