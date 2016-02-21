@@ -1,7 +1,7 @@
 {
     "items": [{
         "displayName": "Articoli correlati",
-        "ShowContent": true,
+        "showContent": true,
         "content": [{    
             "cdate": "2016-02-21T15:23:19Z",
             "pubfromdate": "2016-02-21T15:20:00Z",
