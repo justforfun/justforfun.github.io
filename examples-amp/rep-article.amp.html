@@ -229,8 +229,18 @@
     /* Hack per collassare spazio banner nel caso di mancata erogazione  */
     [creative-id*="dfp-_empty_"] { display: none;} 
    
+    amp-user-notification{min-height:30px;padding:8px}
+    amp-user-notification button{border:none;border-radius:2px;height:26px;min-width:32px;padding:0 16px;margin:0 16px;cursor:pointer;vertical-align:middle;text-align:center}
+    @keyframes fadeIn{from{opacity:0}
+    to{opacity:1}
+    }
+    amp-user-notification.amp-active{opacity:0;-webkit-animation:fadeIn ease-in 1s 1 forwards;-moz-animation:fadeIn ease-in 1s 1 forwards;animation:fadeIn ease-in 1s 1 forwards;z-index:11002;top:0;bottom:auto}
+    amp-user-notification{font:14px/1.8 lato-regular,Arial,sans-serif;color:#fff;background:#1a1a1a}
+    amp-user-notification a{color:#fff}
+    amp-user-notification button{background:#037cbc;color:#fff;text-transform:uppercase;letter-spacing:0;line-height:26px}
 
     /* Styling user notification 
+
     amp-user-notification {
       min-height: 30px;
       font-family: 'Roboto';
@@ -290,6 +300,13 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
+  <amp-user-notification
+      layout=nodisplay
+      id="amp-user-notification-privacy">
+      Su questo sito utilizziamo cookie tecnici e, previo tuo consenso, cookie di profilazione, nostri e di terze parti, per proporti pubblicità in linea con le tue preferenze. Se vuoi saperne di più o prestare il consenso solo ad alcuni utilizzi <a href="https://login.kataweb.it/static/privacy/?editore=gruppoespresso">clicca qui</a>
+      <button on="tap:amp-user-notification-privacy.dismiss">OK</button>
+
+  </amp-user-notification>
   <!-- amp-user-notification
       layout=nodisplay
       id="amp-user-notification1"
@@ -303,19 +320,13 @@
   <!-- /div -->
   
   <header>
-    <!--p>
-      <amp-iframe height=360 width=640
-          layout="responsive"
-          sandbox="allow-scripts allow-same-origin"
-          src="https://login.kataweb.it/static/testcert/test-iframe.html">
-          <amp-img height=360 width=640 layout="responsive" src="http://www.repstatic.it/video/photo/2016/01/26/299328/299328-thumb-social-play-taxieaerei_1.jpg" placeholder></amp-img>
-      </amp-iframe>
-  </p -->
+    
     <div class="brand-logo">
        <amp-ad width=300 height=100
       layout="responsive"
       type="doubleclick"
       data-slot="/35012960/repubblica.it/amp/interna/Top"
+      data-consent-notification-id="amp-user-notification-privacy"
       json='{"targeting":{"pageType":"dettaglio_content"}}'
       >
         <div class="adv-placeholder" placeholder>
@@ -382,6 +393,7 @@
             <amp-ad width=300 height=100
               type="doubleclick"
               data-slot="/35012960/repubblica.it/amp/interna/Top"
+              data-consent-notification-id="amp-user-notification-privacy"
               json='{"targeting":{"pageType":"dettaglio_content"}}'
             >
               <div class="adv-placeholder" placeholder>
@@ -530,6 +542,7 @@
               <amp-ad width=300 height=250
                 type="doubleclick"
                 data-slot="/35012960/repubblica.it/amp/interna/Middle1"
+                data-consent-notification-id="amp-user-notification-privacy"
                 json='{"targeting":""}'
               >
               <div placeholder>Loading Advertisement...</div>
@@ -648,6 +661,7 @@
             <amp-ad width=300 height=250
               type="doubleclick"
               data-slot="/35012960/repubblica.it/amp/interna/Middle1"
+              data-consent-notification-id="amp-user-notification-privacy"
               json='{"targeting":""}'
             >
             <div placeholder>Loading Advertisement...</div>
