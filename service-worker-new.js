@@ -1,6 +1,8 @@
 'use strict';
 
-var REPUBBLICA_ENDPOINT = 'http://data.kataweb.it/storage/static/iwatch/iwatch-push-sent.html';
+//var REPUBBLICA_ENDPOINT = 'https://data.kataweb.it/storage/static/iwatch/iwatch-push-sent.html';
+var REPUBBLICA_ENDPOINT = 'https://justforfun.github.io/rep-endpoint.json';
+
 
 self.addEventListener('push', function(event) {
   console.log('Received a push message', event);
