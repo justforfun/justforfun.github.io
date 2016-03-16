@@ -31,6 +31,7 @@ self.addEventListener('push', function(event) {
 
         
         var message = data.TESTO.text;  
+        icon = data.img;
         console.log(message);
     self.registration.showNotification(title, {
       body: body,
