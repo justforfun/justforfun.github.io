@@ -114,7 +114,7 @@ self.addEventListener('push', function(event) {
           'images/touch/chrome-touch-icon-192x192.png';
         ***/
 
-        var icon = 'images/icon-152.png';
+        //var icon = 'images/icon-152.png';
         var icon = data.img;
         
         var notificationTag = 'simple-push-demo-notification';
