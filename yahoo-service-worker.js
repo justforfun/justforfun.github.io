@@ -12,7 +12,8 @@ var YAHOO_WEATHER_API_ENDPOINT = 'https://query.yahooapis.com/' +
 ***/
 
 // var YAHOO_WEATHER_API_ENDPOINT='http://data.kataweb.it/storage/static/iwatch/iwatch-push-sent.html';  
-var YAHOO_WEATHER_API_ENDPOINT='https://justforfun.github.io/endpoint.html';  
+//var YAHOO_WEATHER_API_ENDPOINT='https://justforfun.github.io/endpoint.html';  
+var YAHOO_WEATHER_API_ENDPOINT='https://justforfun.github.io/rep-endpoint.json';  
 
 var KEY_VALUE_STORE_NAME = 'key-value-store';
 
@@ -114,6 +115,7 @@ self.addEventListener('push', function(event) {
         ***/
 
         var icon = 'images/icon-152.png';
+        var icon = data.img;
         
         var notificationTag = 'simple-push-demo-notification';
 
