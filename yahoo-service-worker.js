@@ -106,8 +106,8 @@ self.addEventListener('push', function(event) {
         
         var title = 'Repubblica.it';
         //var message = data.query.results.channel.item.condition.text;
-        console.log('Testo alert', data.alert.text);
-        var message = data.alert;
+        console.log('Testo alert', data.TESTO.text);
+        var message = data.TESTO;
         
         /***
         var icon = data.query.results.channel.image.url ||
