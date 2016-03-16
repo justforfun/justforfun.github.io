@@ -47,7 +47,7 @@ self.addEventListener('push', function(event) {
 
       return showNotification(title, message);
     }) 
-  );
+//  );
 });
 
 
