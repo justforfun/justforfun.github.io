@@ -703,11 +703,16 @@
           </figure -->
           <hr>
           <p>
-            <!--amp-iframe height=1 width=1
-              layout="responsive"
-              sandbox="allow-scripts allow-same-origin"
-              src="https://login.kataweb.it/static/testcert/google_amp.html?pageHref=CANONICAL_URL">
-            </amp-iframe-->
+            <!--
+            var wt_map_tree = "/repubblica/homepage";
+            var webtrekkConfig = {
+                            trackId : "253822047730481",
+                            trackDomain : "gruppoespresso01.webtrekk.net",
+                            domain : "REGEXP:^.*?\.webtrekk\.net$",
+                            cookie : "3",
+                            contentId : ""
+                        };
+          -->
             <!-- 
 https://gruppoespresso01.webtrekk.net/253822047730481/wt?p=315,CANONICAL_URL,1,1920x1080,24,1,1453398076408,http%3A%2F%2Fjustforfun.github.io%2Fexamples-amp%2Frep-article.amp.html,0x0,0&tz=1&la=it&cg1=external&cg2=external%20-%20repubblica&cg3=external%20-%20repubblica%20-%20facebook&cp1=no-type&cp2=no-ref&cp3=no-profile-adv&cp4=no-refresh&cp8=CANONICAL_URL&cp10=non%20loggato&cp14=no-product&cp18=gio&cp19=4&cp33=no-tag&cp34=web&cp35=not%20defined&np=Shockwave%20Flash&eor=1
 // https://gruppoespresso01.webtrekk.net/253822047730481/wt?p=315,CANONICAL_URL,1,1920x1080,24,1,1453398076408,http%3A%2F%2Fjustforfun.github.io%2Fexamples-amp%2Frep-article.amp.html,0x0,0&tz=1&la=it&cg1=external&cg2=external%20-%20repubblica&cg3=external%20-%20repubblica%20-%20facebook&cp1=no-type&cp2=no-ref&cp3=no-profile-adv&cp4=no-refresh&cp8=CANONICAL_URL&cp10=non%20loggato&cp14=no-product&cp18=gio&cp19=4&cp33=no-tag&cp34=web&cp35=not%20defined&np=Shockwave%20Flash&eor=1
@@ -718,8 +723,13 @@ https://gruppoespresso01.webtrekk.net/253822047730481/wt?p=315,CANONICAL_URL,1,1
             <!-- amp-pixel src="https://login.kataweb.it/static/testcert/google_amp.html?pageHref=CANONICAL_URL&cid=CLIENT_ID(cid-scope-cookie-fallback-name"></amp-pixel -->
             <!--  http://secure-it.imrworldwide.com/cgi-bin/m?cg=0&ci=kataweb-it&si=%%URL%%&rnd=%%RAND%% -->
             <!-- amp-pixel src="https://secure-it.imrworldwide.com/cgi-bin/m?cg=0&ci=kataweb-it&si=CANONICAL_URL&rnd=RANDOM"></amp-pixel -->
-            <amp-analytics config="https://justforfun.github.io/examples-amp/analytics/config.json?pageHref=CANONICAL_URL" id="webtrekk"></amp-analytics>
             
+            <amp-analytics type="webtrekk">
+              <script type="application/json">
+              {
+                "transport":{"beacon":false,"xhrpost":false,"image":true},
+                "requests":{"parameterPrefix":"?p=431,${contentId},1,${screenWidth}x${screenHeight}, ${screenColorDepth},${documentReferrer},${timestamp},0,,0&tz=${timezone}&la=${browserLanguage}","pageCategories":"&cg1=${cg1}&cg2=${cg2}&cg3=${cg3}&cg4=${cg4}&cg5=${cg5}&cg6=${cg6}","pageParameter":"&cp1=${cp1}&cp3=${cp3}&cp4=${cp4}&cp8=${cp8}&cp12=${cp12}&cp13=${cp13}&cp15=${cp15}&cp16=${cp16}&cp17=${cp17}&cp18=${cp18}&cp19=${cp19}&cp32=${cp32}&cp33=${cp33}&cp34=${cp34}&cp35=${cp35}&cp38=${cp38}"},
+                "vars":{"trackDomain":"gruppoespresso01.webtrekk.net","trackId":"253822047730481","contentId":${canonicalUrl}},"triggers":{"trackPageview":{"on":"visible","request":"pageview","vars":{"cg1":"repubblica","cg2":"repubblica - motori","cg3":"repubblica - motori - articoli","cg4":"","cg5":"","cg6":"","cp1":"article","cp3":"","cp4":"no-refresh","cp8":${canonicalHost},"cp12":"2016-03-20","cp13":10,"cp15":"","cp16":"","cp17":"","cp18":"mer","cp19":13,"cp32":"","cp33":"","cp34":"","cp35":"","cp38":""}}}}</script></amp-analytics>
 
           </p>
         </div>
