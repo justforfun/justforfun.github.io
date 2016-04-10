@@ -143,7 +143,7 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
     "authorization":
         "https://scripts.repubblica.it/checkpw/test/mobile/amp/authorization?url=CANONICAL_URL&rid=READER_ID",
     "pingback":
-        "https://scripts.repubblica.it/checkpw/test/mobile/amp/pingback?rid=READER_ID&url=CANONICAL_URL",
+        "https://scripts.repubblica.it/checkpw/test/mobile/amp/pingback?rid=READER_ID&url=CANONICAL_URL&AUTHDATA(pw2)",
     "login":
         "https://login.kataweb.it/login/SSO?op=login&service=espresso&rid=READER_ID&loginpage=https%3A%2F%2Flogin.kataweb.it%2Fregistrazione%2Fespresso%2Flogin.jsp%3Fmorecookies%3Dplus-mobile%26ssoOnly%3Dfalse&backurl=http%3A%2F%2Fespresso.repubblica.it%2Fsocial%2Fsites%2Frepubblica%2Fespresso%2Floader.php%3Fmorecookies%3Dplus-mobile%26mClose%3D2%26backUrl%3DCANONICAL_URL&optbackurl=http%3A%2F%2Fespresso.repubblica.it%2Fsocial%2Fsites%2Frepubblica%2Fespresso%2Floader.php%3Fmorecookies%3Dplus-mobile%26mClose%3D2%26backUrl%3DCANONICAL_URL",
     "authorizationFallbackResponse": {"error": true}
@@ -233,6 +233,9 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
       <time class="article-time" itemprop="datePublished" datetime="2015-12-15 13:01">17 novembre, 2016 alle ore 15.23</time>
 
 
+      <div amp-access="NOT pw2" amp-access-hide>
+          <a on="tap:amp-access.login">Become a subscriber now!</a>
+      </div>
 
       <div class="article-body" itemprop="articleBody">
 
