@@ -141,12 +141,12 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
   <script id="amp-access" type="application/json">
   {
     "authorization":
-        "https://scripts.repubblica.it/checkpw/test/mobile/amp/authorization?url=CANONICAL_URL&rid=READER_ID&ref=DOCUMENT_REFERRER",
+        "https://scripts.repubblica.it/checkpw/test/mobile/amp/authorization?url=CANONICAL_URL&rid=READER_ID&ref=DOCUMENT_REFERRER&rnd=RANDOM",
     "pingback":
-        "https://scripts.repubblica.it/checkpw/test/mobile/amp/pingback?rid=READER_ID&url=CANONICAL_URL&AUTHDATA(pw2)",
+        "https://scripts.repubblica.it/checkpw/test/mobile/amp/pingback?rid=READER_ID&url=CANONICAL_URL&AUTHDATA(showContent)&rnd=RANDOM",
     "login":
         "https://login.kataweb.it/login/SSO?op=login&service=espresso&rid=READER_ID&loginpage=https%3A%2F%2Flogin.kataweb.it%2Fregistrazione%2Fespresso%2Flogin.jsp%3Fmorecookies%3Dplus-mobile%26ssoOnly%3Dfalse&backurl=http%3A%2F%2Fespresso.repubblica.it%2Fsocial%2Fsites%2Frepubblica%2Fespresso%2Floader.php%3Fmorecookies%3Dplus-mobile%26mClose%3D2%26backUrl%3DSOURCE_URL&optbackurl=http%3A%2F%2Fespresso.repubblica.it%2Fsocial%2Fsites%2Frepubblica%2Fespresso%2Floader.php%3Fmorecookies%3Dplus-mobile%26mClose%3D2%26backUrl%3DSOURCE_URL",
-    "authorizationFallbackResponse": {"pw2": false}
+    "authorizationFallbackResponse": {"showContent": false}
   }
   </script>
 
@@ -233,12 +233,12 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
       <time class="article-time" itemprop="datePublished" datetime="2015-12-15 13:01">17 novembre, 2016 alle ore 15.23</time>
 
       <p>
-        <div amp-access="NOT pw2" amp-access-hide>
+        <div amp-access="NOT showContent" amp-access-hide>
             <a on="tap:amp-access.login">Autorizzazione Fallita! Iscriviti subito</a>
         </div>
       </p>
 
-      <div amp-access="pw2" class="article-body" itemprop="articleBody" amp-access-hide>
+      <div amp-access="showContent" class="article-body" itemprop="articleBody" amp-access-hide>
 
         <strong>PARIGI - </strong>Strade bloccate, pneumatici in fiamme, violenti scontri tra polizia e manifestanti. Parigi &egrave; in pieno caos: almeno 20 persone sono state arrestate questa mattina nella capitale francese durante la mobilitazione
         dei tassisti indetta contro le auto a noleggio con autista e contro <a href="http://ricerca.repubblica.it/repubblica/archivio/repubblica/2015/06/26/guerriglia-a-parigi-i-tassisti-contro-uber-ci-sta-rovinando22.html">Uber</a>. Secondo la prefettura,
