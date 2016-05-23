@@ -13,7 +13,7 @@ function (a, b, c) {
     function e(a, b, c) {
         function d() {
             //var a = ["https://10.20.20.10/", "http://10.20.20.10/", "https://s3.amazonaws.com/customerfiles.scribblelive.com/", "http://s3.amazonaws.com/customerfiles.scribblelive.com/", "http://customerfiles.scribblelive.com.s3.amazonaws.com/"];
-            var a = ["https://10.20.20.10/", "http://10.20.20.10/", "https://www.repstatic.it/customerfiles.scribblelive.com/", "http://s3.amazonaws.com/customerfiles.scribblelive.com/", "http://customerfiles.scribblelive.com.s3.amazonaws.com/"];
+            var a = ["https://10.20.20.10/", "http://10.20.20.10/", "https://www.repstatic.it/customerfiles.scribblelive.com/", "http://www.repstatic.it/customerfiles.scribblelive.com/", "http://customerfiles.scribblelive.com.s3.amazonaws.com/"];
             new RegExp(a.join("|")), new Error;
             return a[2]
         }
