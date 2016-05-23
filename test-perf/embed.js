@@ -57,7 +57,8 @@ function (a, b, c) {
                         toLoad: [i + "groupo_espresso/js/key_events.js"]
                     }],
                     init: function () {
-                        custom_key_event.init(this), b("head").append('<script src="' + i + 'implementation/custom-embed/latest/js/embed.min.js">')
+                        //custom_key_event.init(this), b("head").append('<script src="' + i + 'implementation/custom-embed/latest/js/embed.min.js">')
+                        custom_key_event.init(this), b("head").append('<script src="' + i + 'groupo_espresso/custom-embed/latest/js/embed.min.js">')
                     }
                 }
             },
