@@ -155,7 +155,17 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
 .go-to-mobile a{text-decoration:none;display:block;position:relative;line-height:40px;border-radius:20px;color:#fff;background:#059df0;font-size:14px;text-transform:uppercase;font-weight:700}
 .taboola-container{margin:20px 0}
 .taboola-container .taboola-widget{padding:20px;background:#e5e5e5}
-        
+ 
+
+
+      .dashedborder {
+        border: 2px dashed;
+      }
+      .artificialfold {
+        height: 900px;
+        background: #000;
+      }
+ 
       </style>
 
       <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -296,7 +306,7 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
         </amp-ad>
 
       </div>
-
+      <div class=artificialfold></div>
       <div class="adv-container">
         <!-- ADV test multisize-->
         <amp-ad width=320 height=100
@@ -305,7 +315,7 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
                   data-consent-notification-id="amp-user-notification-privacy"
                   data-multi-size="300x50,320x50,300x100"
                   data-multi-size-validation="false"
-                  layout="responsive"
+                  class="dashedborder"
                   json='{"targeting":{"pageType":"dettaglio_content"}}'
                 >
           <div class="adv-placeholder" placeholder>
@@ -322,7 +332,7 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
   </a>
 </div>
     </div>
-             
+
     <div class="article-body" itemprop="articleBody">
         
         
