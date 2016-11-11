@@ -205,31 +205,33 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
 </amp-user-notification>
 
 
-<div>    
+<div class="container-ad">    
 
     <!--div class="parent"-->
-     <amp-ad width=320 height=100
-        type="doubleclick"
-        data-slot="/35012960/repubblica.it/amp/interna/Top"
-        data-consent-notification-id="amp-user-notification-privacy"
-        data-multi-size="300x50,320x50,320x100,300x100"
-        data-multi-size-validation="false"
-    class="dashedborder"
-    json='{"targeting":{"pageType":"dettaglio_content"}}'
-       >
-       <div fallback>
-      <a href="http://m.repubblica.it/mobile/r/sezioni/sport/2016/02/09/news/app_rep-133068373/?ref=amp">
-        <amp-img layout="responsive" width=300 height=100 src="//www.repstatic.it/cless-mobile/main/amp/2016-v1/img/300x100_AppRepubblicaSport.gif"></amp-img>
-     </a>
-     </div>
-     <div class="adv-placeholder" placeholder>
-            <a href="http://m.repubblica.it/mobile/r/sezioni/sport/2016/02/09/news/app_rep-133068373/?ref=amp">
-              <amp-img layout="responsive" width=300 height=100 src="//www.repstatic.it/cless-mobile/main/amp/2016-v1/img/300x100_AppRepubblicaSport.gif"></amp-img>
-            </a>
-          </div>
+    <amp-sticky-ad layout="nodisplay">
+       <amp-ad width=320 height=100
+          type="doubleclick"
+          data-slot="/35012960/repubblica.it/amp/interna/Top"
+          data-consent-notification-id="amp-user-notification-privacy"
+          data-multi-size="300x50,320x50,320x100,300x100"
+          data-multi-size-validation="false"
+      class="dashedborder"
+      json='{"targeting":{"pageType":"dettaglio_content"}}'
+         >
+         <div fallback>
+        <a href="http://m.repubblica.it/mobile/r/sezioni/sport/2016/02/09/news/app_rep-133068373/?ref=amp">
+          <amp-img layout="responsive" width=300 height=100 src="//www.repstatic.it/cless-mobile/main/amp/2016-v1/img/300x100_AppRepubblicaSport.gif"></amp-img>
+       </a>
+       </div>
+       <div class="adv-placeholder" placeholder>
+              <a href="http://m.repubblica.it/mobile/r/sezioni/sport/2016/02/09/news/app_rep-133068373/?ref=amp">
+                <amp-img layout="responsive" width=300 height=100 src="//www.repstatic.it/cless-mobile/main/amp/2016-v1/img/300x100_AppRepubblicaSport.gif"></amp-img>
+              </a>
+            </div>
 
 
-    </amp-ad>
+        </amp-ad>
+      </amp-sticky-ad>
     </div> 
       
 
@@ -376,7 +378,7 @@ Infine, come <strong>ultimo movente</strong>, c'è la libertà che solo l'isolam
       <!-- ADV -->
       
       <div class="container-ad">
-        <amp-sticky-ad layout="nodisplay">      
+        
           <amp-ad width=300 height=250
               type="doubleclick"
               data-slot="/35012960/repubblica.it/amp/interna/Middle1"
@@ -398,7 +400,7 @@ Infine, come <strong>ultimo movente</strong>, c'è la libertà che solo l'isolam
 
             
           </amp-ad>
-        </amp-sticky-ad>
+        
       </div>
 
 
