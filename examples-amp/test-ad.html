@@ -156,7 +156,20 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
 .go-to-mobile a{text-decoration:none;display:block;position:relative;line-height:40px;border-radius:20px;color:#fff;background:#059df0;font-size:14px;text-transform:uppercase;font-weight:700}
 .taboola-container{margin:20px 0}
 .taboola-container .taboola-widget{padding:20px;background:#e5e5e5}
-        
+      
+
+    .amp-sticky-ad {
+      background-color: #fce4ec
+    }
+
+    .amp-sticky-ad-loaded {
+      background-color: #f48fb1
+    }
+
+    .amp-sticky-ad-close-button {
+      min-width: 0
+    }
+    
       </style>
 
       <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
@@ -173,6 +186,7 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
       <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
       <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
       <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+      <script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-0.1.js"></script>
 
       <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
       <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -412,19 +426,21 @@ Infine, come <strong>ultimo movente</strong>, c'è la libertà che solo l'isolam
 
         <!-- ADV -->
       <div class="container-ad adv-floor">
-        <amp-ad width=320 height=50
-            type="doubleclick"
-            data-slot="/35012960/repubblica.it/amp/interna/floor"
-            data-consent-notification-id="amp-user-notification-privacy"
-            json='{"targeting":""}'
-          >
-          <div class="adv-placeholder adv-floor" placeholder>
-            <amp-anim width=16 height=16 src="//www.repstatic.it/cless-mobile/main/amp/2016-v1/img/loader.gif">
-                <amp-img placeholder width=16 height=16 src="//www.repstatic.it/cless-mobile/main/amp/2016-v1/img/loader.gif">
-              </amp-img>
-            </amp-anim>
-          </div>
-        </amp-ad>
+        <amp-sticky-ad layout="nodisplay">
+          <amp-ad width=320 height=50
+              type="doubleclick"
+              data-slot="/35012960/repubblica.it/amp/interna/floor"
+              data-consent-notification-id="amp-user-notification-privacy"
+              json='{"targeting":""}'
+            >
+            <div class="adv-placeholder adv-floor" placeholder>
+              <amp-anim width=16 height=16 src="//www.repstatic.it/cless-mobile/main/amp/2016-v1/img/loader.gif">
+                  <amp-img placeholder width=16 height=16 src="//www.repstatic.it/cless-mobile/main/amp/2016-v1/img/loader.gif">
+                </amp-img>
+              </amp-anim>
+            </div>
+          </amp-ad>
+        </amp-sticky-ad>
       </div>
 
       <footer class="main-footer">
