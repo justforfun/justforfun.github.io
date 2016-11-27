@@ -50,7 +50,8 @@
 
       var tsEndLocationEpoch = 1634508000; 
 
-      // Numero Km. giornalieri: 27,4     
+      // Numero Km. giornalieri: 27,4 
+      var AverageAllowedKm = 27.4;
     </script>
 
   </head>
@@ -91,6 +92,12 @@
         console.log("Data attuale: " + currentDateEpoch);
         var PastDaysEpoch = Math.floor((currentDateEpoch-tsStartLocationEpoch)/86400);
         console.log("Numero giorni trascorsi da inizio locazione: " + PastDaysEpoch);
+        var DaysToEndLocationEpoch = Math.floor((tsEndLocationEpoch-currentDateEpoch)/86400);
+        console.log("Numero giorni mancanti a fine locazione: " + DaysToEndLocationEpoch);
+        var DailyAverageKm = KmValue/PastDaysEpoch;
+        console.log("Numero medio Km percorsi al giorno: " + DailyAverageKm);
+        var DevianceFromAllowedKm = AverageAllowedKm - DailyAverageKm;
+        console.log("Km percorsi rispetto a soglia: " + DevianceFromAllowedKm);
         return;
     }
     </script>
