@@ -48,7 +48,9 @@
       Human time (GMT): Sun, 17 Oct 2021 22:00:00 GMT
       ***/
 
-      var tsEndLocationEpoch = 1634508000;      
+      var tsEndLocationEpoch = 1634508000; 
+
+      // Numero Km. giornalieri: 27,4     
     </script>
 
   </head>
@@ -85,8 +87,10 @@
         var KmValue = theForm.elements["kmval"].value;
         console.log("Valore Km inserito: " + KmValue);
         var d = new Date();
-        var currentDateEpoch = Math.floor(d.getTime()/1000);
+        var currentDateEpoch = Math.floor(d.now()/1000);
         console.log("Data attuale: " + currentDateEpoch);
+        var PastDaysEpoch = Math.floor((currentDateEpoch-tsStartLocationEpoch)/86400);
+        console.log("Numero giorni trascorsi da inizio locazione: " + PastDaysEpoch);
         return;
     }
     </script>
