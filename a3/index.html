@@ -85,7 +85,7 @@
         var KmValue = theForm.elements["kmval"].value;
         console.log("Valore Km inserito: " + KmValue);
         var d = new Date();
-        var currentDateEpoch = d.getTime()/1000;
+        var currentDateEpoch = Math.floor(d.getTime()/1000);
         console.log("Data attuale: " + currentDateEpoch);
         return;
     }
