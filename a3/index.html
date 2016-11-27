@@ -39,7 +39,7 @@
       Human time (your time zone): 19/10/2016, 00:00:00
       Human time (GMT): Tue, 18 Oct 2016 22:00:00 GMT
       ***/
-      var tsStartLocation = 0;      
+      var tsStartLocationEpoch = 1476828000;      
       // Data fine locazione: 18/10/2021
       /***
       Epoch timestamp: 1634508000
@@ -48,7 +48,7 @@
       Human time (GMT): Sun, 17 Oct 2021 22:00:00 GMT
       ***/
 
-      var tsEndLocation = 0;      
+      var tsEndLocationEpoch = 1634508000;      
     </script>
 
   </head>
@@ -78,7 +78,7 @@
     
     <script type="text/javascript">
       function doCalc (){
-        var tmp = "";
+        
         
         var theForm = document.forms["kmform"];
         //Get a reference to the value the user inserted name=kmval":
