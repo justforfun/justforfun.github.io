@@ -31,6 +31,25 @@
 
     
     <link rel="icon" href="../images/favicon.ico">
+    <script type="text/javascript">
+      // Data inizio locazione: 19/10/2021
+      /***
+      Epoch timestamp: 1476828000
+      Timestamp in milliseconds: 1476828000000
+      Human time (your time zone): 19/10/2016, 00:00:00
+      Human time (GMT): Tue, 18 Oct 2016 22:00:00 GMT
+      ***/
+      var tsStartLocation = 0;      
+      // Data fine locazione: 18/10/2021
+      /***
+      Epoch timestamp: 1634508000
+      Timestamp in milliseconds: 1634508000000
+      Human time (your time zone): 18/10/2021, 00:00:00
+      Human time (GMT): Sun, 17 Oct 2021 22:00:00 GMT
+      ***/
+
+      var tsEndLocation = 0;      
+    </script>
 
   </head>
 
@@ -65,6 +84,9 @@
         //Get a reference to the value the user inserted name=kmval":
         var KmValue = theForm.elements["kmval"].value;
         console.log("Valore Km inserito: " + KmValue);
+        var d = new Date();
+        var currentDateEpoch = d.getTime()/1000;
+        console.log("Data attuale: " + currentDateEpoch);
         return;
     }
     </script>
