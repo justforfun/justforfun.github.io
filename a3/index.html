@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Calcolatore Km Audi A3">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Calcolatore Km</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="../images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-title" content="Calcolatore Km A3">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="../images/apple-touch-icon-precomposed.png">
+
+    
+    <link rel="icon" href="../images/favicon.ico">
+
+  </head>
+
+  <body>
+    <h1>Calcolatore chilometraggio Audi A3</h1>
+    
+    <p></p>
+  
+    <p>To use this sample please do the following:</p>
+
+    <ol>
+      <li>Create a project in the <a href="https://console.developers.google.com"  target="_blank">Google Developer Console</a>.</li>
+      <li>Under APIs enable Google Cloud Messaging for Android and Google Cloud Messaging for Chrome.</li>
+      <li>Under Credentials, create a new key and select Server key as the type.</li>
+      <li>Create a copy of [config.sample.js](config.sample.js) called config.js</li>
+      <li>Create a copy of [manifest.sample.json](manifest.sample.json) called manifest.json</li>
+      <li>Replace "&lt;Your Public API Key ...&gt;" in your new `config.js` file with your own API key from the Google Developer Console project.</li>
+      <li>Replace "&lt;Your Project Number ...&gt;" in your new `manifest.json` with your own project number from the Google Developer Console project.</li>
+    </ol>
+
+
+    <p>
+        <button class="js-push-button" disabled>
+          Enable Push Messages
+        </button>
+    </p>
+    
+    <br />
+    <br />
+
+    <h2>cURL Command to Send Push</h2>
+    <div class="js-curl-command"></div>
+    
+    <script src="config.js"></script>
+    <script src="demo.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript"> var pippo = 
+{
+    "ID": "2009",
+    "DATA": "2016-03-16 08:28:27",
+    "TESTO": "Mega Tuesday a Trump e Clinton. Rubio perde in Florida e si ritira, Kasich tiene. Tra i dem, Hillary verso nomination",
+    "USER_ID": "0",
+    "URL": "http://www.repubblica.it/esteri/elezioni-usa/primarie2016/2016/03/16/news/primarie_usa_florida_ohio_trump_rubio_clinton-135575088/",
+    "img": "https://www.repstatic.it/content/nazionale/img/2016/03/16/070531254-10d71e73-55b6-4dc8-8df4-366bde89af14.jpg",
+    "TITOLO": "Primarie Usa,",
+    "PERREPUBBLICA": "1",
+    "PERVODAFONE": "1",
+    "PERWIND": "1",
+    "SHORT": "http://larep.it/1nMEuhH",
+    "WHATSAPP": "1",
+    "REPPLUS": "0",
+    "IOS": "0",
+    "URL_IOS": "1nMEuhH",
+    "URL_ANDROID": "android-app://it.elemedia.repubblica.it.android/repubblica/www.repubblica.it/esteri/elezioni-usa/primarie2016/2016/03/16/news/primarie_usa_florida_ohio_trump_rubio_clinton-135575088/",
+    "URL_TELEGRAM": "http://www.repubblica.it/esteri/elezioni-usa/primarie2016/2016/03/16/news/primarie_usa_florida_ohio_trump_rubio_clinton-135575088/?ref=tgpr",
+    "URL_WEBPUSH": "http://www.repubblica.it/esteri/elezioni-usa/primarie2016/2016/03/16/news/primarie_usa_florida_ohio_trump_rubio_clinton-135575088/"
+  };
+</script>
+    
+  </body>
+</html>
