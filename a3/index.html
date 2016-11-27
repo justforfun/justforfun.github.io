@@ -47,7 +47,7 @@
 
 
     <p>
-      <form name="kmform" action="javascript:doCalc()">
+      <form id="kmform" action="javascript:doCalc()">
         Km:<br/>
         <input type="text" name="kmval" ><br>
         <br/>
@@ -60,7 +60,11 @@
     <script type="text/javascript">
       function doCalc (){
         var tmp = "";
-        console.log("Mi ha chiamato la form");
+        
+        var theForm = document.forms["kmform"];
+        //Get a reference to the value the user inserted name=kmval":
+        var KmValue = theForm.elements["kmval"];
+        console.log("Mi ha chiamato la form: " + KmValue);
         return;
     }
     </script>
