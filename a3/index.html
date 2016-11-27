@@ -98,33 +98,17 @@
         console.log("Numero medio Km percorsi al giorno: " + DailyAverageKm);
         var DevianceFromAllowedKm = AverageAllowedKm - DailyAverageKm;
         console.log("Km percorsi rispetto a soglia: " + DevianceFromAllowedKm);
+        var ProjectedKmToLocationEnd = DailyAverageKm*DaysToEndLocationEpoch;
+        console.log("Stima Km a fine locazione: " + DevianceFromAllowedKm);
+        var Message = "";
         return;
     }
     </script>
+    
+    <div id="log"></div>
     <div id="history"></div>
     
-    <script type="text/javascript"> var pippo = 
-{
-    "ID": "2009",
-    "DATA": "2016-03-16 08:28:27",
-    "TESTO": "Mega Tuesday a Trump e Clinton. Rubio perde in Florida e si ritira, Kasich tiene. Tra i dem, Hillary verso nomination",
-    "USER_ID": "0",
-    "URL": "http://www.repubblica.it/esteri/elezioni-usa/primarie2016/2016/03/16/news/primarie_usa_florida_ohio_trump_rubio_clinton-135575088/",
-    "img": "https://www.repstatic.it/content/nazionale/img/2016/03/16/070531254-10d71e73-55b6-4dc8-8df4-366bde89af14.jpg",
-    "TITOLO": "Primarie Usa,",
-    "PERREPUBBLICA": "1",
-    "PERVODAFONE": "1",
-    "PERWIND": "1",
-    "SHORT": "http://larep.it/1nMEuhH",
-    "WHATSAPP": "1",
-    "REPPLUS": "0",
-    "IOS": "0",
-    "URL_IOS": "1nMEuhH",
-    "URL_ANDROID": "android-app://it.elemedia.repubblica.it.android/repubblica/www.repubblica.it/esteri/elezioni-usa/primarie2016/2016/03/16/news/primarie_usa_florida_ohio_trump_rubio_clinton-135575088/",
-    "URL_TELEGRAM": "http://www.repubblica.it/esteri/elezioni-usa/primarie2016/2016/03/16/news/primarie_usa_florida_ohio_trump_rubio_clinton-135575088/?ref=tgpr",
-    "URL_WEBPUSH": "http://www.repubblica.it/esteri/elezioni-usa/primarie2016/2016/03/16/news/primarie_usa_florida_ohio_trump_rubio_clinton-135575088/"
-  };
-</script>
+    
     
   </body>
 </html>
