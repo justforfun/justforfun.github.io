@@ -61,12 +61,7 @@
     
 
 
-    <p>To use this sample please do the following:</p>
-
-    <ol>
-      <li>Create a project in the <a href="https://console.developers.google.com"  target="_blank">Google Developer Console</a>.</li>
-    </ol>
-
+    <p>Inserisci qui sotto il numero di chilometri percorsi e ti produco un resoconto sulla situazione:</p>
 
     <p>
       <form id="kmform" action="javascript:doCalc()">
@@ -98,7 +93,7 @@
         console.log("Numero medio Km percorsi al giorno: " + DailyAverageKm);
         var DevianceFromAllowedKm = AverageAllowedKm - DailyAverageKm;
         console.log("Km percorsi rispetto a soglia: " + DevianceFromAllowedKm);
-        var ProjectedKmToLocationEnd = DailyAverageKm*DaysToEndLocationEpoch;
+        var ProjectedKmToLocationEnd = Math.floor((DailyAverageKm*DaysToEndLocationEpoch));
         console.log("Stima Km a fine locazione: " + ProjectedKmToLocationEnd);
         var Message = "";
         return;
