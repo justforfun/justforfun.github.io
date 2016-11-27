@@ -95,13 +95,15 @@
         console.log("Km percorsi rispetto a soglia: " + DevianceFromAllowedKm);
         var ProjectedKmToLocationEnd = Math.floor((DailyAverageKm*DaysToEndLocationEpoch));
         console.log("Stima Km a fine locazione: " + ProjectedKmToLocationEnd);
-
+        var TaxToPay = 0;
         var Message = "";
         var ElemMessage = document.getElementById("log");
         if (ProjectedKmToLocationEnd > 50000) {
-            Message = "Attenzione!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + " Km."
+            TaxToPay = Math.floor(((ProjectedKmToLocationEnd-50000)*0.119));
+            Message = "Attenzione!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + " Km. La penale da pagare sarà di " + TaxToPay + " Euro."
         }
         else{
+            
             Message = "Tutto OK!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + " Km."
         }
 
