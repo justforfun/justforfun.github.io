@@ -63,8 +63,8 @@
         
         var theForm = document.forms["kmform"];
         //Get a reference to the value the user inserted name=kmval":
-        var KmValue = theForm.elements["kmval"];
-        console.log("Mi ha chiamato la form: " + KmValue);
+        var KmValue = theForm.elements["kmval"].value;
+        console.log("Valore Km inserito: " + KmValue);
         return;
     }
     </script>
