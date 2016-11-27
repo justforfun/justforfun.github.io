@@ -89,7 +89,7 @@
         console.log("Numero giorni trascorsi da inizio locazione: " + PastDaysEpoch);
         var DaysToEndLocationEpoch = Math.floor((tsEndLocationEpoch-currentDateEpoch)/86400);
         console.log("Numero giorni mancanti a fine locazione: " + DaysToEndLocationEpoch);
-        var DailyAverageKm = KmValue/PastDaysEpoch;
+        var DailyAverageKm = Math.floor((KmValue/PastDaysEpoch));
         console.log("Numero medio Km percorsi al giorno: " + DailyAverageKm);
         var DevianceFromAllowedKm = AverageAllowedKm - DailyAverageKm;
         console.log("Km percorsi rispetto a soglia: " + DevianceFromAllowedKm);
@@ -99,10 +99,10 @@
         var Message = "";
         var ElemMessage = document.getElementById("log");
         if (ProjectedKmToLocationEnd > 50000) {
-            Message = "Attenzione!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + "Km."
+            Message = "Attenzione!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + " Km."
         }
         else{
-            Message = "Tutto OK!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + "Km."
+            Message = "Tutto OK!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + " Km."
         }
 
         ElemMessage.innerHTML = Message;
