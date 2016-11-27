@@ -95,7 +95,17 @@
         console.log("Km percorsi rispetto a soglia: " + DevianceFromAllowedKm);
         var ProjectedKmToLocationEnd = Math.floor((DailyAverageKm*DaysToEndLocationEpoch));
         console.log("Stima Km a fine locazione: " + ProjectedKmToLocationEnd);
+
         var Message = "";
+        var ElemMessage = document.getElementById("log");
+        if (ProjectedKmToLocationEnd > 50000) {
+            Message = "Attenzione!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd "Km."
+        }
+        else{
+            Message = "Tutto OK!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd "Km."
+        }
+
+        ElemMessage.innerHTML = Message;
         return;
     }
     </script>
