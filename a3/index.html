@@ -52,6 +52,7 @@
 
       // Numero Km. giornalieri: 27,4 
       var AverageAllowedKm = 27.4;
+      var PenaltyForEccedingKm = 0.119;
     </script>
 
   </head>
@@ -99,12 +100,12 @@
         var Message = "";
         var ElemMessage = document.getElementById("log");
         if (ProjectedKmToLocationEnd > 50000) {
-            TaxToPay = Math.floor(((ProjectedKmToLocationEnd-50000)*0.119));
-            Message = "Attenzione!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + " Km. La penale da pagare sarà di " + TaxToPay + " Euro."
+            TaxToPay = Math.floor(((ProjectedKmToLocationEnd-50000)*PenaltyForEccedingKm));
+            Message = "<p> Attenzione!!! </p> <p> Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + " Km. </p> <p>La penale da pagare sarà di " + TaxToPay + " Euro. </p>"
         }
         else{
             
-            Message = "Tutto OK!!! Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + " Km."
+            Message = "<p> Tutto OK!!!  </p> <p>Hai percorso mediamente " + DailyAverageKm + " Km. al giorno e la stima a termine locazione è di: " + ProjectedKmToLocationEnd + " Km.</p>"
         }
 
         ElemMessage.innerHTML = Message;
