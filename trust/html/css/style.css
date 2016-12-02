@@ -1,0 +1,275 @@
+.contenitore{
+	width:1024px;
+	margin:0 auto;
+	font-family: "Droid Sans",sans-serif;
+	font-size:13px;
+}
+
+.colonnasx{
+	width:700px;
+}
+
+.colonnasx img{
+	width:100%
+}
+
+.colonnasx div,
+.colonnadx div{
+	margin-bottom:30px;
+}
+
+.colonnadx{
+	width:324px;
+}
+
+.colonnadx img{
+	width:99%
+}
+
+.bg_colonna2{
+	width:90%;
+	margin:0 auto;
+	background:#ccc;
+	height:3000px;
+}
+
+.fclear{
+	clear:both;
+	margin-bottom:0px !important;
+}
+
+.fleft{
+	float:left;
+	margin-bottom:0px !important;
+}
+
+.fright{
+	float:right;
+	margin-bottom:0px !important;
+}
+
+/* ARTICOLO */
+.autore{
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#000;
+	font-size: 12px;
+	font-family: "Droid Sans",sans-serif;
+	margin-bottom: 6px !important;
+	margin-top: 9px;
+	background:#E1E7F0;
+	padding:12px;
+}
+
+.autore a{
+	color:#000;
+	text-decoration:none;
+	display:block;
+	float:left;
+	margin-top:4px;
+}
+
+.autore img{
+	display:block;
+}
+
+.luogo{
+	color: #000000;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-family: "Droid Sans",sans-serif;
+	margin-bottom:0px !important;
+	background:#E1E7F0;
+	padding:12px;
+}
+
+.luogo a{
+	color:#000;
+	text-decoration:none;
+	display:block;
+	float:left;
+	margin-top:4px;
+}
+
+.luogo img{
+	display:block;
+}
+
+#cartina_luogo{
+	width:33px !important;
+	margin-left:30px;
+}
+
+.data{
+	color: #838589;
+	float: right;
+	font-size: 11px;
+	margin-top: 9px;
+	margin-right: 12px;
+	text-transform: uppercase;
+	margin-bottom:0px !important;
+	font-family: "Droid Sans",sans-serif;
+}
+
+.link{
+	background:#E1E7F0;
+	padding:12px;
+}
+
+.link a{
+	color:#005189;
+	text-decoration:none;
+	font-weight:bold;
+	line-height:1.5;
+}
+
+.storia_articolo{
+	margin-bottom:30px;
+	font-size:15px;
+	background:#E1E7F0;
+	padding:12px;
+	line-height:1.4;
+}
+
+.storia_articoloSX{
+	width:50%;
+}
+.storia_articoloDX{
+	width:50%
+}
+
+.copyeditor{
+	margin-bottom:0 !important;
+	margin-top:12px;
+}
+
+.copyeditor a{
+	color:#000;
+	text-decoration:underline;
+}
+
+.segnalazioni a{
+	color:#005189;
+	text-decoration:none;
+}
+
+/* AUTORE */
+.nome_autore img{
+	width:422px !important;
+}
+
+.img_autore{
+	width:690px;
+	height:390px;
+	overflow:hidden;
+	margin:15px 0px;
+}
+
+.social img{
+	width:209px !important;
+}
+
+.data{
+	color: #838589;
+	float: right;
+	font-size: 11px;
+	margin-top: 9px;
+	margin-right: 12px;
+	text-transform: uppercase;
+	margin-bottom:0px !important;
+	font-family: "Droid Sans",sans-serif;
+}
+
+.testo_autore{
+	font-size: 17px;
+	line-height: 1.5;
+	text-align: justify;
+	margin-bottom:30px;
+	margin-top:30px;
+}
+
+.testo_autore div{
+	margin-bottom:15px;
+}
+
+.testo_autore a{
+	color:#005189;
+	text-decoration:none;
+}
+
+.altri_articoli a{
+	font-weight:bold;
+}
+
+/* MAPPA */
+.marker_luogo{
+	font-size:18px;
+}
+
+.marker_luogo img{
+	width:26px !important;
+}
+
+/* COPYRIGHT */
+.nome_copyright img{
+	width:auto !important;
+}
+
+.img_copyright{
+	text-align:center;
+}
+.img_copyright img{
+	width:auto !important;
+}
+
+/* SEGNALAZIONI */
+.referenza{
+	font-size:18px;
+}
+
+form input{
+	margin-bottom:12px;
+}
+
+/* TESSERA*/
+.membership_card{
+	box-sizing: border-box;
+	padding:15px;
+	border: 2px solid #000000;
+    border-radius: 25px;
+	width:48%;
+	background:#f4f4f4;
+	float:left;
+	height:160px;
+	margin-right:12px;
+}
+
+.membership_card div{
+	margin-bottom:6px !important;
+}
+
+.membership_card_logo{
+	float:left;
+	margin-right:30px;
+}
+
+.membership_card_logo img{
+	width:80px;
+	height:30px;
+}
+
+.membership_card_progetto{
+	float:left;
+}
+
+.membership_card_id{
+	float:left;
+	margin-bottom:0 !important;
+}
+
+.membership_card_website{
+	float:right;
+	margin-bottom:0 !important;
+	font-size:13px;
+	margin-top:6px;
+}
