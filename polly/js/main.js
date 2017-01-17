@@ -6,6 +6,7 @@ var fetchVoice = function(speakText) {
             console.log(this.responseText);
             var json = JSON.parse(this.responseText);
             var url = json.presignedUrl;
+            console.log(url);
 
             // Terrible hack because the codec type can't be inferred from the signed URL.
             Howler.codecs = function() { return true; }
