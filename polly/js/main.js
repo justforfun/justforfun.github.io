@@ -1,8 +1,9 @@
 // Fetch the signed URL from the API Gateway and play.
 var fetchVoice = function(speakText) {
     var reqListener = function() {
-        document.getElementById('response-status').innerHTML = '';
+        document.getElementById('response-status').innerHTML = 'Arrivata la risposta';
         try {
+            console.log(this.responseText);
             var json = JSON.parse(this.responseText);
             var url = json.presignedUrl;
 
