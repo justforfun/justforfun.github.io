@@ -6,7 +6,7 @@ var fetchVoice = function(speakText) {
             console.log(this.responseText);
             var json = JSON.parse(this.responseText);
             console.log (JSON.stringify(json));
-            var url = json.presignedUrl;
+            var url = json.body.presignedUrl;
             console.log(url);
 
             // Terrible hack because the codec type can't be inferred from the signed URL.
