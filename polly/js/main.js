@@ -5,6 +5,7 @@ var fetchVoice = function(speakText) {
         try {
             console.log(this.responseText);
             var json = JSON.parse(this.responseText);
+            console.log (JSON.stringify(json));
             var url = json.presignedUrl;
             console.log(url);
 
