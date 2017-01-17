@@ -24,8 +24,8 @@ var fetchVoice = function(speakText) {
     oReq.addEventListener('load', reqListener);
     oReq.addEventListener('error', errorListener);
     // Rate-limited and usage-throttled API Gateway
-    oReq.open('GET', 'https://4wqziymf9g.execute-api.us-east-2.amazonaws.com/prod?speakText=' + encodeURIComponent(speakText));
-    oReq.setRequestHeader('x-api-key', 'SKmFbj2luu9VmIFUGywkc2UtCpAB7GDo4R7Qpv95');
+    oReq.open('GET', 'https://rdh13jptya.execute-api.eu-west-1.amazonaws.com/prod/pollyExecute?speakText=' + encodeURIComponent(speakText));
+    //oReq.setRequestHeader('x-api-key', 'SKmFbj2luu9VmIFUGywkc2UtCpAB7GDo4R7Qpv95');
     oReq.send();
     document.getElementById('response-status').innerHTML = 'loading...';
 };
