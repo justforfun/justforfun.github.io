@@ -1,3 +1,3 @@
 {
-"items" : $input.json('$')
+"items" : $input.json('$..entries[?(@.categories && !@.relateds)]')
 }
