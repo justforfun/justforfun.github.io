@@ -554,7 +554,9 @@ Infine, come <strong>ultimo movente</strong>, c'è la libertà che solo l'isolam
           <div class="fc-item {{toneClass}}">
               <div class="fc-item__image-container">
               {{#media}} 
-                <amp-img src="{{href}}" layout="fixed" width=156 height=156></amp-img>
+                {{#otheralternate}} 
+                  <amp-img src="{{156x156.href}}" layout="fixed" width=156 height=156></amp-img>
+                {{/otheralternate}}   
               {{/media}}   
               </div>
             <div class="fc-item__content">
