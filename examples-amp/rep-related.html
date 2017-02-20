@@ -558,9 +558,11 @@ Infine, come <strong>ultimo movente</strong>, c'è la libertà che solo l'isolam
                   {{#156x156}} 
                     <amp-img src="{{href}}" layout="fixed" width=156 height=156></amp-img>
                   {{/156x156}}
-                  {{#112x112}} 
-                    <amp-img src="{{href}}" layout="fixed" width=112 height=112></amp-img>
-                  {{/112x112}}      
+                  {{^156x156}}
+                    {{#112x112}} 
+                      <amp-img src="{{href}}" layout="fixed" width=112 height=112></amp-img>
+                    {{/112x112}}  
+                  {{/156x156}}    
                 {{/otheralternate}}   
               {{/media}}   
               </div>
