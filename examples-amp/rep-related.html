@@ -552,24 +552,11 @@ Infine, come <strong>ultimo movente</strong>, c'è la libertà che solo l'isolam
           </h2>
           {{#content}}
           <div class="fc-item {{toneClass}}">
-              <div class="fc-item__image-container">
-              {{#media}} 
-                {{#otheralternate}} 
-                  {{#156x156}} 
-                    <amp-img src="{{href}}" layout="fixed" width=156 height=156></amp-img>
-                  {{/156x156}}
-                  {{^156x156}}
-                    {{#112x112}} 
-                      <amp-img src="{{href}}" layout="fixed" width=112 height=112></amp-img>
-                    {{/112x112}}  
-                  {{/156x156}}    
-                {{/otheralternate}}   
-              {{/media}}   
-              </div>
             <div class="fc-item__content">
               <div class="fc-item__header">
                 <!--h2 class="fc-item__title" -->
                 <h2 class="article-headline">   
+                  {{{overtitle}}}
                   <span>
                   {{#isVideo}}
                     <span class="inline-video-icon inline-icon ">
@@ -592,7 +579,6 @@ Infine, come <strong>ultimo movente</strong>, c'è la libertà che solo l'isolam
                     </span>
                   {{/isComment}}
                   </span>
-                  {{{overtitle}}}
                 </h2>
                 {{#isComment}}
                   <!-- div class="byline" -->
@@ -600,6 +586,20 @@ Infine, come <strong>ultimo movente</strong>, c'è la libertà che solo l'isolam
                   {{byline}}
                   </div>
                 {{/isComment}}
+              </div>
+              <div class="fc-item__image-container">
+              {{#media}} 
+                {{#otheralternate}} 
+                  {{#156x156}} 
+                    <amp-img src="{{href}}" layout="fixed" width=156 height=156></amp-img>
+                  {{/156x156}}
+                  {{^156x156}}
+                    {{#112x112}} 
+                      <amp-img src="{{href}}" layout="fixed" width=112 height=112></amp-img>
+                    {{/112x112}}  
+                  {{/156x156}}    
+                {{/otheralternate}}   
+              {{/media}}   
               </div>
               {{{title}}} <a href="{{href}}" class="fc-item__link">Dettaglio</a>
               <aside class="fc-item__meta">
