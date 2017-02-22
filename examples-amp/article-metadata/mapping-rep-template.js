@@ -1,8 +1,9 @@
+#set($allEntries = $input.json('$..entries[?(@.categories && !@.relateds)]'))
 {
 "items" : [{
-    "displayName": "Articoli correlati",
+    "displayName": "Dalla Home Page",
     "showContent": true,
-    "content":$input.json('$..entries[?(@.categories && !@.relateds)]')
+    "showWebPublicationDate": true,
+    "content":$allEntries[0,10])
 }]
-}    
-    
+}        
