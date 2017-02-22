@@ -4,6 +4,6 @@
     "displayName": "Dalla Home Page",
     "showContent": true,
     "showWebPublicationDate": true,
-    "content":$allEntries[0,10]
+    "content":$input.json('$..entries[?(@.categories && !@.relateds)]')
 }]
 }        
