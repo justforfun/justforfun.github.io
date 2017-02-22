@@ -6,10 +6,10 @@
     "showContent": true,
     "showWebPublicationDate": true,
     "content":{
-#foreach($key in $allEntries.keySet())
-"$key" : "$util.escapeJavaScript($allEntries.get($key))"
-    #if($velocityCount>9),#end
-#end
-}
+		#foreach($key in $allEntries.keySet())
+		"$key" : "$util.escapeJavaScript($allEntries.get($key))"
+		    #if($velocityCount>9),#end
+		#end
+	}
 }]
 }        
