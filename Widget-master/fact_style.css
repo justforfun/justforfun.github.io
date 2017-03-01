@@ -1,0 +1,75 @@
+﻿.factbox {
+  display: inline-block;
+  padding: 16px;
+  margin: 10px 0;
+  max-width: 575px;
+  border: #ddd 1px solid;
+  border-top-color: #eee;
+  border-bottom-color: #bbb;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  font: bold 14px/18px Helvetica, Arial, sans-serif;
+  color: #000;
+}
+
+.fact {
+    width: 40%;
+    display: inline-block;
+}
+
+.fact-text {
+    font: 20px Times, serif;
+    float: left;
+}
+
+.left-box {
+    width: 25%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+    margin: auto 2%;
+}
+
+.logo {
+    width: 100%;
+}
+
+.right-box {
+    float: right;
+    width: 24%;
+    height: 100%;
+    overflow: visible;
+    margin: auto 2%;
+}
+
+img.image {
+    max-width: 100%;
+    margin: 5px 0px;
+    max-height: 80px;
+
+}
+
+.subtext {
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.embed-box {
+    display:none;
+}
+
+@media screen and (max-width: 400px) {
+
+    .factbox {
+        max-width: 375px;
+        width: auto;
+    }
+
+   .container { 
+    float: none;
+    margin: 10px; 0px;
+    width:auto;
+    border:0;
+  }
+}
+
