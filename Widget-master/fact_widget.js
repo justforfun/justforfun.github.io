@@ -107,7 +107,8 @@ function createMetaData (div, json_obj)
     s.type = 'application/ld+json';        
     s.src = 'test';
     var embedder = document.getElementById(div);
-    embedder.parentNode.insertBefore(s, embedder);
+    // embedder.parentNode.insertBefore(s, embedder);
+    console.log ("Div: " + div);
 
 }
 
