@@ -111,11 +111,28 @@ function createMetaData (div_id, json_obj, row_id)
     var embedder = document.getElementById(div_id);
     embedder.parentNode.insertBefore(s, embedder);
     var type = ["Review", "ClaimReview"];
+    
+    // Review Rating
+    var ReviewRating = new Object();
+    ReviewRating['@type']="Rating";
+    ReviewRating.ratingValue = json_obj.feed.entry[row_id].gsx$rating.$t;
+    ReviewRating.bestRating = '5';
+    ReviewRating.alternateName = json_obj.feed.entry[row_id].gsx$ratingdescription.$t;
+    ReviewRating.image = json_obj.feed.entry[row_id].gsx$ratingimage.$t;
+
+    // Item Reviewed
+
     var MetaData = new Object();
     MetaData['@context']="http://schema.org";
-    MetaData['type']=type;
+    MetaData['@type']=type;
     MetaData.url = "http://www.nytimes.com/interactive/2016/10/09/us/elections/fact-check-debate.html#/factcheck-29";
     MetaData.claimReviewed = json_obj.feed.entry[row_id].gsx$fact.$t;
+    MetaData.datePublished = "2016-10-10";
+    MetaData.reviewRating = ReviewRating;
+
+    
+
+
     s.text = JSON.stringify(MetaData);
     /***
                 title = json_obj.feed.entry[row_id].gsx$fact.$t;
