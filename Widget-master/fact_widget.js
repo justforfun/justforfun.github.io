@@ -61,7 +61,7 @@ function showEmbed(e) {
     factbox.getElementsByClassName('embed-box')[0].style.display = 'block';
 }
 
-function createMetaData (div_id, json_obj)
+function createMetaData (div_id, json_obj, row_id)
 {
 /***
 <script type="application/ld+json">
@@ -107,10 +107,27 @@ function createMetaData (div_id, json_obj)
 
     var s = document.createElement('script');
     s.type = 'application/ld+json';        
-    s.text = 'test';
+    
     var embedder = document.getElementById(div_id);
     embedder.parentNode.insertBefore(s, embedder);
-    console.log ("Div: " + JSON.stringify(embedder));
+    var type = ["Review", "ClaimReview"];
+    var MetaData = new Object();
+    MetaData.@context = "http://schema.org";
+    MetaData.@type = type;
+    MetaData.url = "http://www.nytimes.com/interactive/2016/10/09/us/elections/fact-check-debate.html#/factcheck-29";
+    MetaData.claimReviewed = json_obj.feed.entry[row_id].gsx$fact.$t;
+    s.text = JSON.stringfy(MetaData);
+    /***
+                title = json_obj.feed.entry[row_id].gsx$fact.$t;
+                rating = json_obj.feed.entry[row_id].gsx$rating.$t;
+                speaker = json_obj.feed.entry[row_id].gsx$speaker.$t;
+                logo_image = json_obj.feed.entry[0].gsx$logoimage.$t;
+                speaker_image = json_obj.feed.entry[row_id].gsx$speakerimage.$t;
+                rating_image = json_obj.feed.entry[row_id].gsx$ratingimage.$t;
+                rating_text = json_obj.feed.entry[row_id].gsx$ratingtext.$t;
+                rating_description = json_obj.feed.entry[row_id].gsx$ratingdescription.$t;
+
+    ***/            
 
 }
 
@@ -163,7 +180,7 @@ function createHtml (google_id, row_id, div, div_id) {
                 '\n' +
                 '<div class=\"embed-box\"><p>Copy and paste this embed code into your site:<\/p><textarea rows=\"4\" cols=\"50\">' + embed_text + '<\/textarea><\/div><\/div>\n\n';
 
-            createMetaData (div_id, json_obj);    
+            createMetaData (div_id, json_obj, row_id);    
 
         });
 };
