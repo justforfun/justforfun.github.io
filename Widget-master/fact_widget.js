@@ -107,7 +107,7 @@ function createMetaData (div_id, json_obj)
 
     var s = document.createElement('script');
     s.type = 'application/ld+json';        
-    s.src = 'test';
+    s.text = 'test';
     var embedder = document.getElementById(div_id);
     embedder.parentNode.insertBefore(s, embedder);
     console.log ("Div: " + JSON.stringify(embedder));
