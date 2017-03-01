@@ -49,7 +49,9 @@ document.getElementsByTagName('head')[0].appendChild(styleTag);
 [].forEach.call(document.querySelectorAll('[data-sheet]'), function (insert_div) {
     sheet = insert_div.attributes['data-sheet'].value;
     row = parseInt(insert_div.attributes['data-row'].value, 10);
-    createHtml(sheet, row, insert_div);
+    insert_div_id = sheet+'-'+insert_div.attributes['data-row'];
+    insert_div.setAttribute("id", insert_div_id);
+    createHtml(sheet, row, insert_div, insert_div_id);
 });
 
 
@@ -59,7 +61,7 @@ function showEmbed(e) {
     factbox.getElementsByClassName('embed-box')[0].style.display = 'block';
 }
 
-function createMetaData (div, json_obj)
+function createMetaData (div_id, json_obj)
 {
 /***
 <script type="application/ld+json">
@@ -106,13 +108,13 @@ function createMetaData (div, json_obj)
     var s = document.createElement('script');
     s.type = 'application/ld+json';        
     s.src = 'test';
-    var embedder = document.getElementById(div);
-    // embedder.parentNode.insertBefore(s, embedder);
-    console.log ("Div: " + JSON.stringify(div));
+    var embedder = document.getElementById(div_id);
+    embedder.parentNode.insertBefore(s, embedder);
+    console.log ("Div: " + JSON.stringify(embedder));
 
 }
 
-function createHtml (google_id, row_id, div) {  
+function createHtml (google_id, row_id, div, div_id) {  
     httpGetAsync("https://spreadsheets.google.com/feeds/list/" + google_id + "/od6/public/values?alt=json-in-script&callback=listEntries",
         function (error, response) {
             if (error == null) {
@@ -161,7 +163,7 @@ function createHtml (google_id, row_id, div) {
                 '\n' +
                 '<div class=\"embed-box\"><p>Copy and paste this embed code into your site:<\/p><textarea rows=\"4\" cols=\"50\">' + embed_text + '<\/textarea><\/div><\/div>\n\n';
 
-            createMetaData (div, json_obj);    
+            createMetaData (div_id, json_obj);    
 
         });
 };
