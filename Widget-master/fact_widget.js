@@ -120,7 +120,22 @@ function createMetaData (div_id, json_obj, row_id)
     ReviewRating.alternateName = json_obj.feed.entry[row_id].gsx$ratingdescription.$t;
     ReviewRating.image = json_obj.feed.entry[row_id].gsx$ratingimage.$t;
 
+    var Author = new Object();
+    var sameAs = [];
+    Author['@type']= "Person";
+    Author['name']=json_obj.feed.entry[row_id].gsx$speaker.$t;
+    Author['image']=json_obj.feed.entry[row_id].gsx$speakerimage.$t;
+    Author['sameAs']= sameAs;
+    
+
+
     // Item Reviewed
+    var ItemReviewed = new Object();
+    ItemReviewed['@type']="CreativeWork";
+    ItemReviewed['name']=json_obj.feed.entry[row_id].gsx$fact.$t;
+    ItemReviewed['datePublished']= "2016-10-10";
+    ItemReviewed['Author'] = Author;
+
 
     var MetaData = new Object();
     MetaData['@context']="http://schema.org";
@@ -129,7 +144,7 @@ function createMetaData (div_id, json_obj, row_id)
     MetaData.claimReviewed = json_obj.feed.entry[row_id].gsx$fact.$t;
     MetaData.datePublished = "2016-10-10";
     MetaData.reviewRating = ReviewRating;
-
+    MetaData.itemReviewed = ItemReviewed;
     
 
 
