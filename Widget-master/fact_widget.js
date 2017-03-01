@@ -138,7 +138,7 @@ function createMetaData (div_id, json_obj, row_id)
     var ItemReviewed = new Object();
     ItemReviewed['@type']="CreativeWork";
     ItemReviewed['name']=json_obj.feed.entry[row_id].gsx$fact.$t;
-    ItemReviewed['datePublished']= "2016-10-10";
+    ItemReviewed['datePublished']= json_obj.feed.entry[row_id].gsx$ratingpublisheddate.$t;
     ItemReviewed['Author'] = Author;
 
 
@@ -148,7 +148,7 @@ function createMetaData (div_id, json_obj, row_id)
     MetaData['Author'] = Organization;
     MetaData.url = "http://www.nytimes.com/interactive/2016/10/09/us/elections/fact-check-debate.html#/factcheck-29";
     MetaData.claimReviewed = json_obj.feed.entry[row_id].gsx$fact.$t;
-    MetaData.datePublished = "2016-10-10";
+    MetaData.datePublished = json_obj.feed.entry[row_id].gsx$publisheddate.$t;
     MetaData.reviewRating = ReviewRating;
     MetaData.itemReviewed = ItemReviewed;
     
