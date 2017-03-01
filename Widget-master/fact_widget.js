@@ -120,6 +120,11 @@ function createMetaData (div_id, json_obj, row_id)
     ReviewRating.alternateName = json_obj.feed.entry[row_id].gsx$ratingdescription.$t;
     ReviewRating.image = json_obj.feed.entry[row_id].gsx$ratingimage.$t;
 
+    var Organization =  new Object();
+    Organization['@type']= "Organization";
+    Organization['name'] = json_obj.feed.entry[0].gsx$fact.$t;
+    Organization['url'] = json_obj.feed.entry[0].gsx$speaker.$t;
+
     var Author = new Object();
     var sameAs = [];
     Author['@type']= "Person";
@@ -140,6 +145,7 @@ function createMetaData (div_id, json_obj, row_id)
     var MetaData = new Object();
     MetaData['@context']="http://schema.org";
     MetaData['@type']=type;
+    MetaData['Author'] = Organization;
     MetaData.url = "http://www.nytimes.com/interactive/2016/10/09/us/elections/fact-check-debate.html#/factcheck-29";
     MetaData.claimReviewed = json_obj.feed.entry[row_id].gsx$fact.$t;
     MetaData.datePublished = "2016-10-10";
@@ -171,8 +177,11 @@ function createHtml (google_id, row_id, div, div_id) {
                 json_obj = JSON.parse(processed_json);
                 title = json_obj.feed.entry[row_id].gsx$fact.$t;
                 rating = json_obj.feed.entry[row_id].gsx$rating.$t;
+                
                 speaker = json_obj.feed.entry[row_id].gsx$speaker.$t;
+                author  = json_obj.feed.entry[0].gsx$speaker.$t;
                 logo_image = json_obj.feed.entry[0].gsx$logoimage.$t;
+
                 speaker_image = json_obj.feed.entry[row_id].gsx$speakerimage.$t;
                 rating_image = json_obj.feed.entry[row_id].gsx$ratingimage.$t;
                 rating_text = json_obj.feed.entry[row_id].gsx$ratingtext.$t;
