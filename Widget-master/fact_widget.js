@@ -116,7 +116,7 @@ function createMetaData (div_id, json_obj, row_id)
     MetaData['type']=type;
     MetaData.url = "http://www.nytimes.com/interactive/2016/10/09/us/elections/fact-check-debate.html#/factcheck-29";
     MetaData.claimReviewed = json_obj.feed.entry[row_id].gsx$fact.$t;
-    s.text = JSON.stringfy(MetaData);
+    s.text = JSON.stringify(MetaData);
     /***
                 title = json_obj.feed.entry[row_id].gsx$fact.$t;
                 rating = json_obj.feed.entry[row_id].gsx$rating.$t;
