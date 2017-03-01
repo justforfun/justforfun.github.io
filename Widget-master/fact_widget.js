@@ -59,8 +59,59 @@ function showEmbed(e) {
     factbox.getElementsByClassName('embed-box')[0].style.display = 'block';
 }
 
+function createMetaData (div, json_obj)
+{
+/***
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": ["Review", "ClaimReview"],
+    "datePublished": "2016-10-10",
+    "url": "http://www.nytimes.com/interactive/2016/10/09/us/elections/fact-check-debate.html#/factcheck-29",
+    "author": {
+        "@type": "Organization",
+        "url": "http://www.nytimes.com/",
+        "sameAs": "https://twitter.com/nytimes"
+    },
+    "claimReviewed": "Mr. Trump says Mrs. Clinton wants “amnesty for everybody, come on in, come on over.”",
+    "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": 1,
+        "bestRating": 3,
+        "alternateName": "Not her position.",
+        "image": "http://www.nytimes.com/newsgraphics/2015/11/17/fact-checks/assets/images/nyt.png"
+    },
+    "itemReviewed": {
+        "@type": "CreativeWork",
+        "author": {
+            "@type": "Person",
+            "name": "Donald J. Trump",
+            "jobTitle": "Republican Presidential Candidate",
+            "image": "https://static01.nyt.com/newsgraphics/2015/11/17/fact-checks/assets/images/trump.png",
+            "sameAs": [
+                "https://en.wikipedia.org/wiki/Donald_Trump",
+                "https://www.donaldjtrump.com"
+            ]
+        },
+        "datePublished": "2016-10-10",
+        "name": "Fact Check: Will Clinton Let  “Everybody” Across the Border?"
+    }
+}
+</script>
 
-function createHtml (google_id, row_id, div) {
+
+
+***/
+
+    var s = document.createElement('script');
+    s.type = 'application/ld+json';        
+    s.src = 'test';
+    var embedder = document.getElementById(div);
+    embedder.parentNode.insertBefore(s, embedder);
+
+}
+
+function createHtml (google_id, row_id, div) {  
     httpGetAsync("https://spreadsheets.google.com/feeds/list/" + google_id + "/od6/public/values?alt=json-in-script&callback=listEntries",
         function (error, response) {
             if (error == null) {
@@ -108,6 +159,8 @@ function createHtml (google_id, row_id, div) {
                 '<div class=\"right-box container\">' + rating_summary +  '<a class=\"subtext\" href=\"#\" onclick=\"showEmbed(this)\">embed this<\/a><\/div>' +
                 '\n' +
                 '<div class=\"embed-box\"><p>Copy and paste this embed code into your site:<\/p><textarea rows=\"4\" cols=\"50\">' + embed_text + '<\/textarea><\/div><\/div>\n\n';
+
+            createMetaData (div, json_obj);    
 
         });
 };
