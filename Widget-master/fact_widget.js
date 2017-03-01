@@ -112,8 +112,8 @@ function createMetaData (div_id, json_obj, row_id)
     embedder.parentNode.insertBefore(s, embedder);
     var type = ["Review", "ClaimReview"];
     var MetaData = new Object();
-    MetaData.@context = "http://schema.org";
-    MetaData.@type = type;
+    MetaData['@context']="http://schema.org";
+    MetaData['type']=type;
     MetaData.url = "http://www.nytimes.com/interactive/2016/10/09/us/elections/fact-check-debate.html#/factcheck-29";
     MetaData.claimReviewed = json_obj.feed.entry[row_id].gsx$fact.$t;
     s.text = JSON.stringfy(MetaData);
