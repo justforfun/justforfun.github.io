@@ -209,7 +209,7 @@ function createHtml (google_id, row_id, div, div_id) {
             }
             else { rating_text_with_label = ''; }
 
-            embed_text = "<script type=\"text\/javascript\" id=\"dclg-impact-indicators-embedder-5b8cf3a4-b0f0-13e9-3737-d5a159268ae6\" class=\"dclg-impact-indicators-async-script-loader\">\nMYLIBRARY = [\"1WBbJsFCGfLqylMMUKFnswcNtYNWML2InfC8GxKAeweQ\", 1];\nvar s = document.createElement('script');\ns.type = 'text\/javascript';\ns.async = true;\ns.src = 'fact_widget.js';\nvar embedder = document.getElementById('test');\nembedder.parentNode.insertBefore(s, embedder);<\/script>"
+            embed_text = "<script type=\"text\/javascript\" id=\"dclg-impact-indicators-embedder-5b8cf3a4-b0f0-13e9-3737-d5a159268ae6\" class=\"dclg-impact-indicators-async-script-loader\">\nMYLIBRARY = [\"1WBbJsFCGfLqylMMUKFnswcNtYNWML2InfC8GxKAeweQ\", 1];\nvar s = document.createElement('script');\ns.type = 'text\/javascript';\ns.async = true;\ns.src = 'http://justforfun.github.io/Widget-master/fact_widget.js';\nvar embedder = document.getElementById('test');\nembedder.parentNode.insertBefore(s, embedder);<\/script>"
 
             div.innerHTML = '<div class=\"factbox\">\n' +
                 '<div class=\"left-box container\"><img class=\"image logo\" src=\"' + logo_image + '\" alt=\"Rater\">' +
