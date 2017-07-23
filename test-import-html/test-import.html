@@ -14,11 +14,9 @@
   // mainDoc references the main document (the page that's importing us)
   var mainDoc = document;
 
-  // Grab the first stylesheet from this import, clone it,
+  // Grab the meta elements from this import, clone it,
   // and append it to the importing document.
-  //var metas = importDoc.querySelector('meta');
-  //mainDoc.head.appendChild(metas.cloneNode(true));
-
+  
   var x = importDoc.getElementsByTagName("meta");
   var i;
   for (i = 0; i < x.length; i++) {
