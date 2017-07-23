@@ -14,6 +14,8 @@
   // mainDoc references the main document (the page that's importing us)
   var mainDoc = document;
 
+  console.log('Sto eseguendo script dentro import');
+  
   // Grab the meta elements from this import, clone it,
   // and append it to the importing document.
   var singleNode = importDoc.querySelector('meta');
