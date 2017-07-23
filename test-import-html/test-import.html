@@ -10,7 +10,7 @@
 <script>
   // importDoc references this import's document
   //var importDoc = window.document.currentScript.ownerDocument;
-  if (window.PolyfillNeeded)
+  if (document.currentScript.ownerDocument)
 	var importDoc = document.currentScript.ownerDocument;
   else
   	var importDoc = document._currentScript.ownerDocument;
