@@ -16,13 +16,16 @@
 
   // Grab the meta elements from this import, clone it,
   // and append it to the importing document.
-  
+  var singleNode = importDoc.querySelector('meta');
+  mainDoc.head.appendChild(singleNode.cloneNode(true));
+
+/***
   var x = importDoc.getElementsByTagName("meta");
   var i;
   for (i = 0; i < x.length; i++) {
 	    mainDoc.head.appendChild(x[i].cloneNode(true));
  }
-
+***/
 
 
 </script>
