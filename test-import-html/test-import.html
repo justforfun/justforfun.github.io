@@ -16,7 +16,16 @@
 
   // Grab the first stylesheet from this import, clone it,
   // and append it to the importing document.
-  var metas = importDoc.querySelector('meta');
-  mainDoc.head.appendChild(metas.cloneNode(true));
+  //var metas = importDoc.querySelector('meta');
+  //mainDoc.head.appendChild(metas.cloneNode(true));
+
+  var x = importDoc.getElementsByTagName("meta");
+  var i;
+  for (i = 0; i < x.length; i++) {
+	    mainDoc.head.appendChild(x[i].cloneNode(true));
+ }
+
+
+
 </script>
 </body>
