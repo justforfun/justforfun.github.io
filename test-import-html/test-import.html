@@ -9,7 +9,8 @@
 <body>
 <script>
   // importDoc references this import's document
-  var importDoc = window.document.currentScript.ownerDocument;
+  //var importDoc = window.document.currentScript.ownerDocument;
+  var importDoc = document._currentScript.ownerDocument
 
   // mainDoc references the main document (the page that's importing us)
   var mainDoc = window.document;
