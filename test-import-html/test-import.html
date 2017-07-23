@@ -1,4 +1,22 @@
+<html>
+<head>
 <meta property="og:url" content="http://www.repubblica.it/esteri/2017/07/22/news/isis_trump_accusa_nyt_ha_fatto_fallire_piano_per_uccidere_baghdadi_-171405836/">
 <meta property="fb:pages"content="YOUR_PAGE_ID1" />
 <meta property="fb:pages"content="YOUR_PAGE_ID2" />
 <meta property="fb:pages"content="YOUR_PAGE_ID3" />
+
+</head>
+<body>
+<script>
+  // importDoc references this import's document
+  var importDoc = document.currentScript.ownerDocument;
+
+  // mainDoc references the main document (the page that's importing us)
+  var mainDoc = document;
+
+  // Grab the first stylesheet from this import, clone it,
+  // and append it to the importing document.
+  var metas = importDoc.querySelector('meta');
+  mainDoc.head.appendChild(metas.cloneNode(true));
+</script>
+</body>
