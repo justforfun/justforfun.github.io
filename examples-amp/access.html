@@ -10,7 +10,7 @@
     .welcome-message:after{clear:both}
     .welcome-message p{font:18px/28px Arial,sans-serif;float:left;margin:0}
   	.welcome-message .logout{float:right;background:#444;color:#fff;text-decoration:none;font:18px/1 Arial,sans-serif;text-transform:uppercase;padding:5px 10px;border-radius:5px}
-	.header-login{right:100px;position:absolute;top:0;padding:5px;border:1px solid #e6e6e6;color:#4a4a4a;background:#fff;font:14px/17px Arial,sans-serif;font-weight:700;text-transform:uppercase}
+	.header-login{right:5px;position:absolute;top:0;padding:5px;border:1px solid #e6e6e6;color:#4a4a4a;background:#fff;font:14px/17px Arial,sans-serif;font-weight:700;text-transform:uppercase}
   </style>
   <!-- ## Setup -->
   <!-- Import the `amp-access` component in the header. -->
@@ -35,8 +35,10 @@
     },
    "pingback": "https://api.gelocal.it/checkpw-v1/messaggeroveneto/amp/pingback?rid=READER_ID&pubtime=2017-05-09T11:36:22Z&ts=TIMESTAMP&url=CANONICAL_URL",
    "authorization": "https://api.gelocal.it/checkpw-v1/messaggeroveneto/amp/authorization?rid=READER_ID&pubtime=2017-05-09T11:36:22Z&ts=TIMESTAMP&url=CANONICAL_URL",
-   "authorizationFallbackResponse": {"showContent": false}
+   "authorizationFallbackResponse": {"showContent":true,"premiumContent":true,"pw2":true,"logged":true,"profile":{"nickname":"Luigi Lobello","thumbnailURL":"https:\/\/www.repstatic.it\/cless\/common\/social\/stable\/img\/repubblica\/nazionale\/placeholder-utente.png?provider=site"},"pwProfile":{"id":2255,"position":280,"name":"finegil-member-5","desc":"Contenuto che richiede registrazione dopo 5 accessi"}}
+
 }
+// "authorizationFallbackResponse": {"showContent": false}
   </script>
   <link rel="canonical" href="https://ampbyexample.com/components/amp-access/">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
