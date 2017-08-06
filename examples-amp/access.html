@@ -8,7 +8,7 @@
     .welcome-message{background:#ececec;padding:10px;zoom:1;margin-bottom:0}
     .welcome-message:after,.welcome-message:before{content:"";display:table}
     .welcome-message:after{clear:both}
-    .welcome-message p{font:18px/28px Arial,sans-serif;float:left;margin:0}
+    .welcome-message p{font:15px/25px Arial,sans-serif;float:left;margin:0}
   	.welcome-message .logout{float:right;background:#444;color:#fff;text-decoration:none;font:18px/1 Arial,sans-serif;text-transform:uppercase;padding:5px 10px;border-radius:5px}
 	.header-login{right:5px;position:absolute;top:0;padding:5px;border:1px solid #e6e6e6;color:#4a4a4a;background:#fff;font:14px/17px Arial,sans-serif;font-weight:700;text-transform:uppercase}
   </style>
@@ -57,7 +57,7 @@
         <!-- amp-img src="{{profile.thumbnailURL}}" layout="fixed" width="30" height="30"></amp-img -->
         <template type="amp-mustache" amp-access-template>
         <p>
-            Benvenuto <span>{{profile.nickname}}</span>
+            Ciao <span>{{profile.nickname}}</span>
         </p>
         </template>
         <a on="tap:amp-access.login-logout" class="logout">Esci</a>
