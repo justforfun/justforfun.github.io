@@ -1,0 +1,64 @@
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+  <style amp-custom>
+    .welcome-message{background:#ececec;padding:10px;zoom:1;margin-bottom:0}
+    .welcome-message:after,.welcome-message:before{content:"";display:table}
+    .welcome-message:after{clear:both}
+    .welcome-message p{font:18px/28px Arial,sans-serif;float:left;margin:0}
+  	.welcome-message .logout{float:right;background:#444;color:#fff;text-decoration:none;font:18px/1 Arial,sans-serif;text-transform:uppercase;padding:5px 10px;border-radius:5px}
+	.header-login{right:100px;position:absolute;top:0;padding:5px;border:1px solid #e6e6e6;color:#4a4a4a;background:#fff;font:14px/17px Arial,sans-serif;font-weight:700;text-transform:uppercase}
+  </style>
+  <!-- ## Setup -->
+  <!-- Import the `amp-access` component in the header. -->
+  <script async custom-element="amp-access" src="https://cdn.ampproject.org/v0/amp-access-0.1.js"></script>
+  <!-- `amp-access` requires `amp-analytics` to be imported as well. -->
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+  <!-- Optionally, use the [`amp-mustache`](https://www.ampproject.org/docs/reference/components/amp-mustache) component to show text with values replaced from
+  the authorization response -->
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+
+  <!-- Add the configuration for the `authorization`, `pingback` and the `login` endpoints. We provide two login endpoints, one for sign-in and one for sign-out. It is
+  also possible to create a fallback response that will be used if the authorization fails with the `authorizationFallbackResponse` attribute -->
+  <script id="amp-access" type="application/json">
+   {
+   "login": {
+        "login": "https://api.gelocal.it/checkpw-v1/messaggeroveneto/amp/login?rid=READER_ID",
+        "loginpw": "https://api.gelocal.it/checkpw-v1/messaggeroveneto/amp/login?origin=MV_ACC_PAY&rid=READER_ID",
+        "registration": "https://api.gelocal.it/checkpw-v1/messaggeroveneto/amp/login?page=registration&origin=MV_PAY&rid=READER_ID",
+        "logout": "https://api.gelocal.it/checkpw-v1/messaggeroveneto/amp/logout?rid=READER_ID",
+        "purchase": "https://api.gelocal.it/checkpw-v1/messaggeroveneto/amp/purchase?rid=READER_ID"
+    },
+   "pingback": "https://api.gelocal.it/checkpw-v1/messaggeroveneto/amp/pingback?rid=READER_ID&pubtime=2017-05-09T11:36:22Z&ts=TIMESTAMP&url=CANONICAL_URL",
+   "authorization": "https://api.gelocal.it/checkpw-v1/messaggeroveneto/amp/authorization?rid=READER_ID&pubtime=2017-05-09T11:36:22Z&ts=TIMESTAMP&url=CANONICAL_URL",
+   "authorizationFallbackResponse": {"showContent": false}
+}
+  </script>
+  <link rel="canonical" href="https://ampbyexample.com/components/amp-access/">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+<body>
+  <header id="main-header">
+  <div class="logo-container">
+    <a amp-access="NOT logged" on="tap:amp-access.login-login" amp-access-hide class="header-login">Accedi</a>
+  </div>
+   <div class="welcome-message" amp-access="logged" amp-access-hide>
+        <!-- amp-img src="{{profile.thumbnailURL}}" layout="fixed" width="30" height="30"></amp-img-->
+        <template type="amp-mustache" amp-access-template>
+        <p>
+            Benvenuto <span>{{profile.nickname}}</span>
+        </p>
+        </template>
+        <a on="tap:amp-access.login-logout" class="logout">Esci</a>
+    </div> 
+</header>
+  <!-- This section is visible to all users. No special markup is needed in this case.-->
+  
+  
+</body>
+</html>
