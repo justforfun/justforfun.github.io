@@ -29,13 +29,19 @@ function parseURL(url) {
 }
 
 var query_string = QueryStringToJSON();
-var fallbackurl= "https://rep.repubblica.it";
+var fallbackurl= "https://tangeri.repubblica.it";
 var redirectDomain = "";
 
 if (query_string.redirect) {
     redirectDomain = parseURL(query_string.redirect)
+    console.log("Redirect url:" + query_string.redirect);
+    console.log("Redirect Domain:" + redirectDomain);
+
     if ( GediAllowedRedirectDomains.indexOf(redirectDomain) != -1)
         window.location.href = query_string.redirect;
+    else {
+        window.location.href = fallbackurl;
+    }
 }
 else {
     window.location.href = fallbackurl;
