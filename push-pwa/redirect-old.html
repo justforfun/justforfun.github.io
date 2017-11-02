@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head><title>Redirect</title></head>
+<body>
+
+<script type="text/javascript">
+const GediAllowedRedirectDomains = [
+  'rep.repubblica.it',
+  'tangeri.repubblica.it',
+  'larep.it',
+  ];
+
+function QueryStringToJSON() {            
+        var pairs = location.search.slice(1).split('&');
+        
+        var result = {};
+        pairs.forEach(function(pair) {
+            pair = pair.split('=');
+            result[pair[0]] = decodeURIComponent(pair[1] || '');
+        });
+
+        return JSON.parse(JSON.stringify(result));
+    }
+
+function parseURL(url) {
+    var a=document.createElement('a');
+    a.href=url;
+    return a.hostname;
+}
+
+var query_string = QueryStringToJSON();
+var fallbackurl= "https://rep.repubblica.it";
+var redirectDomain = "";
+
+if (query_string.redirect) {
+    redirectDomain = parseURL(query_string.redirect)
+    if ( GediAllowedRedirectDomains.indexOf(redirectDomain) != -1)
+        window.location.href = query_string.redirect;
+}
+else {
+    window.location.href = fallbackurl;
+}
+
+</script>
+
+</body>
+</html>
