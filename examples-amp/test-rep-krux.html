@@ -516,9 +516,48 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
                  
                  src="https://utilitysocial.repubblica.it/star_rating/index.php?geturl=CANONICAL_URL&rnd=RANDOM"
                  ><template type="amp-mustache">​
-          <input name="url" type="hidden" value="CANONICAL_URL" data-amp-replace="CANONICAL_URL"><input name="voto" type="radio" id="rating5" value="5" on="change:rating.submit" [checked]="votogenerale.MediaVoti==5? 'checked' : ''"/><label for="rating5" title="5 stars">☆</label><input name="voto" type="radio" id="rating4" value="4" on="change:rating.submit" [checked]="votogenerale.MediaVoti==4? 'checked' : ''"/><label for="rating4" title="4 stars">☆</label><input name="voto" type="radio" id="rating3" value="3" on="change:rating.submit" [checked]="votogenerale.MediaVoti==3? 'checked' : ''"/><label for="rating3" title="3 stars">☆</label><input name="voto" type="radio" id="rating2" value="2" on="change:rating.submit" [checked]="votogenerale.MediaVoti==2? 'checked' : ''"/><label for="rating2" title="2 stars">☆</label><input name="voto" type="radio" id="rating1" value="1" on="change:rating.submit" [checked]="votogenerale.MediaVoti==1? 'checked' : ''"/><label for="rating1" title="1 stars">☆</label></template></amp-list></fieldset><div submit-success><template type="amp-mustache"><p>Grazie per aver votato</p></template></div><div submit-error><template type="amp-mustache">
+          <input name="url" type="hidden" value="CANONICAL_URL" data-amp-replace="CANONICAL_URL"><input name="voto" type="radio" id="rating5" value="5" on="change:rating.submit" [checked]="votogenerale.MediaVoti==5? 'checked' : ''"/><label for="rating5" title="5 stars">☆</label><input name="voto" type="radio" id="rating4" value="4" on="change:rating.submit" [checked]="votogenerale.MediaVoti==4? 'checked' : ''"/><label for="rating4" title="4 stars">☆</label><input name="voto" type="radio" id="rating3" value="3" on="change:rating.submit" [checked]="votogenerale.MediaVoti==3? 'checked' : ''"/><label for="rating3" title="3 stars">☆</label><input name="voto" type="radio" id="rating2" value="2" on="change:rating.submit" [checked]="votogenerale.MediaVoti==2? 'checked' : ''"/><label for="rating2" title="2 stars">☆</label><input name="voto" type="radio" id="rating1" value="1" on="change:rating.submit" [checked]="votogenerale.MediaVoti==1? 'checked' : ''"/><label for="rating1" title="1 stars">☆</label></template></amp-list></fieldset>
+          
+            
+          <div submit-success>
+            
+            
+              <template type="amp-mustache">
+                <amp-analytics>
+                  <script type="application/json"> {
+                            "requests":{
+                                "host": "https://utilitysocial.repubblica.it/star_rating/",
+                                "base": "${host}/index.php",
+                                "ContentVoted" : "${base}?geturl=CANONICAL_URL&rnd=RANDOM&id=${pixelId}&cd[meter_count]=$AUTHDATA"
+                            },
+                            "vars":{
+                                "pixelId":"{{voto}}"
+                            },
+                            "triggers": {
+                                "trackPageview": {
+                                    "on": "visible",
+                                    "request": "ContentVoted",
+                                    "selector": "#thankyouforvoting",
+                                    "selectionMethod": "scope"
+                                }
+                            }
+                        }
+                    </script>
+                </amp-analytics>
+                <div id="thankyouforvoting">                  
+                  <p>Grazie per aver votato</p>
+                </div>
+              </template>             
+          </div>
+        
+          <div submit-error>
+            <template type="amp-mustache">
         Oops! Qualcosa è andato storto! Riprova {{error}}
-      </template></div></form></div><div class="detail-problem"><a href="mailto:segnalazionirep@repubblica.it">Invia una segnalazione</a></div><!-- end stars --></div></div></div><!-- <div class="detail-user_feedback"><div class="detail-article_container"><div class="detail-value"><a href="#detail-values_big"><span class="icon-value"></span><span class="label">Valuta </span></a></div><div class="detail-comment"><a href="#"><span class="icon-comment"></span><span class="label">Commenta </span></a></div><div class="detail-save"><a href="#"><span class="icon-bookmark "><span class="label">Salva </span></span></a></div><div class="detail-social"><a on="tap:detail-social_bar_bottom.toggleVisibility"><span class="icon-share"></span><span class="label">Condividi </span></a></div><div id="detail-social_bar_bottom" hidden><amp-social-share type="email" width=40 height=40></amp-social-share><amp-social-share type="facebook" width=40 height=40 data-param-app_id="182234715127717"></amp-social-share><amp-social-share type="gplus" width=40 height=40></amp-social-share><amp-social-share type="twitter" width=40 height=40></amp-social-share><amp-social-share type="whatsapp" width=40 height=40></amp-social-share></div></div></div> --></article></main><amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox><footer class="main-footer"><div class="main-footer_container">
+      </template>
+    </div>
+  </form>
+</div>
+<div class="detail-problem"><a href="mailto:segnalazionirep@repubblica.it">Invia una segnalazione</a></div><!-- end stars --></div></div></div><!-- <div class="detail-user_feedback"><div class="detail-article_container"><div class="detail-value"><a href="#detail-values_big"><span class="icon-value"></span><span class="label">Valuta </span></a></div><div class="detail-comment"><a href="#"><span class="icon-comment"></span><span class="label">Commenta </span></a></div><div class="detail-save"><a href="#"><span class="icon-bookmark "><span class="label">Salva </span></span></a></div><div class="detail-social"><a on="tap:detail-social_bar_bottom.toggleVisibility"><span class="icon-share"></span><span class="label">Condividi </span></a></div><div id="detail-social_bar_bottom" hidden><amp-social-share type="email" width=40 height=40></amp-social-share><amp-social-share type="facebook" width=40 height=40 data-param-app_id="182234715127717"></amp-social-share><amp-social-share type="gplus" width=40 height=40></amp-social-share><amp-social-share type="twitter" width=40 height=40></amp-social-share><amp-social-share type="whatsapp" width=40 height=40></amp-social-share></div></div></div> --></article></main><amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox><footer class="main-footer"><div class="main-footer_container">
       Divisione La Repubblica - GEDI Gruppo Editoriale S.p.A. - P.Iva 00906801006
       Societa' soggetta all'attivita' di direzione e coordinamento di CIR SpA -
       Riproduzione riservata - <a href="https://login.kataweb.it/static/privacy/?editore=gruppoespresso" class="privacy_link">PRIVACY</a></div></footer><amp-analytics type="chartbeat"><script type="application/json"> {
