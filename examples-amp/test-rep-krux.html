@@ -390,7 +390,9 @@ to{opacity:1;-webkit-transform:none;transform:none}
     id="amp-user-notification-privacy"><p>
       Su questo sito utilizziamo cookie tecnici e, previo tuo consenso, cookie di profilazione, nostri e di terze parti, per proporti pubblicità in linea con le tue preferenze. Se vuoi saperne di più o prestare il consenso solo ad alcuni utilizzi <a href="https://login.kataweb.it/static/privacy/?editore=gruppoespresso">clicca qui</a></p><button on="tap:amp-user-notification-privacy.dismiss">OK</button></amp-user-notification><amp-install-serviceworker src="/service-worker.js"
 data-iframe-src="https://rep.repubblica.it/data/widgets/service-worker.html"
-layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src="https://utilitysocial.repubblica.it/star_rating/index.php?geturl=CANONICAL_URL&rnd=RANDOM"></amp-state><header class="main-header"><div id="slim-header"><div class="slim-header_container"><div class="slim-header_left"><div id="slim-header_social"><span>Seguici su:</span><div id="fb_link"><a href="#"><span class="icon-facebook"></span></a></div><div id="tw_link"><a href="#"><span class="icon-twitter"></span></a></div></div></div><div class="slim-header_right"><div id="slim-header_rit"><a href="https://www.repubblica.it"><amp-img
+layout="nodisplay"></amp-install-serviceworker>
+<amp-state id="votogenerale" src="https://utilitysocial.repubblica.it/star_rating/index.php?geturl=CANONICAL_URL&rnd=RANDOM"></amp-state>
+<header class="main-header"><div id="slim-header"><div class="slim-header_container"><div class="slim-header_left"><div id="slim-header_social"><span>Seguici su:</span><div id="fb_link"><a href="#"><span class="icon-facebook"></span></a></div><div id="tw_link"><a href="#"><span class="icon-twitter"></span></a></div></div></div><div class="slim-header_right"><div id="slim-header_rit"><a href="https://www.repubblica.it"><amp-img
               src="//www.repstatic.it/cless/main/rep21/2017-v1/img/r_it-logo.svg"
               alt="Repubblica.it"
               width="150"
@@ -509,14 +511,31 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
               
 
               <!-- stars --><div id="detail-values_big"><h3>Vota questo articolo</h3><!-- <amp-state id="votogenerale" src="https://utilitysocial.repubblica.it/star_rating/index.php?geturl=CANONICAL_URL&rnd=RANDOM"></amp-state> -->
-  ​<form id="rating" class="p2" method="post" action-xhr="https://utilitysocial.repubblica.it/star_rating/index.php" target="_blank"><fieldset class="rating"><amp-list  height="56"
+  ​<form amp-access id="rating" class="p2" method="post" action-xhr="https://utilitysocial.repubblica.it/star_rating/index.php" target="_blank">
+  <fieldset class="rating">
+    <amp-list  height="56"
                  items="."
                  single-item
                  class="stars-container"
                  
                  src="https://utilitysocial.repubblica.it/star_rating/index.php?geturl=CANONICAL_URL&rnd=RANDOM"
-                 ><template type="amp-mustache">​
-          <input name="url" type="hidden" value="CANONICAL_URL" data-amp-replace="CANONICAL_URL"><input name="voto" type="radio" id="rating5" value="5" on="change:rating.submit" [checked]="votogenerale.MediaVoti==5? 'checked' : ''"/><label for="rating5" title="5 stars">☆</label><input name="voto" type="radio" id="rating4" value="4" on="change:rating.submit" [checked]="votogenerale.MediaVoti==4? 'checked' : ''"/><label for="rating4" title="4 stars">☆</label><input name="voto" type="radio" id="rating3" value="3" on="change:rating.submit" [checked]="votogenerale.MediaVoti==3? 'checked' : ''"/><label for="rating3" title="3 stars">☆</label><input name="voto" type="radio" id="rating2" value="2" on="change:rating.submit" [checked]="votogenerale.MediaVoti==2? 'checked' : ''"/><label for="rating2" title="2 stars">☆</label><input name="voto" type="radio" id="rating1" value="1" on="change:rating.submit" [checked]="votogenerale.MediaVoti==1? 'checked' : ''"/><label for="rating1" title="1 stars">☆</label></template></amp-list></fieldset>
+                 >
+         <template type="amp-mustache">​
+            <input name="url" type="hidden" value="CANONICAL_URL" data-amp-replace="CANONICAL_URL">
+            <input name="hash_id" type="hidden" value="{{profile.hash_id}}" data-amp-replace="{{profile.hash_id}}">
+            <input name="voto" type="radio" id="rating5" value="5" on="change:rating.submit" [checked]="votogenerale.MediaVoti==5? 'checked' : ''"/>
+            <label for="rating5" title="5 stars">☆</label>
+            <input name="voto" type="radio" id="rating4" value="4" on="change:rating.submit" [checked]="votogenerale.MediaVoti==4? 'checked' : ''"/>
+            <label for="rating4" title="4 stars">☆</label>
+            <input name="voto" type="radio" id="rating3" value="3" on="change:rating.submit" [checked]="votogenerale.MediaVoti==3? 'checked' : ''"/>
+            <label for="rating3" title="3 stars">☆</label>
+            <input name="voto" type="radio" id="rating2" value="2" on="change:rating.submit" [checked]="votogenerale.MediaVoti==2? 'checked' : ''"/>
+            <label for="rating2" title="2 stars">☆</label>
+            <input name="voto" type="radio" id="rating1" value="1" on="change:rating.submit" [checked]="votogenerale.MediaVoti==1? 'checked' : ''"/>
+            <label for="rating1" title="1 stars">☆</label>
+          </template>
+      </amp-list>
+    </fieldset>
           
           
           
