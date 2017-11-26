@@ -523,6 +523,7 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
             
             
               <template type="amp-mustache">
+                <!-- {{voto}} -->
                 <amp-analytics>
                   <script type="application/json"> {
                             "requests":{
@@ -531,7 +532,7 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
                                 "ContentVoted" : "${base}?geturl=CANONICAL_URL&rnd=RANDOM&id=${pixelId}&cd[meter_count]=$AUTHDATA"
                             },
                             "vars":{
-                                "pixelId":"{{voto}}"
+                                "pixelId":"voto"
                             },
                             "triggers": {
                                 "trackPageview": {
