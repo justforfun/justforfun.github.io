@@ -519,9 +519,15 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
           <input name="url" type="hidden" value="CANONICAL_URL" data-amp-replace="CANONICAL_URL"><input name="voto" type="radio" id="rating5" value="5" on="change:rating.submit" [checked]="votogenerale.MediaVoti==5? 'checked' : ''"/><label for="rating5" title="5 stars">☆</label><input name="voto" type="radio" id="rating4" value="4" on="change:rating.submit" [checked]="votogenerale.MediaVoti==4? 'checked' : ''"/><label for="rating4" title="4 stars">☆</label><input name="voto" type="radio" id="rating3" value="3" on="change:rating.submit" [checked]="votogenerale.MediaVoti==3? 'checked' : ''"/><label for="rating3" title="3 stars">☆</label><input name="voto" type="radio" id="rating2" value="2" on="change:rating.submit" [checked]="votogenerale.MediaVoti==2? 'checked' : ''"/><label for="rating2" title="2 stars">☆</label><input name="voto" type="radio" id="rating1" value="1" on="change:rating.submit" [checked]="votogenerale.MediaVoti==1? 'checked' : ''"/><label for="rating1" title="1 stars">☆</label></template></amp-list></fieldset>
           
           
-          <amp-analytics>
+          
+          <div id="successfullvoting" submit-success>
+            
+            
+              <template type="amp-mustache">
+                <!-- {{voto}} -->
+                <amp-analytics>
                   <script type="application/json"> 
-                  /***
+                  
                   {
                             "requests":{
                                 "host": "https://utilitysocial.repubblica.it/star_rating/",
@@ -540,33 +546,10 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
                                 }
                             }
                     }
-                    ***/
-                    {
-                        "requests":{
-                            "host": "https://utilitysocial.repubblica.it/star_rating/",
-                            "base": "${host}/tr?noscript=1",
-                            "ViewPaywall" : "${base}&ev=ViewPaywall&id=${pixelId}&cd[meter_count]=$AUTHDATA"
-                        },
-                        "vars":{
-                            "pixelId":"247428115450514"
-                        },
-                        "triggers": {
-                            "trackPageview": {
-                                "on": "visible",
-                                "request": "ViewPaywall",
-                                "selector": "#successfullvoting",
-                                "selectionMethod": "scope"
-                            }
-                        }
-                    }
+                  
+                  
                     </script>
                 </amp-analytics>  
-          <div id="successfullvoting" submit-success>
-            
-            
-              <template type="amp-mustache">
-                <!-- {{voto}} -->
-                
                 <div id="thankyouforvoting">                  
                   <p>Grazie per aver votato</p>
                 </div>
