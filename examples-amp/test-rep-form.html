@@ -523,16 +523,9 @@ layout="nodisplay"></amp-install-serviceworker>
           "ContentVoted" : "${base}?geturl=CANONICAL_URL&rnd=RANDOM&voto=${formFields[voto]}&hash_id=$AUTHDATA(profile.hash_id)&eventId=${eventId}"
         },
         "triggers": {
-          "formSubmit": {
-            "on": "amp-form-submit",
-            "request": "ContentVoted"
-          },
           "formSubmitSuccess": {
             "on": "amp-form-submit-success",
-            "request": "ContentVoted",
-            "vars": {
-              "eventId": "form-submit-success"
-            }
+            "request": "ContentVoted"
           }
         }
       }
