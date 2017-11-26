@@ -518,13 +518,8 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
                  ><template type="amp-mustache">​
           <input name="url" type="hidden" value="CANONICAL_URL" data-amp-replace="CANONICAL_URL"><input name="voto" type="radio" id="rating5" value="5" on="change:rating.submit" [checked]="votogenerale.MediaVoti==5? 'checked' : ''"/><label for="rating5" title="5 stars">☆</label><input name="voto" type="radio" id="rating4" value="4" on="change:rating.submit" [checked]="votogenerale.MediaVoti==4? 'checked' : ''"/><label for="rating4" title="4 stars">☆</label><input name="voto" type="radio" id="rating3" value="3" on="change:rating.submit" [checked]="votogenerale.MediaVoti==3? 'checked' : ''"/><label for="rating3" title="3 stars">☆</label><input name="voto" type="radio" id="rating2" value="2" on="change:rating.submit" [checked]="votogenerale.MediaVoti==2? 'checked' : ''"/><label for="rating2" title="2 stars">☆</label><input name="voto" type="radio" id="rating1" value="1" on="change:rating.submit" [checked]="votogenerale.MediaVoti==1? 'checked' : ''"/><label for="rating1" title="1 stars">☆</label></template></amp-list></fieldset>
           
-            
-          <div submit-success>
-            
-            
-              <template type="amp-mustache">
-                <!-- {{voto}} -->
-                <amp-analytics>
+          
+          <amp-analytics>
                   <script type="application/json"> 
                   /***
                   {
@@ -559,13 +554,19 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
                             "trackPageview": {
                                 "on": "visible",
                                 "request": "ViewPaywall",
-                                "selector": "#thankyouforvoting",
+                                "selector": "#successfullvoting",
                                 "selectionMethod": "scope"
                             }
                         }
                     }
                     </script>
-                </amp-analytics>
+                </amp-analytics>  
+          <div id="successfullvoting" submit-success>
+            
+            
+              <template type="amp-mustache">
+                <!-- {{voto}} -->
+                
                 <div id="thankyouforvoting">                  
                   <p>Grazie per aver votato</p>
                 </div>
