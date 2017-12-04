@@ -344,7 +344,7 @@ to{opacity:1;-webkit-transform:none;transform:none}
   },
   "pingback": "https://rep.repubblica.it/api/checkpw-v1/premium/amp/pingback?rid=READER_ID&ts=TIMESTAMP&url=CANONICAL_URL",
   "authorization": "https://rep.repubblica.it/api/checkpw-v1/premium/amp/authorization?rid=READER_ID&ts=TIMESTAMP&url=CANONICAL_URL",
-  "authorizationFallbackResponse": {"showContent": false} 
+  "authorizationFallbackResponse": {"showContent": false, "read": "0"} 
   
   }
 </script>
@@ -466,7 +466,7 @@ layout="nodisplay"></amp-install-serviceworker>
                         "requests":{
                             "host": "https://www.facebook.com",
                             "base": "${host}/tr?noscript=1",
-                            "ViewPaywall" : "${base}&ev=ViewPaywall&id=${pixelId}&cd[meter_count]=$AUTHDATA"
+                            "ViewPaywall" : "${base}&ev=ViewPaywall&id=${pixelId}&cd[meter_count]=$AUTHDATA(read)"
                         },
                         "vars":{
                             "pixelId":"247428115450514"
