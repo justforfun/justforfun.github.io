@@ -94,7 +94,7 @@
         console.log("Numero medio Km percorsi al giorno: " + DailyAverageKm);
         var DevianceFromAllowedKm = AverageAllowedKm - DailyAverageKm;
         console.log("Km percorsi rispetto a soglia: " + DevianceFromAllowedKm);
-        var ProjectedKmToLocationEnd = Math.floor((DailyAverageKm*DaysToEndLocationEpoch)) + KmValue;
+        var ProjectedKmToLocationEnd = Math.floor((DailyAverageKm*DaysToEndLocationEpoch)) + parseInt(KmValue);
         console.log("Stima Km a fine locazione: " + ProjectedKmToLocationEnd);
 
         var TaxToPay = 0;
