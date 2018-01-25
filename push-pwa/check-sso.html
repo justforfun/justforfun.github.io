@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="https://www.repstatic.it/cless/common/stable/js/vendor/jquery/jquery-1.8.2.min.js"></script>	
+<script type="text/javascript" src="https://login.kataweb.it/login/js/api/sso-api.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	window.SSOConf = {
+       targetDomain: "prod",
+       appId: "prm.repubblica.it"
+	  }
+  
+
+	function QueryStringToJSON() {            
+	    var pairs = location.search.slice(1).split('&');
+	    
+	    var result = {};
+	    pairs.forEach(function(pair) {
+	        pair = pair.split('=');
+	        result[pair[0]] = decodeURIComponent(pair[1] || '');
+	    });
+
+	    return JSON.parse(JSON.stringify(result));
+	}
+
+	var query_string = QueryStringToJSON();
+	console.log("query_string: " + JSON.stringify(query_string))
+
+
+	var hashId = query_string && query_string.hash_id ? query_string.hash_id : null;
+	console.log("HashId letto da query string: " + hashId);
+
+
+
+	function AutoLoginCallBack(dati) {
+	  var urlTmp = "";
+	  var urlCommenti = "";
+	  var urlRedirect = "";
+	  var urlFail = "";
+	  
+	  urlCommenti=query_string.url;
+	  
+	  /***
+	   https://rep.repubblica.it/api/checkpw-v1/premium/amp/checkuser
+
+		successurl= urlCommenti;
+		failurl= urlRedirect;
+		hashid
+		rid;
+		urlRedirect = "https://rep.repubblica.it/api/checkpw-v1/premium/amp/checkuser?rid="+query_string.rid+"&"+"urlSuccess="+encodeURIComponent(urlCommenti)+"urlFail="+encodeURIComponent(urlFail);
+		***/
+
+
+	  urlTmp="https://rep.repubblica.it/api/checkpw-v1/premium/amp/login?rid="+query_string.rid+"&return="+query_string.return;
+	  urlFail = "https://rep.repubblica.it/api/checkpw-v1/premium/amp/logout?rid="+query_string.rid+"&"+"return="+encodeURIComponent(urlTmp);
+	  urlRedirect = "https://rep.repubblica.it/api/checkpw-v1/premium/amp/checkuser?rid="+query_string.rid+"&"+"successurl="+encodeURIComponent(urlCommenti)+"failurl="+encodeURIComponent(urlFail);
+	  
+	  console.log ("Redirect to: " + urlRedirect);
+	  console.log ("Return: " + query_string.return);
+	  console.log ("Dati: " + JSON.stringify(dati));
+
+	   if ("login" ==  dati.op)   { 
+	    //--- non solo loggato sull'applicazione ma lo sono su SSO
+	    console.log("AutoLogin - do login");
+	    //window.location.href = urlPremiumLogin+dati.SSID;
+	   }
+	   else  if ("changeuser" ==  dati.op)    {
+	    //--- Lo SSO e' loggato con un altro utente: esegui il logout appplicativo del vecchio utente ed esegui login nuovo utente
+
+	    console.log("AutoLogin - do changeuser");
+	    if (window.top === window)
+	    	window.location.href = urlRedirect;
+	    else
+	    	window.top.location.href = urlRedirect;
+	   }
+	   else  if ("login_manual" ==  dati.op)    {
+	    //  forzare il login in modo che questo attivi il flusso di registrazione: nessuna azione automatica eseguita
+	    //alert("do login_manual");
+	    // console.log("AutoLogin - do login_manual");
+	   }
+	   else  if ("logout" ==  dati.op)    {
+	    //--- logout applicativo (NO SSO) e ritorno sulla home
+	    console.log("AutoLogin - do logout");
+	    if (window.top === window)
+	    	window.location.href = urlRedirect;
+	    else
+	    	window.top.location.href = urlRedirect;
+	   }
+	   else  if ("sameuser" ==  dati.op)    {
+	    	//-- nessuna azione presentare la pagina richiesta
+		    console.log("AutoLogin - tutto OK");
+		    if (dati.hashId){	
+                window.location.href=urlCommenti+"?hash_id="+dati.hashId;			
+            } else {
+				if (window.top === window)
+	    			window.location.href = urlRedirect;
+	    		else
+	    			window.top.location.href = urlRedirect;
+			}
+	   }
+	   else {
+	    console.log("AutoLogin - ??????????");
+	   }
+	  }
+	// Il terzo parametro è il Reset Status
+	SSO.checkStatusChange(hashId, AutoLoginCallBack, true);
+
+</script>
+</body>
+</html>
