@@ -42,7 +42,12 @@
       </script>
       
 
+<!-- 
+"authorizationFallbackResponse": {"showContent": false}
+"authorizationFallbackResponse":{"showContent":false,"has_metered":false,"has_paywall":true,"fb":{"fbContentTier":"locked","fbisSubscriber":"false"},"pw2":false,"logged":false,"freeview":false,"lstblk":"test-finegil-member-0","read":0,"remaining":0,"barrier":0,"pwProfile":{"id":2252,"position":120,"name":"test-finegil-exec-member-0","desc":"Contenuto che richiede registrazione immediata"},"debug":{"config":{"config":{"VALIDITY_PERIOD":"month"},"page":{"tracked":"true","days":"90000","counters":{"default":["test-finegil-member-0"]},"allowedReferrers":[]},"counter":[{"id":"test-finegil-member-0","intermediate":[],"limit":0,"redirect":"http:\/\/quotidiani.gelocal.it"}],"intermediate":[],"profile":{"id":2252,"position":120,"name":"test-finegil-exec-member-0","desc":"Contenuto che richiede registrazione immediata"},"referrer":[],"rule":{"id":39,"name":"test-finegil-exec-member-0"}},"og_url":"http:\/\/test.messaggeroveneto.gelocal.it\/udine\/cronaca\/2016\/03\/15\/news\/la-regione-lazio-crea-una-rete-socio-sanitaria-per-combattere-i-disturbi-alimentari-1.9808388","has_paywall":true,"has_metered":false,"pwProfile":{"id":2252,"position":120,"name":"test-finegil-exec-member-0","desc":"Contenuto che richiede registrazione immediata"},"pw2":{"pw2":false,"logged":false,"freeview":false,"lstblk":"test-finegil-member-0","read":0,"remaining":0,"barrier":0},"counters":{"_vf":"1517908581","_vt":"1519862400","test_finegil_member_5":{"c":"3","blk":"20"},"test_finegil_logged_user":{"c":"7","blk":"12"},"_lstblk":"test-finegil-member-0","test-finegil-member-0":{"c":0,"blk":1}}}}
 
+
+-->
 <script id="amp-access" type="application/json">
 {
    "login": {
@@ -54,7 +59,7 @@
     },
    "pingback": "https://test-api.gelocal.it/checkpw-v1/messaggeroveneto/amp/pingback?rid=READER_ID&pubtime=2017-05-09T11:36:22Z&ts=TIMESTAMP&url=CANONICAL_URL",
    "authorization": "https://test-api.gelocal.it/checkpw-v1/messaggeroveneto/amp/authorization?rid=READER_ID&pubtime=2017-05-09T11:36:22Z&ts=TIMESTAMP&url=CANONICAL_URL",
-   "authorizationFallbackResponse": {"showContent": false}
+   "authorizationFallbackResponse":{"showContent":false,"has_metered":false,"has_paywall":true,"fb":{"fbContentTier":"locked","fbisSubscriber":"false"},"pw2":false,"logged":false,"freeview":false,"lstblk":"test-finegil-member-0","read":0,"remaining":0,"barrier":0,"pwProfile":{"id":2252,"position":120,"name":"test-finegil-exec-member-0","desc":"Contenuto che richiede registrazione immediata"},"debug":{"config":{"config":{"VALIDITY_PERIOD":"month"},"page":{"tracked":"true","days":"90000","counters":{"default":["test-finegil-member-0"]},"allowedReferrers":[]},"counter":[{"id":"test-finegil-member-0","intermediate":[],"limit":0,"redirect":"http:\/\/quotidiani.gelocal.it"}],"intermediate":[],"profile":{"id":2252,"position":120,"name":"test-finegil-exec-member-0","desc":"Contenuto che richiede registrazione immediata"},"referrer":[],"rule":{"id":39,"name":"test-finegil-exec-member-0"}},"og_url":"http:\/\/test.messaggeroveneto.gelocal.it\/udine\/cronaca\/2016\/03\/15\/news\/la-regione-lazio-crea-una-rete-socio-sanitaria-per-combattere-i-disturbi-alimentari-1.9808388","has_paywall":true,"has_metered":false,"pwProfile":{"id":2252,"position":120,"name":"test-finegil-exec-member-0","desc":"Contenuto che richiede registrazione immediata"},"pw2":{"pw2":false,"logged":false,"freeview":false,"lstblk":"test-finegil-member-0","read":0,"remaining":0,"barrier":0},"counters":{"_vf":"1517908581","_vt":"1519862400","test_finegil_member_5":{"c":"3","blk":"20"},"test_finegil_logged_user":{"c":"7","blk":"12"},"_lstblk":"test-finegil-member-0","test-finegil-member-0":{"c":0,"blk":1}}}}
 }
 </script>
 
@@ -342,9 +347,10 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
         
         <div amp-access="NOT (showContent)" amp-access-hide>
     <p>ROMA. Due posti letto dedicati alla rianimazione subintensiva nutrizionale saranno realizzati presso il complesso ospedaliero del<strong> S. Giovanni Addolorata</strong> di Roma. Lo comunica in una nota la Regione Lazio nella giornata dei disturbi alimentari.</p><p>«È la prima struttura del genere in Italia destinata ad assistere pazienti in coma o in pericolo di vita a causa di disturbi alimentari - scrive la Regione - Questa innovazione è contenuta nel decreto 80 firmato dal presidente della Regione Lazio, <strong>Nicola ...</strong></p>
-	<div id="paywall-banner">
+	<div id="paywall-banner" amp-access="NOT (has_metered)" amp-access-hide>
         <div class="paywall-gradient"></div>
         <div class="paywall-banner-inner">
+          Paywall per contenuti senza meter
             <a class="button1" on="tap:amp-access.login-loginpw">&nbsp;</a>
             <a class="button2" on="tap:amp-access.login-purchase">&nbsp;</a> <a
                 class="button3" on="tap:amp-access.login-registration">&nbsp;</a>
@@ -353,6 +359,31 @@ amp-user-notification button{background:#037cbc;color:#fff;text-transform:upperc
                 alt="Paywall" layout="responsive" width="320" height="420">
         </div>
     </div>
+    <div id="paywall-banner" amp-access="(has_metered) AND (logged)" amp-access-hide>
+        <div class="paywall-gradient"></div>
+        <div class="paywall-banner-inner">
+          Paywall per contenuti con meter e loggati
+            <a class="button1" on="tap:amp-access.login-loginpw">&nbsp;</a>
+            <a class="button2" on="tap:amp-access.login-purchase">&nbsp;</a> <a
+                class="button3" on="tap:amp-access.login-registration">&nbsp;</a>
+            <amp-img
+                src="//www.gelestatic.it/cless/messaggeroveneto/2014-v1/img/pw/banner.png"
+                alt="Paywall" layout="responsive" width="320" height="420">
+        </div>
+    </div>
+    <div id="paywall-banner" amp-access="(has_metered) AND NOT (logged)" amp-access-hide>
+        <div class="paywall-gradient"></div>
+        <div class="paywall-banner-inner">
+          Paywall per contenuti con meter e NON loggati
+            <a class="button1" on="tap:amp-access.login-loginpw">&nbsp;</a>
+            <a class="button2" on="tap:amp-access.login-purchase">&nbsp;</a> <a
+                class="button3" on="tap:amp-access.login-registration">&nbsp;</a>
+            <amp-img
+                src="//www.gelestatic.it/cless/messaggeroveneto/2014-v1/img/pw/banner.png"
+                alt="Paywall" layout="responsive" width="320" height="420">
+        </div>
+    </div>
+
 </div>
         
         
