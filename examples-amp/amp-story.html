@@ -14,9 +14,8 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   </head>
   <body>
-    <amp-story standalone>
-      <amp-story-page id="my-first-page" auto-advance-after="my-audio-1">
-      <!-- 
+
+    <!-- 
 <amp-story-page id="my-first-page" background-audio="https://justforfun.github.io/examples-amp/audio/425121-mp3-audio-128-20180212_m5s-spese-personali.mp3" auto-advance-after="20s">
 <title>M5S, cinque anni di spese personali tra cibo, affitti, penne e consulenze</title>
       <link>http://video.repubblica.it/audio-rep/m5s-cinque-anni-di-spese-personali-tra-cibo-affitti-penne-e-consulenze/297025/297644</link>
@@ -33,17 +32,7 @@
     <p>Your browser doesn’t support HTML5 audio</p>
   </div>
  </amp-audio>
-
-    -->
-        <amp-story-grid-layer template="fill">
-          <amp-img src="https://www.gelestatic.it/thimg/gml60DfA4o7jNS4lkovp3tYTj3Y=/1800x1014/smart/filters:format(webp)/https://www.repstatic.it/content/localirep/img/rep/2018/02/12/232851615-8ff054a2-913a-41bd-81b0-59070cf40517.jpg"
-              width="1800" height="1014">
-          </amp-img>
-
-        </amp-story-grid-layer>
-        <amp-story-grid-layer template="vertical">
-          <h1>M5S, cinque anni di spese personali tra cibo, affitti, penne e consulenze</h1>
-            <!--amp-audio id="my-audio-1 "title="M5S, cinque anni di spese personali tra cibo, affitti, penne e consulenze" 
+<amp-audio id="my-audio-1 "title="M5S, cinque anni di spese personali tra cibo, affitti, penne e consulenze" 
             height="50"
             width="auto"
             src="https://cdn.flv.kataweb.it/repubblicatv/file/2018/02/13/425121/425121-mp3-audio-128-20180212_m5s-spese-personali.mp3" 
@@ -53,10 +42,23 @@
             <div fallback>
                 <p>Your browser doesn’t support HTML5 audio</p>
             </div>
-          </amp-audio-->
+          </amp-audio>
+    -->
+    <amp-story standalone>
+      <!--amp-story-page id="my-first-page" auto-advance-after="my-audio-1">
+      
+        <amp-story-grid-layer template="fill">
+          <amp-img src="https://www.gelestatic.it/thimg/gml60DfA4o7jNS4lkovp3tYTj3Y=/1800x1014/smart/filters:format(webp)/https://www.repstatic.it/content/localirep/img/rep/2018/02/12/232851615-8ff054a2-913a-41bd-81b0-59070cf40517.jpg"
+              width="1800" height="1014">
+          </amp-img>
 
         </amp-story-grid-layer>
-      </amp-story-page>
+        <amp-story-grid-layer template="vertical">
+          <h1>M5S, cinque anni di spese personali tra cibo, affitti, penne e consulenze</h1>
+            
+
+        </amp-story-grid-layer>
+      </amp-story-page -->
       <amp-story-page id="amp-audio">
         <amp-story-grid-layer template="fill">
           <amp-audio width="auto"
@@ -66,7 +68,11 @@
           </amp-audio>
         </amp-story-grid-layer>
         <amp-story-grid-layer template="thirds">
-          <h1 grid-area="upper-third">amp-audio</h1>
+          <h1 grid-area="upper-third">M5S, cinque anni di spese personali tra cibo, affitti, penne e consulenze</h1>
+          <p grid-area="middle-third"><amp-img src="https://www.gelestatic.it/thimg/gml60DfA4o7jNS4lkovp3tYTj3Y=/1800x1014/smart/filters:format(webp)/https://www.repstatic.it/content/localirep/img/rep/2018/02/12/232851615-8ff054a2-913a-41bd-81b0-59070cf40517.jpg"
+              width="1800" height="1014">
+          </amp-img>
+        </p>
         </amp-story-grid-layer>
       </amp-story-page>
       
