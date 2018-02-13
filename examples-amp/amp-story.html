@@ -45,18 +45,12 @@
           </amp-audio>
     -->
     <amp-story standalone>
-      <amp-story-page id="my-first-page" auto-advance-after="10s">
+      <amp-story-page id="my-first-page">
       
         <amp-story-grid-layer template="fill">
           <amp-img src="https://www.gelestatic.it/thimg/gml60DfA4o7jNS4lkovp3tYTj3Y=/1800x1014/smart/filters:format(webp)/https://www.repstatic.it/content/localirep/img/rep/2018/02/12/232851615-8ff054a2-913a-41bd-81b0-59070cf40517.jpg"
               width="1800" height="1014">
           </amp-img>
-          <amp-audio id="my-audio-1" width="auto"
-            height="50"
-            controls
-            autoplay
-            src="https://cdn.flv.kataweb.it/repubblicatv/file/2018/02/13/425121/425121-mp3-audio-128-20180212_m5s-spese-personali.mp3">
-          </amp-audio>
         </amp-story-grid-layer>
         <amp-story-grid-layer template="vertical">
           <h1>M5S, cinque anni di spese personali tra cibo, affitti, penne e consulenze</h1>
@@ -64,7 +58,7 @@
 
         </amp-story-grid-layer>
       </amp-story-page>
-      <amp-story-page id="amp-audio">
+      <amp-story-page id="amp-audio" auto-advance-after="10s">
         <amp-story-grid-layer template="fill">
           <amp-audio id="my-audio-1" width="auto"
             height="50"
@@ -76,7 +70,18 @@
           <h1 grid-area="upper-third">M5S, cinque anni di spese personali tra cibo, affitti, penne e consulenze</h1>
         </amp-story-grid-layer>
       </amp-story-page>
-      
+      <amp-story-page id="amp-audio-2">
+        <amp-story-grid-layer template="fill">
+          <amp-audio id="my-audio-1" width="auto"
+            height="50"
+            autoplay
+            src="https://cdn.flv.kataweb.it/repubblicatv/file/2018/02/13/425121/425121-mp3-audio-128-20180212_m5s-spese-personali.mp3">
+          </amp-audio>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+          <h1 grid-area="upper-third">M5S, cinque anni di spese personali tra cibo, affitti, penne e consulenze</h1>
+        </amp-story-grid-layer>
+      </amp-story-page>
         
     </amp-story>
   </body>
