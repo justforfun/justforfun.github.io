@@ -57,16 +57,20 @@
 
         </amp-story-grid-layer>
       </amp-story-page>
-      <amp-story-page id="my-second-page">
+      <amp-story-page id="amp-audio">
         <amp-story-grid-layer template="fill">
-          <amp-img src="https://example.ampproject.org/helloworld/bg2.gif"
-              width="900" height="1600">
-          </amp-img>
+          <amp-audio width="auto"
+            height="50"
+            autoplay
+            src="https://ia801402.us.archive.org/16/items/EDIS-SRP-0197-06/EDIS-SRP-0197-06.mp3">
+          </amp-audio>
         </amp-story-grid-layer>
-        <amp-story-grid-layer template="vertical">
-          <h1>The End</h1>
+        <amp-story-grid-layer template="thirds">
+          <h1 grid-area="upper-third">amp-audio</h1>
         </amp-story-grid-layer>
       </amp-story-page>
+      
+        
     </amp-story>
   </body>
 </html>
