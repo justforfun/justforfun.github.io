@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Test SWG</title>
+    <script type="application/javascript">var swgmetadataavailable=false;</script>
+
+    <script type="application/javascript">
+     var k=document.createElement('script');k.type='text/javascript';k.async=true;
+      k.src='https://news.google.com/swg/js/v1/swg-tt.js';
+      if(!window.swgmetadataavailable) {
+        k.setAttribute('subscriptions-control', 'manual');
+      }  
+      var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+    </script>
+      
+    <!--script async subscriptions-control="manual" src="https://news.google.com/swg/js/v1/swg-tt.js"></script -->
+
+    <script type="application/javascript">
+   function subscribeResponse() {
+             console.log('subscribeResponse');
+             // 1. Handle subscription response.
+
+             // 2. Once subscription is processed (account created):
+             response.complete().then(function() {
+                 // 3. The subscription is fully processed.
+         console.log('response.complete');
+             });
+         }
+
+        (self.SWG = self.SWG || []).push(function(subscriptions) {
+            // subscriptions runtime is ready and can be used.
+            if(!window.swgmetadataavailable) {
+                subscriptions.init('rep.repubblica.it:web');
+                console.log('Inizializzazione manuale');
+              }  
+            
+     subscriptions.setOnSubscribeResponse(subscribeResponse);
+     //subscriptions.subscribe('basic_daily_1');
+     subscriptions.showOffers().then(showOffers);
+
+        });
+    </script>
+</head>
+ <body>
+   <div>Not Paywall</div>
+   <div class="paywall">Paywall</div>
+ </body>
+</html>
