@@ -474,7 +474,16 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
         ><template type="amp-mustache"><span class="icon-value"></span><span class="label">{{MediaVoti}} / 5</span></template></amp-list></div><div class="detail-comment"><a href="#"><span class="icon-comment"></span><span class="label">Commenta </span></a></div><div class="detail-save"><a href="#"><span class="icon-bookmark "></span><span class="label">Salva </span></a></div><div class="detail-social"><a on="tap:detail-social_bar.toggleVisibility"><span class="icon-share"></span><span class="label">Condividi </span></a></div><div id="detail-social_bar" hidden><amp-social-share type="email" width=40 height=40></amp-social-share><amp-social-share type="facebook" width=40 height=40 data-param-app_id="182234715127717"></amp-social-share><!-- <amp-social-share type="gplus" width=40 height=40></amp-social-share> --><amp-social-share type="twitter" width=40 height=40></amp-social-share><amp-social-share type="whatsapp" width=40 height=40></amp-social-share></div></div></div><div class="detail-article_container"><div class="detail-article_body" itemprop="articleBody"><div amp-access="NOT (showContent)" amp-access-hide>
      GENOVA.&nbsp;C&#39;era una volta Genova &quot;red and blue&quot;. O forse solo &quot;red&quot;, tralasciando il calcio. Rossi erano il porto e i suoi camalli. Rossi erano i mercati. Rosso &egrave; lo stadio. Rossi anche i caruggi, le vene che innervano il centro storico e degradano fino al mare. Rossi i quarti di nobilt&agrave;, anzi, di popolo, della Superba, cos&igrave; la ribattezz&ograve; Francesco Petrarca. Oggi &quot;La Superba&quot; &egrave; un gruppo neofascista federato con gli hamm...
 
-    <div id="paywall-banner"><div class="paywall-banner-inner"><a class="button1" on="tap:amp-access.login-loginpw"></a><a class="button2" on="tap:amp-access.login-purchasedesk"></a><a class="button3" href="https://quotidiano.repubblica.it/edicola/homerep.jsp"></a><a class="button4" on="tap:amp-access.login-purchasemob"></a><div><amp-analytics><script type="application/json"> {
+    <div id="paywall-banner"><div class="paywall-banner-inner"><a class="button1" on="tap:amp-access.login-loginpw"></a><a class="button2" on="tap:amp-access.login-purchasedesk"></a><a class="button3" href="https://quotidiano.repubblica.it/edicola/homerep.jsp"></a><a class="button4" on="tap:amp-access.login-purchasemob"></a><div>
+<!--
+/***"trackPageview": {
+                                "on": "visible",
+                                "request": "ViewPaywall",
+                                "selector": "#paywall-banner-inner",
+                                "selectionMethod": "scope"
+                            },***/
+ -->
+      <amp-analytics><script type="application/json"> {
                         "requests":{
 
                             "host": "https://www.facebook.com",
@@ -488,12 +497,10 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
                             "pixelId":"247428115450514"
                         },
                         "triggers": {
-                            /***"trackPageview": {
-                                "on": "visible",
-                                "request": "ViewPaywall",
-                                "selector": "#paywall-banner-inner",
-                                "selectionMethod": "scope"
-                            },***/
+                            "accessAuthorizationFailed": {
+                                "on": "access-authorization-received",
+                                "request": AUTHDATA(fb.fbisSubscriber)
+                            },                       
                             "accessAuthorizationReceived": {
                                 "on": "access-authorization-received",
                                 "request": AUTHDATA(fb.fbisSubscriber)
