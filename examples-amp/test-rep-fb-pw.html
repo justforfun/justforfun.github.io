@@ -485,7 +485,6 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
  -->
       <amp-analytics><script type="application/json"> {
                         "requests":{
-
                             "host": "https://www.facebook.com",
                             "base": "${host}/tr?noscript=1",
                             "ViewPaywall" : "${base}&ev=ViewPaywall&id=${pixelId}&cd[meter_count]=0",
@@ -499,11 +498,11 @@ layout="nodisplay"></amp-install-serviceworker><amp-state id="votogenerale" src=
                         "triggers": {
                             "accessAuthorizationFailed": {
                                 "on": "access-authorization-received",
-                                "request": AUTHDATA(fb.fbisSubscriber)
+                                "request": $AUTHDATA(fb.fbisSubscriber)
                             },                       
                             "accessAuthorizationReceived": {
                                 "on": "access-authorization-received",
-                                "request": AUTHDATA(fb.fbisSubscriber)
+                                "request": $AUTHDATA(fb.fbisSubscriber)
                             }
                         }
                     }
