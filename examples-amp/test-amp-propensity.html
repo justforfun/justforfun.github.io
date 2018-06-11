@@ -905,6 +905,8 @@ https:///examples-amp/ads/prop.json
 {{readerId}}
 json='{"targeting":{"rid":"{{readerId}}"},"categoryExclusions":["sports"]}'
 json='{{readerId}}'
+{}
+"targeting":{"rid":["{{readerId}}"]}
 -->
 <template amp-access-template type="amp-mustache">
 <div role="button" tabindex="2">
@@ -913,10 +915,10 @@ json='{{readerId}}'
 
 <amp-ad
 type="doubleclick"
-data-slot="/35012960/repubblica.pwa/dettaglio/box1/{{readerId}}"
+data-slot="/35012960/repubblica.pwa/dettaglio/box1/"
 rtc-config='{
-"urls": ["https://test-api.repubblica.it/checkpw-v1/premium/amp/testswg?rid=TGT"]}'
-json='{"targeting":"{{readerId}}"}'
+"urls": ["https://test-api.repubblica.it/checkpw-v1/premium/amp/testswg?rid=TGT&test=ATTR(data-json)"]}'
+json='{"targeting":{"rid":"{{readerId}}"}, "rid":"{{readerId}}"}'
 width="300" height="250">
 </amp-ad>
 </template>
