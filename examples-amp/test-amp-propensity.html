@@ -898,7 +898,12 @@ https:///examples-amp/ads/prop.json
 <amp-ad
 type="doubleclick"
 data-slot="/35012960/repubblica.pwa/dettaglio/box1"
-rtc-config='{"urls": ["https://test-api.repubblica.it/checkpw-v1/premium/amp/testswg?rid={{readerId}}"]}'
+rtc-config='{
+"vendors": {
+              "vendor-a": {"RID": {{readerId}}},
+
+},
+"urls": ["https://test-api.repubblica.it/checkpw-v1/premium/amp/testswg?rid=RID"]}'
 json='{"targeting":{"loc": "usa"},"categoryExclusions":["sports"]}'
 width="300" height="250">
 </amp-ad>
