@@ -898,14 +898,16 @@ https:///examples-amp/ads/prop.json
               "vendor-a": {"RID": {{readerId}}},
 
 },
+{{readerId}}
+json='{"targeting":{"rid":"{{readerId}}"},"categoryExclusions":["sports"]}'
 -->
 <template amp-access-template type="amp-mustache">
 <amp-ad
 type="doubleclick"
 data-slot="/35012960/repubblica.pwa/dettaglio/box1"
 rtc-config='{
-"urls": ["https://test-api.repubblica.it/checkpw-v1/premium/amp/testswg?rid=TGT&adcid=ADCID"]}'
-json='{"targeting":{"rid":"{{readerId}}"},"categoryExclusions":["sports"]}'
+"urls": ["https://test-api.repubblica.it/checkpw-v1/premium/amp/testswg?rid=ATTR(data-json.rid)&adcid=ADCID"]}'
+json='{"rid":"{{readerId}}","targeting":{},"categoryExclusions":["sports"]}'
 width="300" height="250">
 </amp-ad>
 </template>
