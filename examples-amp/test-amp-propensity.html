@@ -907,6 +907,7 @@ json='{"targeting":{"rid":"{{readerId}}"},"categoryExclusions":["sports"]}'
 json='{{readerId}}'
 {}
 "targeting":{"rid":["{{readerId}}"]}
+json='{"targeting":{"rid":"{{readerId}}"}, "rid":"{{readerId}}"}'
 -->
 <template amp-access-template type="amp-mustache">
 <div role="button" tabindex="2">
@@ -917,8 +918,8 @@ json='{{readerId}}'
 type="doubleclick"
 data-slot="/35012960/repubblica.pwa/dettaglio/box1/{{readerId}}"
 rtc-config='{
-"urls": ["https://test-api.repubblica.it/checkpw-v1/premium/amp/testswg?rid=TGT&test=ATTR(data-json)&p={{readerId}}"]}'
-json='{"targeting":{"rid":"{{readerId}}"}, "rid":"{{readerId}}"}'
+"urls": ["https://test-api.repubblica.it/checkpw-v1/premium/amp/testswg?rid={{readerId}}"]}'
+json='{"targeting":{"loc": "usa"},"categoryExclusions":["sports"]}'
 width="300" height="250">
 </amp-ad>
 </template>
