@@ -1,0 +1,229 @@
+[{
+  "titleurl": "migranti_ong_aquarius_diario_volontari",
+  "links": [{
+    "href": "http://ws.kolumbus.am.kataweb.it/kpm3-ws-rep-locali/rep/content/198847573",
+    "id": "198847573",
+    "collection": "rep",
+    "rel": "edit"
+  }, {
+    "text": "",
+    "pos": "1",
+    "collection": "rep",
+    "href": "http://ws.kolumbus.am.kataweb.it/kpm3-ws-rep-locali/rep/content/198847602",
+    "ctype": "Media",
+    "rel": "related",
+    "id": "198847602",
+    "first": "true"
+  }, {
+    "text": "",
+    "pos": "2",
+    "collection": "rep",
+    "href": "http://ws.kolumbus.am.kataweb.it/kpm3-ws-rep-locali/rep/content/198855178",
+    "ctype": "Media",
+    "rel": "related",
+    "id": "198855178"
+  }, {
+    "path": "/generale/2018/06/12/news/migranti_ong_aquarius_diario_volontari-198847573/content.json",
+    "term": "/rep/generale",
+    "href": "https://rep.repubblica.it/ws/detail/generale/2018/06/12/news/migranti_ong_aquarius_diario_volontari-198847573/content.json",
+    "rel": "json-alternate",
+    "collection": "rep"
+  }, {
+    "path": "/generale/2018/06/12/news/migranti_ong_aquarius_diario_volontari-198847573/",
+    "term": "/rep/generale",
+    "href": "https://rep.repubblica.it/pwa/generale/2018/06/12/news/migranti_ong_aquarius_diario_volontari-198847573/",
+    "rel": "alternate",
+    "collection": "rep"
+  }],
+  "object_type": "Content",
+  "related": [],
+  "href": "https://rep.repubblica.it/pwa/generale/2018/06/12/news/migranti_ong_aquarius_diario_volontari-198847573/",
+  "id": "rep-locali:rep:198847573",
+  "author": "di ALESSANDRO PORRO*",
+  "media": [{
+    "mimeType": "image/jpeg",
+    "object_type": "media",
+    "pos": 1,
+    "height": "1014",
+    "hd-alternate-href": "http://10.220.181.27:9080/nicaws/nicawscache/52685857HR.jpg",
+    "href": "https://www.repstatic.it/content/localirep/img/rep/2018/06/12/212535377-b366a15f-73d5-45ba-a12f-b40fc3a16144.jpg",
+    "mediaSize": "1800x1014",
+    "id": "rep-locali:rep:198847602",
+    "hd_agency_queue": "2",
+    "hd_credit": "IMPORTATE",
+    "width": "1800",
+    "kpm3id": "198847602",
+    "draft": "false",
+    "type": "media",
+    "revision": "19",
+    "status": "5",
+    "updated": "2018-06-13T11:00:50Z",
+    "hd-alternate-type": "image/jpeg",
+    "ctype": "media",
+    "hd_summary": "www_internet-Esterne WWW (note)",
+    "persons": [{
+      "username": "a.ripani"
+    }],
+    "otheralternate": {
+      "1800x1014": {
+        "mimeType": "image/jpeg",
+        "height": 1014,
+        "width": 1800,
+        "href": "https://www.repstatic.it/content/localirep/img/rep/2018/06/12/212535377-b366a15f-73d5-45ba-a12f-b40fc3a16144.jpg",
+        "summary": "1800x1014"
+      },
+      "374x270": {
+        "mimeType": "image/jpeg",
+        "height": 270,
+        "width": 374,
+        "href": "https://www.repstatic.it/content/localirep/img/rep/2018/06/12/212535856-7aa47f46-6f5b-4e49-8a92-29d8cd8e13c4.jpg",
+        "summary": "374x270"
+      }
+    },
+    "hd_headline": "www_internet-%28note%29",
+    "hd_agency_id": "nica:52685857",
+    "created": "2018-06-12T21:25:34Z"
+  }, {
+    "status": "5",
+    "mimeType": "audio/mpeg3",
+    "updated": "2018-06-13T11:00:50Z",
+    "object_type": "media",
+    "thumbMimeType": "image/jpeg",
+    "created": "2018-06-12T23:47:57Z",
+    "href": "https://media.kataweb.it/repubblicatv/file/2018/06/12/570251/570251-mp3-audio-128-20180612_aquarius-speranza-paura.mp3",
+    "title": "Il diario di bordo dell&#8217;Aquarius tra speranza e paura: &#8220;Non riportateci nell'inferno della Libia&#8221;",
+    "thumb": "https://www.repstatic.it/video/photo/2018/06/12/570251/570251-thumb-rep-rep-audio-cover.jpg",
+    "ctype": "media",
+    "pos": 2,
+    "hd-alternate-href": "https://video.repubblica.it/audio-rep/il-diario-di-bordo-dell-and-8217aquarius-tra-speranza-e-paura-and-8220non-riportateci-nell-inferno-della-libia-and-8221/307739/308368",
+    "persons": [{
+      "username": "coll-visual38"
+    }],
+    "otheralternate": {
+      "audio_mp3_vod": {
+        "mimeType": "audio/mpeg3",
+        "height": 0,
+        "width": 0,
+        "href": "https://media.kataweb.it/repubblicatv/file/2018/06/12/570251/570251-mp3-audio-128-20180612_aquarius-speranza-paura.mp3",
+        "duration": "00:05:39",
+        "summary": "audio_mp3_vod"
+      },
+      "thumb-ipad": {
+        "mimeType": "image/jpeg",
+        "height": 320,
+        "width": 480,
+        "href": "https://www.repstatic.it/video/photo/2018/06/12/570251/570251-thumb-full-rep-audio-cover.jpg",
+        "summary": "thumb-ipad"
+      },
+      "thumb-taboola": {
+        "mimeType": "image/jpeg",
+        "height": 200,
+        "width": 200,
+        "href": "https://www.repstatic.it/video/photo/2018/06/12/570251/570251-thumb-rep-rep-audio-cover.jpg",
+        "summary": "thumb-taboola"
+      },
+      "modal": {
+        "mimeType": "text/html",
+        "summary": "modal",
+        "href": "https://video.repubblica.it/playermodale/audio-rep/il-diario-di-bordo-dell-and-8217aquarius-tra-speranza-e-paura-and-8220non-riportateci-nell-inferno-della-libia-and-8221/307739/308368"
+      },
+      "audio-hls-vod": {
+        "mimeType": "video/x-mpegurl",
+        "height": 0,
+        "width": 0,
+        "href": "https://media.kataweb.it/repubblicatv/file/2018/06/12/570251/hls-audio/hls-audio.m3u8",
+        "duration": "00:05:39",
+        "summary": "audio-hls-vod"
+      },
+      "thumb-full": {
+        "mimeType": "image/jpeg",
+        "height": 360,
+        "width": 640,
+        "href": "https://www.repstatic.it/video/photo/2018/06/12/570251/570251-thumb-full-rep-audio-cover.jpg",
+        "summary": "thumb-full"
+      },
+      "thumb-social-play": {
+        "mimeType": "image/jpeg",
+        "height": 360,
+        "width": 640,
+        "href": "https://www.repstatic.it/video/photo/2018/06/12/570251/570251-thumb-social-play.jpg",
+        "summary": "thumb-social-play"
+      },
+      "thumb-apertura-rep": {
+        "mimeType": "image/jpeg",
+        "summary": "thumb-apertura-rep",
+        "href": "https://www.repstatic.it/video/photo/2018/06/12/570251/570251-thumb-rep-rep-audio-cover.jpg"
+      },
+      "embed": {
+        "mimeType": "text/html",
+        "summary": "embed",
+        "href": "https://video.repubblica.it/embedaudio/audio-rep/il-diario-di-bordo-dell-and-8217aquarius-tra-speranza-e-paura-and-8220non-riportateci-nell-inferno-della-libia-and-8221/307739/308368"
+      },
+      "thumb-rrtv": {
+        "mimeType": "image/jpeg",
+        "height": 80,
+        "width": 136,
+        "href": "https://www.repstatic.it/video/photo/2018/06/12/570251/570251-thumb-rrtv-rep-audio-cover.jpg",
+        "summary": "thumb-rrtv"
+      }
+    },
+    "hd-alternate-type": "text/html",
+    "kpm3id": "198855178",
+    "draft": "false",
+    "type": "media",
+    "id": "rep-locali:rep:198855178",
+    "revision": "3"
+  }],
+  "content": "In plancia di comando si guardano con preoccupazione la cartina meteo e l&#39;ultimo bollettino. Tra la Sardegna e Palma di Maiorca un ciclone di vento e onde alte fino a 4 metri andranno incontro alla Aquarius e alla sua scorta militare. &quot;Sono le 21 del 12 giugno. Siamo pronti. Finalmente si parte. Questa attesa, questo tira e molla lungo tre giorni &egrave; stato angosciante. Ci aspettano ancora quattro giorni durissimi, ma tra sabato e domenica porteremo finalmente queste persone in salvo a terra&quot;. &Egrave; passata da poco la mezzanotte del 10 giugno quando la Aquarius, con il suo carico di 629 migranti salvati al largo della Libia, fa rotta verso Nord, in attesa di un porto sicuro. A bordo anche sette donne incinte e undici bambini.<br />\n&nbsp;\n<h3>10 giugno, mattina - Rotta verso l&#39;Italia</h3>\n&Egrave; mattina quando l&#39;Imrcc di Roma ci chiede verbalmente in quale porto fra Trapani e Messina preferiamo andare. Noi indichiamo Messina per una questione puramente geografica. Abbiamo visitato tutti, messo al riparo donne e bambini, gli uomini sul ponte. La gente a bordo canta e prega, ci siamo gi&agrave; lasciati Malta alle spalle quando apprendiamo dai media della decisione del governo italiano. Sono loro a dirci che il ministro dell&#39;Interno ha annunciato che i porti italiani sono chiusi per la Aquarius, e che dovremmo andare a Malta. Ma noi, con Malta, non abbiamo mai parlato.<br />\n&nbsp;\n<h3>10 giugno, sera - Lo stop improvviso</h3>\nPurtroppo &egrave; vero. Quando ci fermano sono circa le 21: &quot;Aspettate ulteriori istruzioni&quot;, ci dicono da Roma. Siamo a 27 miglia nautiche da Malta e a 35 dall&#39;Italia. &Egrave; gi&agrave; passata l&#39;ora di cena. Abbiamo distribuito porzioni di riso altamente calorico, acqua, t&egrave; caldo e pane e abbiamo trovato la sistemazione migliore per la notte. Non possiamo tenere tutti sotto coperta. Le donne, i bambini, i ragazzi, qualcuno che &egrave; pi&ugrave; disidratato e quelli che sono stati recuperati in acqua ed erano in ipotermia stanno sotto. Gli uomini li abbiamo accomodati sul ponte, con le coperte termiche e i salvagente a fare da materassini. Nessuno di loro si accorge del cambio di rotta.<br />\n&nbsp;\n<h3>11 giugno, all&#39;alba - Silenzio e tensione</h3>\n&Egrave; giorno, adesso in tanti cominciano a capire e la tensione sale. &quot;Perch&eacute; siamo fermi? Ci avevate detto che stamattina saremmo arrivati. Volete riportarci in Libia?&quot;. Ce lo chiedono uno dopo l&#39;altro e facciamo una gran fatica a tenere la situazione sotto controllo. Abbiamo viveri per altre 24 ore, ma ci sono 629 persone a bordo e abbiamo urgente bisogno di sapere dove approderemo. Per&ograve; nessuno ci dice niente. Per fortuna, questa gente &egrave; cos&igrave; felice di essere viva che smorza la tensione improvvisando canti e balli. La loro felicit&agrave; &egrave; contagiosa.<br />\n&nbsp;\n<h3>11 giugno, primo pomeriggio - L&#39;offerta della Spagna</h3>\nAncora i media. Apprendiamo sempre da loro che la nostra destinazione sar&agrave; Valencia. Cerchiamo di tenere nascosta la preoccupazione, ci sono donne incinte che avrebbero bisogno di scendere subito a terra. Da Roma ci dicono che sono disponibili all&#39;evacuazione dei casi che sgenaliamo e chiedono una sorta di report, ma poi non succede nulla. Arriva un&#39;imbarcazione maltese a portare acqua, pasta e snack. Spieghiamo a tutti la verit&agrave;. Leggiamo nei loro occhi sgomento, incredulit&agrave;, paura. Un uomo prova a buttarsi gi&ugrave; dal ponte. Lo rassicuriamo e riportiamo la calma a bordo.<br />\n&nbsp;\n<h3>11 giugno, notte - Il comandante ha paura</h3>\nValencia &egrave; lontanissima. Sono 1.400 chilometri e le previsioni meteo sono in netto peggioramento. Il comandante ritiene di non potersi assumere il rischio di affrontare il viaggio verso la Spagna con tutte queste persone a bordo. &Egrave; rischioso per loro, per l&#39;equipaggio, per l&#39;intera nave. Insiste nel chiedere l&#39;assegnazione di un porto sicuro in Italia. Ci prepariamo alla notte pi&ugrave; difficile.<br />\n&nbsp;\n<h3>12 giugno, mattina - Destinazione Valencia</h3>\n&Egrave; definitivo, dobbiamo andare a Valencia. La comunicazione arriva alle 6 del mattino. Ci hanno detto che non c&#39;&egrave; alcun rischio, che non saremo soli: ci accompagneranno una nave della Guardia costiera e una della marina militare che prenderanno a bordo 500 persone. Abbiamo chiesto di avere a bordo medici e mediatori culturali. Se non si spiega a queste persone cosa sta succedendo la situazione potrebbe andare fuori controllo.<br />\n&nbsp;\n<h3>12 giugno, pomeriggio - Il trasbordo</h3>\nLe navi sono arrivate. Il momento &egrave; durissimo. Dobbiamo convincere le persone a scendere e a salire sullo shuttle che li porta sui mezzi militari. &quot;Sicuro che non ci rimandate in Libia? Dovunque, ma in Libia no, l&igrave; &egrave; l&#39;inferno&quot;, ripetono. Il nostro sforzo &egrave; di evitare che il panico di alcuni possa essere contagioso e creare situazioni ingestibili. I mediatori culturali sono bravissimi. Sono riusciti a convincere tutti che le tre navi andranno tutte nello stesso posto in Spagna, che le famiglie non saranno divise, che nessuno torner&agrave; in Libia. E alla fine, dopo tanta tensione e immobilit&agrave;, prevale un clima di attesa e persino curiosit&agrave;. Alle 21 la partenza: 524 migranti sono stati trasferiti sulle due navi che ci accompagneranno al porto sicuro. Con noi sono rimasti in 105: le famiglie, i pi&ugrave; vulnerabili e chi &egrave; ricoverato nella clinica medica. La Aquarius fa rotta verso Valencia.<br />\n<br />\n<em>* L&#39;autore &egrave; un volontario di Sos Mediterran&eacute;e a bordo della Aquarius</em><br />\n<br />\n&nbsp;",
+  "draft": "false",
+  "kpm3id": "198847573",
+  "type": "Content",
+  "revision": "22",
+  "status": "5",
+  "updated": "2018-06-13T11:00:50Z",
+  "tags": "Immigrazione,Diritti umani,Razzismo",
+  "ctype": "Content",
+  "persons": [{
+    "username": "a.ripani",
+    "name": "di ALESSANDRO PORRO*"
+  }],
+  "story-href": "http://relbox.repubblica.it/contentsense-test/related/public/index/children?output=json&id=198847573&url=https://rep.repubblica.it/pwa/generale/2018/06/12/news/migranti_ong_aquarius_diario_volontari-198847573/&site=repubblica&template=repubblica/2013-v1/approfondimenti",
+  "categories": [{
+    "lastPathTerm": "__default",
+    "name": "Default",
+    "zone": "detail",
+    "sequence": "-1",
+    "primary": "false",
+    "collection": "rep",
+    "categoryTerm": "/rep/__default",
+    "template": "content_premium_rd2017",
+    "block": "1"
+  }, {
+    "lastPathTerm": "generale",
+    "name": "Approfondimento",
+    "zone": "detail",
+    "sequence": "-1",
+    "primary": "true",
+    "collection": "rep",
+    "categoryTerm": "/rep/generale",
+    "template": "content_premium_rd2017",
+    "block": "1"
+  }],
+  "content_with_placeholder": "In plancia di comando si guardano con preoccupazione la cartina meteo e l&#39;ultimo bollettino. Tra la Sardegna e Palma di Maiorca un ciclone di vento e onde alte fino a 4 metri andranno incontro alla Aquarius e alla sua scorta militare. &quot;Sono le 21 del 12 giugno. Siamo pronti. Finalmente si parte. Questa attesa, questo tira e molla lungo tre giorni &egrave; stato angosciante. Ci aspettano ancora quattro giorni durissimi, ma tra sabato e domenica porteremo finalmente queste persone in salvo a terra&quot;. &Egrave; passata da poco la mezzanotte del 10 giugno quando la Aquarius, con il suo carico di 629 migranti salvati al largo della Libia, fa rotta verso Nord, in attesa di un porto sicuro. A bordo anche sette donne incinte e undici bambini.<br />\n&nbsp;\n<h3>10 giugno, mattina - Rotta verso l&#39;Italia</h3>\n&Egrave; mattina quando l&#39;Imrcc di Roma ci chiede verbalmente in quale porto fra Trapani e Messina preferiamo andare. Noi indichiamo Messina per una questione puramente geografica. Abbiamo visitato tutti, messo al riparo donne e bambini, gli uomini sul ponte. La gente a bordo canta e prega, ci siamo gi&agrave; lasciati Malta alle spalle quando apprendiamo dai media della decisione del governo italiano. Sono loro a dirci che il ministro dell&#39;Interno ha annunciato che i porti italiani sono chiusi per la Aquarius, e che dovremmo andare a Malta. Ma noi, con Malta, non abbiamo mai parlato.<br />\n&nbsp;\n<h3>10 giugno, sera - Lo stop improvviso</h3>\nPurtroppo &egrave; vero. Quando ci fermano sono circa le 21: &quot;Aspettate ulteriori istruzioni&quot;, ci dicono da Roma. Siamo a 27 miglia nautiche da Malta e a 35 dall&#39;Italia. &Egrave; gi&agrave; passata l&#39;ora di cena. Abbiamo distribuito porzioni di riso altamente calorico, acqua, t&egrave; caldo e pane e abbiamo trovato la sistemazione migliore per la notte. Non possiamo tenere tutti sotto coperta. Le donne, i bambini, i ragazzi, qualcuno che &egrave; pi&ugrave; disidratato e quelli che sono stati recuperati in acqua ed erano in ipotermia stanno sotto. Gli uomini li abbiamo accomodati sul ponte, con le coperte termiche e i salvagente a fare da materassini. Nessuno di loro si accorge del cambio di rotta.<br />\n&nbsp;\n<h3>11 giugno, all&#39;alba - Silenzio e tensione</h3>\n&Egrave; giorno, adesso in tanti cominciano a capire e la tensione sale. &quot;Perch&eacute; siamo fermi? Ci avevate detto che stamattina saremmo arrivati. Volete riportarci in Libia?&quot;. Ce lo chiedono uno dopo l&#39;altro e facciamo una gran fatica a tenere la situazione sotto controllo. Abbiamo viveri per altre 24 ore, ma ci sono 629 persone a bordo e abbiamo urgente bisogno di sapere dove approderemo. Per&ograve; nessuno ci dice niente. Per fortuna, questa gente &egrave; cos&igrave; felice di essere viva che smorza la tensione improvvisando canti e balli. La loro felicit&agrave; &egrave; contagiosa.<br />\n&nbsp;\n<h3>11 giugno, primo pomeriggio - L&#39;offerta della Spagna</h3>\nAncora i media. Apprendiamo sempre da loro che la nostra destinazione sar&agrave; Valencia. Cerchiamo di tenere nascosta la preoccupazione, ci sono donne incinte che avrebbero bisogno di scendere subito a terra. Da Roma ci dicono che sono disponibili all&#39;evacuazione dei casi che sgenaliamo e chiedono una sorta di report, ma poi non succede nulla. Arriva un&#39;imbarcazione maltese a portare acqua, pasta e snack. Spieghiamo a tutti la verit&agrave;. Leggiamo nei loro occhi sgomento, incredulit&agrave;, paura. Un uomo prova a buttarsi gi&ugrave; dal ponte. Lo rassicuriamo e riportiamo la calma a bordo.<br />\n&nbsp;\n<h3>11 giugno, notte - Il comandante ha paura</h3>\nValencia &egrave; lontanissima. Sono 1.400 chilometri e le previsioni meteo sono in netto peggioramento. Il comandante ritiene di non potersi assumere il rischio di affrontare il viaggio verso la Spagna con tutte queste persone a bordo. &Egrave; rischioso per loro, per l&#39;equipaggio, per l&#39;intera nave. Insiste nel chiedere l&#39;assegnazione di un porto sicuro in Italia. Ci prepariamo alla notte pi&ugrave; difficile.<br />\n&nbsp;\n<h3>12 giugno, mattina - Destinazione Valencia</h3>\n&Egrave; definitivo, dobbiamo andare a Valencia. La comunicazione arriva alle 6 del mattino. Ci hanno detto che non c&#39;&egrave; alcun rischio, che non saremo soli: ci accompagneranno una nave della Guardia costiera e una della marina militare che prenderanno a bordo 500 persone. Abbiamo chiesto di avere a bordo medici e mediatori culturali. Se non si spiega a queste persone cosa sta succedendo la situazione potrebbe andare fuori controllo.<br />\n&nbsp;\n<h3>12 giugno, pomeriggio - Il trasbordo</h3>\nLe navi sono arrivate. Il momento &egrave; durissimo. Dobbiamo convincere le persone a scendere e a salire sullo shuttle che li porta sui mezzi militari. &quot;Sicuro che non ci rimandate in Libia? Dovunque, ma in Libia no, l&igrave; &egrave; l&#39;inferno&quot;, ripetono. Il nostro sforzo &egrave; di evitare che il panico di alcuni possa essere contagioso e creare situazioni ingestibili. I mediatori culturali sono bravissimi. Sono riusciti a convincere tutti che le tre navi andranno tutte nello stesso posto in Spagna, che le famiglie non saranno divise, che nessuno torner&agrave; in Libia. E alla fine, dopo tanta tensione e immobilit&agrave;, prevale un clima di attesa e persino curiosit&agrave;. Alle 21 la partenza: 524 migranti sono stati trasferiti sulle due navi che ci accompagneranno al porto sicuro. Con noi sono rimasti in 105: le famiglie, i pi&ugrave; vulnerabili e chi &egrave; ricoverato nella clinica medica. La Aquarius fa rotta verso Valencia.<br />\n<br />\n<em>* L&#39;autore &egrave; un volontario di Sos Mediterran&eacute;e a bordo della Aquarius</em><br />\n<br />\n&nbsp;",
+  "created": "2018-06-12T21:22:03Z",
+  "title": "Il diario di bordo dell\u2019Aquarius tra speranza e paura: \u201cNon riportateci nell\u2019inferno della Libia\u201d",
+  "summary": "Il racconto in diretta di un volontario di Sos Mediterran&eacute;e. Lo sgomento alla notizia che l&#39;Italia ha chiuso i porti e la disperazione di chi tenta di buttarsi in mare. Ma anche i balli improvvisati sul ponte e la strana felicit&agrave; di essere vivi",
+  "geopoints": {},
+  "author_tags": "alessandro porro",
+  "attributes": {
+    "hideRelated": "false",
+    "newsroom": "redazione",
+    "gigyaEnableComments": "true",
+    "oblivion": "false",
+    "disableAmp": "false",
+    "showSummary": "true",
+    "disableAd": "false",
+    "payment": "false"
+  },
+  "pubfromdate": "2018-06-12T21:20:00Z"
+}]
