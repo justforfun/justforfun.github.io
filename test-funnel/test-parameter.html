@@ -20,7 +20,9 @@
     var urlToken = getParameterByName('urlToken');
     console.log("urlToken: " + urlToken);
     if (urlToken === "repnzappcuboreg1") {
-    	var bottone = document.getElementsByClassName('premium-button');
+    	console.log("Intercettato urlToken sono nell'if");
+    	var bottone = document.getElementsByClassName("premium-button");
+    	console.log("n. elementi trovati: " + bottone.length);
     	for (var i=0; i<bottone.length; i++) {
   				matches[i].href='it.repubblica.m://profilo.close';
  
