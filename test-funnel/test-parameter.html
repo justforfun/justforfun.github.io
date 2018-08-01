@@ -21,8 +21,12 @@
     }
 
     var urlToken = getParameterByName('urlToken');
+    var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
     console.log("urlToken: " + urlToken);
-    if (urlToken === "repnzappcuboreg1") {
+    console.log("iOS: " + iOS);
+
+    if (urlToken === "repnzappcuboreg1" && iOS) {
     	//console.log("Intercettato urlToken sono nell'if");
     	var bottone = document.getElementsByClassName("premium-button");
 
