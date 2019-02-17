@@ -1,0 +1,64 @@
+<!doctype html>
+<html ⚡>
+  <head>
+  <meta charset="utf-8">
+  <title>SWG</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<link rel="canonical" href="https://tangeri.repubblica.it/data/widgets/amp-swg.html" >
+
+	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-subscriptions" src="https://cdn.ampproject.org/v0/amp-subscriptions-0.1.js"></script>
+  <script async custom-element="amp-subscriptions-google" src="https://cdn.ampproject.org/v0/amp-subscriptions-google-0.1.js"></script>
+  <script async custom-element="amp-experiment" src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"></script>
+
+  <script type="application/json" id="amp-subscriptions">
+            {
+            "services": [{
+                    "pingbackUrl": "https://tangeri.repubblica.it/test-api/checkpw-v1/premium/amp/pingback?rid=READER_ID&ts=TIMESTAMP&url=CANONICAL_URL",
+                    "authorizationUrl": "https://tangeri.repubblica.it/test-api/checkpw-v1/premium/amp/new_authorization?rid=READER_ID&ts=TIMESTAMP&url=CANONICAL_URL",
+                    "actions": {
+                        "login": "https://tangeri.repubblica.it/test-api/checkpw-v1/premium/amp/login?rid=READER_ID&fbia=AMPDOC_URL",
+                        "subscribe": "https://tangeri.repubblica.it/test-api/checkpw-v1/premium/amp/purchase?rid=READER_ID&source=REP_PWS_DESK&fbia=AMPDOC_URL",
+                        "registration": "https://tangeri.repubblica.it/test-api/checkpw-v1/premium/amp/login?page=registration&rid=READER_ID&fbia=AMPDOC_URL",
+                        "logout": "https://tangeri.repubblica.it/test-api/checkpw-v1/premium/amp/logout?rid=READER_ID",
+                        "purchaseheaderslim": "https://tangeri.repubblica.it/test-api/checkpw-v1/premium/amp/purchase?rid=READER_ID&fbia=AMPDOC_URL",
+                        "accessprofile": "https://test.quotidiano.repubblica.it/edicola/profilo/profiloutente.jsp"
+                    }
+                }
+            ],
+            "fallbackEntitlement": {
+                "source": "fallback",
+                "granted": false,
+                "grantReason": "SUBSCRIBER",
+                "showContent": false,
+                "data": {}
+            }
+        } </script>
+</head>
+<body>
+  <amp-experiment>
+    <script type="application/json">
+      {
+        "swg-button-experiment": {
+          "variants": {
+            "swg-paywall-with-google-button": 70,
+            "swg-paywall-local": 30
+          }
+        }
+      }
+    </script>
+  </amp-experiment>
+  
+  <p>
+    <a href="https://tangeri.repubblica.it/ws/detail/generale/2019/01/29/news/_passate_con_noi_guaido_vi_da_l_amnistia_la_mano_tesa_dei_venezuelani_ai_soldati-217795689/">Test referrer</a>
+  </p>
+  <div
+    subscriptions-display="NOT (data.showContent)"
+    subscriptions-action="subscribe"
+    subscriptions-service="subscribe.google.com"
+    subscriptions-decorate>Subscribe With Google</div>
+
+</body>
+</html>
