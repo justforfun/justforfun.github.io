@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Testing</h2>
+
+<p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+<p>Click "Stop" to prevent the first function to execute.</p>
+<p>(You must click "Stop" before the 3 seconds are up.)</p>
+
+<script type="text/javascript">
+function addRows(){ 
+	var table = document.getElementById('emptbl');
+	var rowCount = table.rows.length;
+	var cellCount = table.rows[0].cells.length; 
+	var row = table.insertRow(rowCount);
+	for(var i =0; i <= cellCount; i++){
+		var cell = 'cell'+i;
+		cell = row.insertCell(i);
+		var copycel = document.getElementById('col'+i).innerHTML;
+		cell.innerHTML=copycel;
+	}
+}
+function deleteRows(){
+	var table = document.getElementById('emptbl');
+	var rowCount = table.rows.length;
+	if(rowCount > '2'){
+		var row = table.deleteRow(rowCount-1);
+		rowCount--;
+	}
+	else{
+		alert('There should be atleast one row');
+	}
+}
+</script>
+<button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button>
+
+<button onclick="clearTimeout(myVar)">Stop it</button>
+
+<script>
+function myFunction() {
+  //alert("Hello");
+  
+ performance.getEntriesByType('navigation').forEach((navigation) => {
+  //console.dir(navigation);
+  result=JSON.stringify(navigation);
+  time=new Date().toLocaleString();
+  col0.innerHTML=time;
+  dns  = result.domainLookupEnd - result.domainLookupStart;
+  col1.innerHTML=dns;
+  tcp  = result.connectEnd - result.connectStart;
+  col2.innerHTML=tcp;
+
+});
+  setTimeout(myFunction, 3000)
+  
+}
+</script>
+<table id="emptbl">
+	<tr>
+		<th>Time</th>
+		<th>DNS</th>
+		<th>TCP</th> 
+	</tr> 
+		
+</table>
+<div id="col0"></div>
+<div id="col1"></div>
+<div id="col2"></div>
+</body>
+</html>
