@@ -42,7 +42,7 @@ function myFunction() {
   //alert("Hello");
   
  performance.getEntriesByType('navigation').forEach((navigation) => {
-  //console.dir(navigation);
+  console.dir(navigation);
   result=JSON.stringify(navigation);
   time=new Date().toLocaleString();
   col0.innerHTML=time;
