@@ -178,8 +178,8 @@ workerStart: 0
     
 
     // Response time
-    var ResponseTime = resources[i].responseEnd - resources[i].responseStart;
-    log("... Response time = " + ResponseTime);
+    var ContentDownload = resources[i].responseEnd - resources[i].responseStart;
+    log("... Content Download = " + ContentDownload);
 
     // Fetch until response end
     var FetchUntilResponseEnd = (resources[i].fetchStart > 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
