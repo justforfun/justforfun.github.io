@@ -166,16 +166,16 @@ function init() {
   var image1 = new Image();
   image1.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
   ***/
+  var UrlToFetch = "https://www.repstatic.it/content/nazionale/img/2022/04/03/130714361-c3b4a7f4-6f4f-41d6-8431-ba8ad8d51710.jpg?webp?v"+iCounter
   var image2 = new Image();
-  image2.src = "https://www.repstatic.it/content/nazionale/img/2022/04/03/130714361-c3b4a7f4-6f4f-41d6-8431-ba8ad8d51710.jpg?webp"
+  image2.src = UrlToFetch;
   iCounter++;
 
-  log("Init function executed"+ iCounter + "times");
+  log("Init function executed "+ iCounter + " times");
 
   // Set a callback if the resource buffer becomes filled
   performance.onresourcetimingbufferfull = buffer_full;
 
-  // nIntervId = setInterval(init, 1000);
 }
 
 function startTesting() {
@@ -193,7 +193,7 @@ function stopTesting() {
 </script>
 <body onload="init()">
 <h1>Resource Timing examples</h1>
-<button id="log" onclick="startTesting();">Stop Testing</button>
+<button id="log" onclick="startTesting();">Start Testing</button>
 <p></p>
 <button id="log" onclick="stopTesting();">Stop Testing</button>
 <p></p>
