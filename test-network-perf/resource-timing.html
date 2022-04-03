@@ -194,9 +194,6 @@ function init() {
 }
 
 function startTesting() {
-  new PerformanceObserver((entryList) => {
-  const entries = entryList.getEntries();
-
 
   if (!nIntervId) {
     nIntervId = setInterval(init, 5000);
