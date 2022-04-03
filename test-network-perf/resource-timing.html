@@ -193,6 +193,10 @@ function stopTesting() {
 </script>
 <body onload="init()">
 <h1>Resource Timing examples</h1>
+<button id="log" onclick="startTesting();">Stop Testing</button>
+<p></p>
+<button id="log" onclick="stopTesting();">Stop Testing</button>
+<p></p>
 <button id="log" onclick="calculate_load_times();">Calculate resource load times</button>
 <p></p>
 <button id="log" onclick="display_size_data();">Display resource size data</button>
@@ -202,8 +206,6 @@ function stopTesting() {
 <button id="log" onclick="clear_resource_timings();">Clear resource timings</button>
 <p></p>
 <button id="log" onclick="set_resource_timing_buffer_size(160);">Set resource timing buffer size</button>
-<p></p>
-<button id="log" onclick="stopTesting();">Stop Testing</button>
 <p></p>
 <output></output>
 </body>
