@@ -173,13 +173,9 @@ workerStart: 0
     log("... Secure connection time = " + ConnectionTime);
 
     // Time To First Byte (TTFB)
-    if (resources[i].responseStart > 0) {
-      var TTFB = resources[i].responseStart - resources[i].requestStart;
-      log("... TTFB = " + TTFB);
-    }
-    else
-      log("... TTFB = N.A.");
-
+    var TTFB = (resources[i].responseStart > 0) ? (resources[i].responseStart - resources[i].requestStart) : "0";
+    log("... TTFB = " + TTFB);
+    
 
     // Response time
     var ResponseTime = resources[i].responseEnd - resources[i].responseStart;
