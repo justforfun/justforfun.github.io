@@ -147,7 +147,7 @@ function calculate_load_times() {
 
     // Time To First Byte (TTFB)
     if (resources[i].responseStart > 0) {
-      var TTFB = resources[i].responseStart;
+      var TTFB = resources[i].responseStart - resources[i].requestEnd;
       log("... TTFB = " + TTFB);
     }
     else
