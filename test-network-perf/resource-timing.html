@@ -130,36 +130,45 @@ function calculate_load_times() {
   for (var i=0; i < resources.length; i++) {
     log("== Resource[" + i + "] - " + resources[i].name);
     // Redirect time
-    var t = resources[i].redirectEnd - resources[i].redirectStart;
-    log("... Redirect time = " + t);
+    var redirect = resources[i].redirectEnd - resources[i].redirectStart;
+    log("... Redirect time = " + redirect);
 
     // DNS time
-    t = resources[i].domainLookupEnd - resources[i].domainLookupStart;
-    log("... DNS lookup time = " + t);
+    var DNS = resources[i].domainLookupEnd - resources[i].domainLookupStart;
+    log("... DNS lookup time = " + DNS);
 
     // TCP handshake time
-    t = resources[i].connectEnd - resources[i].connectStart;
-    log("... TCP time = " + t);
+    var TCP = resources[i].connectEnd - resources[i].connectStart;
+    log("... TCP time = " + TCP);
 
     // Secure connection time
-    t = (resources[i].secureConnectionStart > 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
-    log("... Secure connection time = " + t);
+    var ConnectionTime = (resources[i].secureConnectionStart > 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
+    log("... Secure connection time = " + ConnectionTime);
+
+    // Time To First Byte (TTFB)
+    if (resources[i].responseStart > 0) {
+      var TTFB = resources[i].responseStart;
+      log("... TTFB = " + TTFB);
+    }
+    else
+      log("... TTFB = N.A.");
+
 
     // Response time
-    t = resources[i].responseEnd - resources[i].responseStart;
-    log("... Response time = " + t);
+    var ResponseTime = resources[i].responseEnd - resources[i].responseStart;
+    log("... Response time = " + ResponseTime);
 
     // Fetch until response end
-    t = (resources[i].fetchStart > 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
-    log("... Fetch until response end time = " + t);
+    var FetchUntilResponseEnd = (resources[i].fetchStart > 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
+    log("... Fetch until response end time = " + FetchUntilResponseEnd);
 
     // Request start until reponse end
-    t = (resources[i].requestStart > 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
-    log("... Request start until response end time = " + t);
+    var RequestStartUntilResponseEnd = (resources[i].requestStart > 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
+    log("... Request start until response end time = " + RequestStartUntilResponseEnd);
 
     // Start until reponse end
-    t = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
-    log("... Start until response end time = " + t);
+    var StartUntilResponseEnd = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
+    log("... Start until response end time = " + StartUntilResponseEnd);
   }
 }
 
@@ -188,18 +197,6 @@ function startTesting() {
   new PerformanceObserver((entryList) => {
   const entries = entryList.getEntries();
 
-  for (const entry of entries) {
-    // Some resources may have a responseStart value of 0, due
-    // to the resource being cached, or a cross-origin resource
-    // being served without a Timing-Allow-Origin header set.
-    if (entry.responseStart > 0) {
-      console.log(`TTFB: ${entry.responseStart}`, entry.name);
-    }
-  }
-}).observe({
-  type: 'resource',
-  buffered: true
-});
 
   if (!nIntervId) {
     nIntervId = setInterval(init, 5000);
