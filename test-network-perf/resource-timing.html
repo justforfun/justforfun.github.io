@@ -128,6 +128,33 @@ function calculate_load_times() {
   
 
   for (var i=0; i < resources.length; i++) {
+
+/****
+connectEnd: 140.6000000089407
+connectStart: 140.6000000089407
+decodedBodySize: 21900
+domainLookupEnd: 140.6000000089407
+domainLookupStart: 140.6000000089407
+duration: 131
+encodedBodySize: 21900
+entryType: "resource"
+fetchStart: 140.6000000089407
+initiatorType: "img"
+name: "https://justforfun.github.io/test-network-perf/images/cat.webp?v0"
+nextHopProtocol: "h2"
+redirectEnd: 0
+redirectStart: 0
+requestStart: 144.5
+responseEnd: 271.6000000089407
+responseStart: 270.1000000089407
+secureConnectionStart: 140.6000000089407
+serverTiming: []
+startTime: 140.6000000089407
+transferSize: 22200
+workerStart: 0
+
+****/
+
     log("== Resource[" + i + "] - " + resources[i].name);
     // Redirect time
     var redirect = resources[i].redirectEnd - resources[i].redirectStart;
@@ -147,7 +174,7 @@ function calculate_load_times() {
 
     // Time To First Byte (TTFB)
     if (resources[i].responseStart > 0) {
-      var TTFB = resources[i].responseStart - resources[i].requestEnd;
+      var TTFB = resources[i].responseStart - resources[i].requestStart;
       log("... TTFB = " + TTFB);
     }
     else
