@@ -221,6 +221,7 @@ function init() {
           ":"+datetostore.getSeconds();
 
   timestamps[iCounter]=ReadableTimestamp;
+  timestamps[iCounter]=datetostore.getTimezoneOffset();
   var UrlToFetch = OriginalUrl+"?v"+iCounter;
   var image2 = new Image();
   image2.src = UrlToFetch;
