@@ -209,8 +209,7 @@ function init() {
   //var OriginalUrl="https://www.repstatic.it/content/nazionale/img/2022/04/03/130714361-c3b4a7f4-6f4f-41d6-8431-ba8ad8d51710.jpg";
 
   
-  //let time = d.getTime();
-  //var date = new Date(timestamp);
+  
   const datetostore = new Date();
   var ReadableTimestamp=
   datetostore.getDate()+
@@ -218,10 +217,11 @@ function init() {
           "/"+datetostore.getFullYear()+
           " "+datetostore.getHours()+
           ":"+datetostore.getMinutes()+
-          ":"+datetostore.getSeconds();
+          ":"+datetostore.getSeconds()+
+          " TZ Offset: "+datetostore.getTimezoneOffset();;
 
   timestamps[iCounter]=ReadableTimestamp;
-  timestamps[iCounter]=datetostore.getTimezoneOffset();
+  
   var UrlToFetch = OriginalUrl+"?v"+iCounter;
   var image2 = new Image();
   image2.src = UrlToFetch;
