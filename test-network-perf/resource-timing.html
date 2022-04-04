@@ -14,6 +14,7 @@ let nIntervId;
 let iCounter=0;
 let timestamps=[];
 var OriginalUrl="https://justforfun.github.io/test-network-perf/images/cat.webp";
+var TimeToStart=10000;
 
 
 function log(s) {
@@ -254,7 +255,7 @@ function init() {
 
 
 function startTesting() {
-  var TimeToStart=5000;
+  
   var StatusMessageDiv = document.getElementById('StatusMessage');
   StatusMessageDiv.innerHTML="Test will start in "+ TimeToStart/1000 + " seconds";
 
