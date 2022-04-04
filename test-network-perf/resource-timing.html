@@ -223,7 +223,6 @@ function init() {
   image1.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
   ***/
   var OriginalUrl="https://justforfun.github.io/test-network-perf/images/cat.webp";
-  //var OriginalUrl="https://www.repstatic.it/content/nazionale/img/2022/04/03/130714361-c3b4a7f4-6f4f-41d6-8431-ba8ad8d51710.jpg";
 
   time=new Date().toLocaleString('it-IT', { timeZone: 'UTC' });
   timestamps[iCounter]=time;
@@ -288,7 +287,8 @@ td {
 </style>
 
 </head>
-<body onload="init()">
+<!-- body onload="init()" -->
+<body>
 <h1>Resource Timing examples</h1>
 <button id="log" onclick="startTesting();">Start Testing</button>
 <p></p>
