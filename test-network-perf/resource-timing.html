@@ -210,6 +210,8 @@ function init() {
 
   var Seconds="";
   var Minutes="";
+  var Hours="";
+
   const datetostore = new Date();
   
   if(datetostore.getSeconds()<10)
@@ -222,14 +224,19 @@ function init() {
   else
     Minutes=datetostore.getMinutes();
 
+  if(datetostore.getHours()<10)
+    Hours="0"+datetostore.getHours();
+  else
+    Hours=datetostore.getHours();
+
   var ReadableTimestamp=
   datetostore.getDate()+
           "/"+(datetostore.getMonth()+1)+
           "/"+datetostore.getFullYear()+
-          " "+datetostore.getHours()+
+          " "+Hours+
           ":"+Minutes+
           ":"+Seconds+
-          " TZ Offset: "+datetostore.getTimezoneOffset();;
+          " TZ Offset: "+datetostore.getTimezoneOffset();
 
   timestamps[iCounter]=ReadableTimestamp;
   
