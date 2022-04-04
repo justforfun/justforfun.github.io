@@ -30,7 +30,7 @@ function buffer_full(event) {
 
 function display_buffer_count() {
   if (performance === undefined) {
-    log("= Buffer Count: peformance NOT supported");
+    log("= Buffer Count: performance NOT supported");
     return;
   }
   // Log the number of resource performance items
@@ -136,6 +136,7 @@ function calculate_load_times() {
   var col5 = document.getElementById('col5');
   var col6 = document.getElementById('col6');
   var col7 = document.getElementById('col7');
+  var col8 = document.getElementById('col8');
 
   for (var i=0; i < resources.length; i++) {
 
@@ -211,6 +212,14 @@ workerStart: 0
     var StartUntilResponseEnd = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
     log("... Total time = " + StartUntilResponseEnd);
     col6.innerHTML=StartUntilResponseEnd;
+
+    // Start until reponse end
+    var encodedBodySize = (resources[i].encodedBodySize> 0) ? (resources[i].encodedBodySize) : "0";
+    if (encodedBodySize > 0)
+      encodedBodySize=encodedBodySize/1024;
+
+    log("... Total Size = " + encodedBodySize);
+    col7.innerHTML=encodedBodySize;
 
     addRows();
   }
@@ -307,13 +316,14 @@ td {
 <div id="populateresult">
   <table id="emptbl">
     <tr>
-      <th>Time</th>
-      <th>Redirect</th>
-      <th>DNS</th>
-      <th>TCP</th>
-      <th>TTFB</th>
-      <th>Content Download</th>
-      <th>Total</th> 
+      <th>Time (UTC)</th>
+      <th>Redirect (ms)</th>
+      <th>DNS (ms)</th>
+      <th>TCP (ms)</th>
+      <th>TTFB (ms)</th>
+      <th>Content Download (ms)</th>
+      <th>Size (KB)</th>
+      <th>Total Time (ms)</th> 
     </tr>       
   </table>
   </br>
@@ -325,6 +335,7 @@ td {
   <div id="col5" style="display: none;"></div>
   <div id="col6" style="display: none;"></div>
   <div id="col7" style="display: none;"></div>
+  <div id="col8" style="display: none;"></div>
 </div>
 <output></output>
 </body>
