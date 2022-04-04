@@ -11,6 +11,8 @@
 var useConsoleLog = false;
 let nIntervId;
 let iCounter=0;
+let timestamps=[];
+const d = new Date();
 
 function log(s) {
   if (useConsoleLog) {
@@ -155,6 +157,8 @@ workerStart: 0
 
 ****/
 
+    log("== Timestamp[" + i + "] - " + timestamps[i]);
+
     log("== Resource[" + i + "] - " + resources[i].name);
     // Redirect time
     var redirect = resources[i].redirectEnd - resources[i].redirectStart;
@@ -191,7 +195,7 @@ workerStart: 0
 
     // Start until reponse end
     var StartUntilResponseEnd = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
-    log("... Start until response end time = " + StartUntilResponseEnd);
+    log("... Total time = " + StartUntilResponseEnd);
   }
 }
 
@@ -204,6 +208,9 @@ function init() {
   var OriginalUrl="https://justforfun.github.io/test-network-perf/images/cat.webp";
   //var OriginalUrl="https://www.repstatic.it/content/nazionale/img/2022/04/03/130714361-c3b4a7f4-6f4f-41d6-8431-ba8ad8d51710.jpg";
 
+  
+  let time = d.getTime();
+  timestamps[iCounter]=time;
   var UrlToFetch = OriginalUrl+"?v"+iCounter;
   var image2 = new Image();
   image2.src = UrlToFetch;
