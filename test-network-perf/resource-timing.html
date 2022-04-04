@@ -12,7 +12,9 @@ var useConsoleLog = false;
 let nIntervId;
 let iCounter=0;
 let timestamps=[];
-
+var col0 = document.getElementById('col0');
+var col1 = document.getElementById('col1');
+var col2 = document.getElementById('col2');
 
 function log(s) {
   if (useConsoleLog) {
@@ -158,6 +160,7 @@ workerStart: 0
 ****/
 
     log("== Timestamp[" + i + "] - " + timestamps[i]);
+    col0.innerHTML=timestamps[i];
 
     log("== Resource[" + i + "] - " + resources[i].name);
     // Redirect time
@@ -167,10 +170,12 @@ workerStart: 0
     // DNS time
     var DNS = resources[i].domainLookupEnd - resources[i].domainLookupStart;
     log("... DNS lookup time = " + DNS);
+    col1.innerHTML=DNS;
 
     // TCP handshake time
     var TCP = resources[i].connectEnd - resources[i].connectStart;
     log("... TCP time = " + TCP);
+    col2.innerHTML=TCP;
 
     // Secure connection time
     var ConnectionTime = (resources[i].secureConnectionStart > 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
@@ -196,6 +201,8 @@ workerStart: 0
     // Start until reponse end
     var StartUntilResponseEnd = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
     log("... Total time = " + StartUntilResponseEnd);
+
+    addRows();
   }
 }
 
@@ -210,7 +217,6 @@ function init() {
 
   time=new Date().toLocaleString('it-IT', { timeZone: 'UTC' });
   timestamps[iCounter]=time;
-  //timestamps[iCounter]=CreateReadableTimestamp();
   
   var UrlToFetch = OriginalUrl+"?v"+iCounter;
   var image2 = new Image();
@@ -224,40 +230,6 @@ function init() {
 
 }
 
-function CreateReadableTimestamp() {
-  var Seconds="";
-  var Minutes="";
-  var Hours="";
-
-  const datetostore = new Date();
-
-  
-  if(datetostore.getSeconds()<10)
-    Seconds="0"+datetostore.getSeconds();
-  else
-    Seconds=datetostore.getSeconds();
-
-  if(datetostore.getMinutes()<10)
-    Minutes="0"+datetostore.getMinutes();
-  else
-    Minutes=datetostore.getMinutes();
-
-  if(datetostore.getHours()<10)
-    Hours="0"+datetostore.getHours();
-  else
-    Hours=datetostore.getHours();
-
-  var ReadableTimestamp=
-  datetostore.getDate()+
-          "/"+(datetostore.getMonth()+1)+
-          "/"+datetostore.getFullYear()+
-          " "+Hours+
-          ":"+Minutes+
-          ":"+Seconds+
-          " TZ Offset: "+datetostore.getTimezoneOffset();
-  
-  return(ReadableTimestamp);        
-}
 
 function startTesting() {
 
@@ -271,6 +243,19 @@ function stopTesting() {
   // release our intervalID from the variable
   nIntervId = null; 
   iCounter=0;
+}
+
+function addRows(){ 
+  var table = document.getElementById('emptbl');
+  var rowCount = table.rows.length;
+  var cellCount = table.rows[0].cells.length; 
+  var row = table.insertRow(rowCount);
+  for(var i =0; i <= cellCount; i++){
+    var cell = 'cell'+i;
+    cell = row.insertCell(i);
+    var copycel = document.getElementById('col'+i).innerHTML;
+    cell.innerHTML=copycel;
+  }
 }
 
 </script>
