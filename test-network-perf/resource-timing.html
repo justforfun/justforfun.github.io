@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width">
 <script>
 // log to either console of <output> element
-var useConsoleLog = false;
+var useConsoleLog = true;
 let nIntervId;
 let iCounter=0;
 let timestamps=[];
@@ -242,7 +242,9 @@ function init() {
   image2.src = UrlToFetch;
   iCounter++;
 
-  log("Init function executed "+ iCounter + " times");
+  var StatusMessageDiv = document.getElementById('StatusMessage');
+  StatusMessageDiv.innerHTML="Test executed "+ iCounter + " times";
+  //log("Test executed "+ iCounter + " times");
 
   // Set a callback if the resource buffer becomes filled
   performance.onresourcetimingbufferfull = buffer_full;
@@ -251,6 +253,9 @@ function init() {
 
 
 function startTesting() {
+  var TimeToStart=5000;
+  var StatusMessageDiv = document.getElementById('StatusMessage');
+  StatusMessageDiv.innerHTML="Test will start in "+ TimeToStart/1000 + " seconds";
 
   if (!nIntervId) {
     nIntervId = setInterval(init, 5000);
@@ -264,6 +269,10 @@ function stopTesting() {
   nIntervId = null;
   calculate_load_times(); 
   iCounter=0;
+  clear_resource_timings();
+  while (timestamps.length > 0) {
+    timestamps.pop();
+  } 
 }
 
 function addRows(){ 
@@ -305,7 +314,7 @@ td {
 <button id="log" onclick="startTesting();">Start Testing</button>
 <p></p>
 <button id="log" onclick="stopTesting();">Stop Testing</button>
-<p></p>
+<p><div id="StatusMessage"></div></p>
 <!--
 <button id="log" onclick="calculate_load_times();">Calculate resource load times</button>
 <p></p>
