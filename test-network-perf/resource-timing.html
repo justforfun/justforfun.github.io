@@ -209,14 +209,21 @@ function init() {
   //var OriginalUrl="https://www.repstatic.it/content/nazionale/img/2022/04/03/130714361-c3b4a7f4-6f4f-41d6-8431-ba8ad8d51710.jpg";
 
   
-  
+  var Minutes="";
+
+
   const datetostore = new Date();
+  if(datetostore.getMinutes()<10)
+    Minutes="0"+datetostore.getMinutes();
+  else
+    Minutes=datetostore.getMinutes();
+
   var ReadableTimestamp=
   datetostore.getDate()+
           "/"+(datetostore.getMonth()+1)+
           "/"+datetostore.getFullYear()+
           " "+datetostore.getHours()+
-          ":"+datetostore.getMinutes()+
+          ":"+Minutes+
           ":"+datetostore.getSeconds()+
           " TZ Offset: "+datetostore.getTimezoneOffset();;
 
