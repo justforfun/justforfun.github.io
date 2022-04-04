@@ -208,18 +208,19 @@ workerStart: 0
     var RequestStartUntilResponseEnd = (resources[i].requestStart > 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
     log("... Request start until response end time = " + RequestStartUntilResponseEnd);
 
-    // Start until reponse end
-    var StartUntilResponseEnd = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
-    log("... Total time = " + StartUntilResponseEnd);
-    col6.innerHTML=StartUntilResponseEnd;
-
+    
     // Start until reponse end
     var encodedBodySize = (resources[i].encodedBodySize> 0) ? (resources[i].encodedBodySize) : "0";
     if (encodedBodySize > 0)
       encodedBodySize=encodedBodySize/1024;
 
     log("... Total Size = " + encodedBodySize);
-    col7.innerHTML=encodedBodySize;
+    col6.innerHTML=encodedBodySize;
+
+    // Start until reponse end
+    var StartUntilResponseEnd = (resources[i].startTime > 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
+    log("... Total time = " + StartUntilResponseEnd);
+    col7.innerHTML=StartUntilResponseEnd;
 
     addRows();
   }
@@ -257,9 +258,11 @@ function startTesting() {
 }
 
 function stopTesting() {
+
   clearInterval(nIntervId);
   // release our intervalID from the variable
-  nIntervId = null; 
+  nIntervId = null;
+  calculate_load_times(); 
   iCounter=0;
 }
 
@@ -303,6 +306,7 @@ td {
 <p></p>
 <button id="log" onclick="stopTesting();">Stop Testing</button>
 <p></p>
+<!--
 <button id="log" onclick="calculate_load_times();">Calculate resource load times</button>
 <p></p>
 <button id="log" onclick="display_size_data();">Display resource size data</button>
@@ -313,6 +317,7 @@ td {
 <p></p>
 <button id="log" onclick="set_resource_timing_buffer_size(160);">Set resource timing buffer size</button>
 <p></p>
+-->
 <div id="populateresult">
   <table id="emptbl">
     <tr>
