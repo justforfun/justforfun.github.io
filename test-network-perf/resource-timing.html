@@ -249,6 +249,8 @@ function addRows(){
   var table = document.getElementById('emptbl');
   var rowCount = table.rows.length;
   var cellCount = table.rows[0].cells.length; 
+  console.log("cellCount: " + cellCount);
+  
   var row = table.insertRow(rowCount);
   for(var i =0; i <= cellCount; i++){
     var cell = 'cell'+i;
