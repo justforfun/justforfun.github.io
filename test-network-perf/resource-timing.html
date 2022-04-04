@@ -260,7 +260,7 @@ function startTesting() {
   StatusMessageDiv.innerHTML="Test will start in "+ TimeToStart/1000 + " seconds";
 
   if (!nIntervId) {
-    nIntervId = setInterval(init, 5000);
+    nIntervId = setInterval(init, TimeToStart);
   }
 }
 
