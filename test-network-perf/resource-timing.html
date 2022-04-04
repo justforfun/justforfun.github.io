@@ -208,11 +208,15 @@ function init() {
   var OriginalUrl="https://justforfun.github.io/test-network-perf/images/cat.webp";
   //var OriginalUrl="https://www.repstatic.it/content/nazionale/img/2022/04/03/130714361-c3b4a7f4-6f4f-41d6-8431-ba8ad8d51710.jpg";
 
-  
+  var Seconds="";
   var Minutes="";
-
-
   const datetostore = new Date();
+  
+  if(datetostore.getSeconds()<10)
+    Seconds="0"+datetostore.getSeconds();
+  else
+    Secondss=datetostore.getSeconds();
+
   if(datetostore.getMinutes()<10)
     Minutes="0"+datetostore.getMinutes();
   else
@@ -224,7 +228,7 @@ function init() {
           "/"+datetostore.getFullYear()+
           " "+datetostore.getHours()+
           ":"+Minutes+
-          ":"+datetostore.getSeconds()+
+          ":"+Seconds+
           " TZ Offset: "+datetostore.getTimezoneOffset();;
 
   timestamps[iCounter]=ReadableTimestamp;
