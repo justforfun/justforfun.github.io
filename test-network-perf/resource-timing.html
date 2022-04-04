@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
+<head>
 <title>Examples for "Using the Resource Timing API" Guide</title>
 <!--
   This example is described in MDN's "Using the Resource Timing API"
@@ -270,6 +271,23 @@ function addRows(){
 }
 
 </script>
+
+<style>
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+</style>
+
+</head>
 <body onload="init()">
 <h1>Resource Timing examples</h1>
 <button id="log" onclick="startTesting();">Start Testing</button>
