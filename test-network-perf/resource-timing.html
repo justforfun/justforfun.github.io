@@ -12,9 +12,7 @@ var useConsoleLog = false;
 let nIntervId;
 let iCounter=0;
 let timestamps=[];
-var col0 = document.getElementById('col0');
-var col1 = document.getElementById('col1');
-var col2 = document.getElementById('col2');
+
 
 function log(s) {
   if (useConsoleLog) {
@@ -129,7 +127,9 @@ function calculate_load_times() {
 
   log("= Calculate Load Times");
 
-  
+  var col0 = document.getElementById('col0');
+  var col1 = document.getElementById('col1');
+  var col2 = document.getElementById('col2');
 
   for (var i=0; i < resources.length; i++) {
 
